@@ -1,0 +1,47 @@
+{
+  "source": {
+    "file": "over_shop_sroki_dostavki.xlsx",
+    "sheet": "Сроки доставки",
+    "dataRows": 54,
+    "unit": "раб. дней"
+  },
+  "destinationCities": ["Алматы", "Астана", "Павлодар"],
+  "availabilityPolicy": {
+    "minimumQuantity": 1,
+    "excludedSupplierLabels": ["OVER ALB", "VENDER_P_S"],
+    "excludedReasons": {
+      "OVER ALB": "склад закрыт",
+      "VENDER_P_S": "не учитывать остатки по указанию владельца"
+    },
+    "companyGroups": [
+      {
+        "name": "VENDER",
+        "supplierLabels": ["VENDER_S", "VENDER_P", "VENDER_G"],
+        "specialRequestQuantityAbove": 50,
+        "note": "Одна фирма; VENDER_P_S исключён и не суммируется с этими остатками."
+      }
+    ]
+  },
+  "warehouses": [
+    {"label": "OVER AS", "city": "Астана", "deliveries": {"Алматы": null, "Астана": 0, "Павлодар": null}},
+    {"label": "AK Cent", "city": "Алматы", "deliveries": {"Алматы": 1, "Астана": 10, "Павлодар": 10}},
+    {"label": "VENDER_S", "city": "Алматы", "company": "VENDER", "deliveries": {"Алматы": 1, "Астана": 5, "Павлодар": 5}},
+    {"label": "ELCO", "city": "Алматы", "deliveries": {"Алматы": 1, "Астана": 5, "Павлодар": 5}},
+    {"label": "FDCOM", "city": "Алматы", "deliveries": {"Алматы": 1, "Астана": 5, "Павлодар": 5}},
+    {"label": "OVER ALP", "city": "Алматы", "deliveries": {"Алматы": 0, "Астана": 5, "Павлодар": null}},
+    {"label": "OVER PAV", "city": "Павлодар", "deliveries": {"Алматы": null, "Астана": null, "Павлодар": 0}},
+    {"label": "VSTrade", "city": "Алматы", "deliveries": {"Алматы": 1, "Астана": 5, "Павлодар": 5}},
+    {"label": "STN", "city": "Алматы", "deliveries": {"Алматы": 1, "Астана": 5, "Павлодар": 5}},
+    {"label": "Marvel", "city": "Алматы", "deliveries": {"Алматы": 3, "Астана": 10, "Павлодар": 10}},
+    {"label": "PULSER", "city": "Алматы", "deliveries": {"Алматы": 1, "Астана": 5, "Павлодар": 5}},
+    {"label": "VENDER_P", "city": "Алматы", "company": "VENDER", "deliveries": {"Алматы": 1, "Астана": 5, "Павлодар": 5}},
+    {"label": "ASBIS", "city": "Алматы", "deliveries": {"Алматы": 1, "Астана": 5, "Павлодар": 5}},
+    {"label": "ALSER", "city": "Алматы", "deliveries": {"Алматы": null, "Астана": null, "Павлодар": null}},
+    {"label": "MOON.kz", "city": "Алматы", "deliveries": {"Алматы": 1, "Астана": 5, "Павлодар": 5}},
+    {"label": "VENDER_G", "city": "Алматы", "company": "VENDER", "deliveries": {"Алматы": 3, "Астана": 10, "Павлодар": 10}},
+    {"label": "COMPORTAL", "city": "Алматы", "deliveries": {"Алматы": 1, "Астана": 5, "Павлодар": 5}},
+    {"label": "ABRIS", "city": "Алматы", "deliveries": {"Алматы": null, "Астана": null, "Павлодар": null}},
+    {"label": "OVER ALB", "city": "Алматы", "active": false, "excludeInventory": true, "deliveries": {"Алматы": null, "Астана": null, "Павлодар": null}},
+    {"label": "VENDER_P_S", "city": "Алматы", "active": false, "excludeInventory": true, "company": "VENDER", "deliveries": {"Алматы": null, "Астана": null, "Павлодар": null}}
+  ]
+}

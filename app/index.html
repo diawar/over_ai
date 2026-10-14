@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f7f3">
+  <title>CoreLab — Ваш будущий компьютер</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="./" aria-label="CoreLab — главная">CoreLab<span>●</span></a>
+    <div class="side-caption">КОМПЬЮТЕР, КОТОРЫЙ ВАМ ПОДХОДИТ</div>
+    <div class="side-intro">Начинается<br>с Ваших задач.</div>
+    <p class="side-copy">Соберём всё необходимое.<br>Без лишнего.</p>
+    <nav aria-label="Этапы подбора" id="progress"></nav>
+    <div class="side-bottom"><span class="status-dot"></span> CoreLab · Персональный подбор<span>Сборка — бесплатно</span></div>
+  </aside>
+  <main>
+    <header><div><span class="mobile-brand">CoreLab<span>●</span></span><span class="header-title">Ваш будущий компьютер</span><span class="header-sub">Подбор системного блока</span></div><button class="quiet" id="restart">Начать заново ↗</button></header>
+    <div class="preview-note" id="connection-status"><span>CORELAB</span> Проверяем подключение ИИ…</div>
+    <section id="conversation" aria-label="Диалог подбора"><div id="messages" role="log" aria-live="polite" aria-relevant="additions"></div></section>
+    <footer id="composer-area"><form id="composer" hidden><label class="sr-only" for="answer">Ваш ответ</label><input id="answer" autocomplete="off" maxlength="500" placeholder="Напишите сообщение…"><button class="send" type="submit" aria-label="Отправить ответ">↑</button></form><p id="input-hint">Начните подбор — это займёт всего несколько шагов</p></footer>
+  </main>
+  <aside class="context-panel"><div class="context-label">ВАША СБОРКА</div><h2>Сначала —<br>знакомство.</h2><div class="pc-art" aria-hidden="true"><div class="pc-front"><i></i><i></i><i></i></div><div class="pc-side"><div class="board"></div><div class="gpu"></div><div class="psu"></div></div></div><p class="context-copy">Расскажите о задачах.<br>Остальное подберём вместе.</p><dl id="brief"></dl><div class="context-foot">Только системный блок.<br>Дополнительные товары — позже.</div></aside>
+  <dialog id="reset-dialog"><h2>Начать знакомство заново?</h2><p>Текущий демонстрационный диалог будет очищен.</p><div class="dialog-actions"><button class="quiet" id="cancel-reset">Продолжить диалог</button><button class="primary" id="confirm-reset">Начать заново</button></div></dialog>
+  <script src="app.js"></script>
+</body>
+</html>

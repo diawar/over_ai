@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://corelab.local/schemas/component-evidence.schema.json",
+  "title": "CoreLab official component evidence",
+  "description": "Human-reviewed, exact-model component facts and compatibility evidence. The schema validates shape, not truth or source ownership.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "components", "compatibilityChecks"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "components": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/component"}
+    },
+    "compatibilityChecks": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/compatibilityCheck"}
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["manufacturer", "pageTitle", "checkedAt", "reviewedBy"],
+      "properties": {
+        "manufacturer": {"type": "string", "minLength": 1},
+        "pageTitle": {"type": "string", "minLength": 1},
+        "checkedAt": {"type": "string", "format": "date-time"},
+        "reviewedBy": {"type": "string", "minLength": 1}
+      }
+    },
+    "fact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "source"],
+      "properties": {
+        "value": {},
+        "source": {"$ref": "#/$defs/source"},
+        "note": {"type": "string"}
+      }
+    },
+    "component": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["skuOver", "category", "article", "manufacturer", "officialModel", "status", "facts"],
+      "properties": {
+        "skuOver": {"type": "string", "pattern": "^[0-9]+$"},
+        "category": {"type": "string", "minLength": 1},
+        "article": {"type": "string", "minLength": 1},
+        "manufacturer": {"type": "string", "minLength": 1},
+        "officialModel": {"type": "string", "minLength": 1},
+        "status": {"enum": ["needs_review", "verified", "rejected"]},
+        "facts": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {"$ref": "#/$defs/fact"}
+        },
+        "merchantProductDetails": {
+          "type": "array",
+          "maxItems": 100,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["sectionName", "attributeName", "attributeValue"],
+            "properties": {
+              "sectionName": {"type": "string", "minLength": 1, "maxLength": 150},
+              "attributeName": {"type": "string", "minLength": 1, "maxLength": 150},
+              "attributeValue": {"type": "string", "minLength": 1, "maxLength": 150}
+            }
+          }
+        },
+        "reviewedAt": {"type": "string", "format": "date-time"},
+        "reviewedBy": {"type": "string", "minLength": 1},
+        "notes": {"type": "string"}
+      },
+      "allOf": [{
+        "if": {"properties": {"status": {"const": "verified"}}, "required": ["status"]},
+        "then": {"required": ["reviewedAt", "reviewedBy", "merchantProductDetails"]}
+      }]
+    },
+    "compatibilityCheck": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["leftSkuOver", "rightSkuOver", "result", "reason", "sources", "checkedAt", "reviewedBy"],
+      "properties": {
+        "leftSkuOver": {"type": "string", "pattern": "^[0-9]+$"},
+        "rightSkuOver": {"type": "string", "pattern": "^[0-9]+$"},
+        "result": {"enum": ["compatible", "incompatible", "unknown"]},
+        "reason": {"type": "string", "minLength": 1},
+        "factReferences": {"type": "array", "minItems": 2, "items": {"type": "string", "minLength": 1}},
+        "sources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/source"}},
+        "checkedAt": {"type": "string", "format": "date-time"},
+        "reviewedBy": {"type": "string", "minLength": 1}
+      },
+      "allOf": [{
+        "if": {"properties": {"result": {"enum": ["compatible", "incompatible"]}}, "required": ["result"]},
+        "then": {"required": ["factReferences"]}
+      }]
+    }
+  }
+}

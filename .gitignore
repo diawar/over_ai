@@ -1,1 +1,3 @@
 .handoff-runtime/
+.secrets/
+data/

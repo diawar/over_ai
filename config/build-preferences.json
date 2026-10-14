@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "description": "Editorial selection priorities, not benchmark results or manufacturer facts. Price is never a performance score. CPU names must match verified officialModel.",
+  "cpu": {
+    "AMD Ryzen 5 7600": [24, 24, 24],
+    "AMD Ryzen 5 8600G": [20, 22, 24],
+    "AMD Ryzen 5 8400F": [16, 18, 18],
+    "AMD Ryzen 3 4100": [8, 8, 10],
+    "AMD Ryzen 7 PRO 4750G": [12, 22, 18],
+    "AMD Ryzen 7 7700": [30, 34, 26],
+    "AMD Ryzen 7 9700X": [40, 42, 30],
+    "AMD Ryzen 9 7950X": [38, 52, 28],
+    "Intel Core i5-12400": [20, 22, 22],
+    "Intel Core i3-14100F": [16, 16, 20],
+    "Intel Core i5-13400": [24, 28, 24],
+    "Intel Core i5-14600": [32, 36, 28],
+    "Intel Core i7-12700F": [28, 36, 24],
+    "Intel Core i9-12900": [30, 42, 26],
+    "Intel Core Ultra 5 245K": [32, 40, 28]
+  },
+  "gpu": {"GeForce RTX 5060":32,"GeForce RTX 5060 Ti":40,"GeForce RTX 5070":55,"GeForce RTX 5070 Ti":65,"GeForce RTX 5080":75}
+}
