@@ -4,7 +4,7 @@ from pathlib import Path
 from sqlalchemy import select
 from app.db import SessionLocal
 from app.models import Attribute, ProductAttribute, JobItem
-from recover_cooling_properties import cohort, CODES
+from cooling_recovery_cohort import cohort, CODES
 
 with SessionLocal() as db:
     output = []

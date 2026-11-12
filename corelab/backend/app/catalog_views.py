@@ -634,7 +634,6 @@ def catalog_router(admin_dependency, csrf_dependency):
 
     @router.get("/{product_id}")
     def product_detail(product_id: int, db: Session = Depends(get_db)):
-        from .property_service import has_technical_values, structure_report
         product = db.get(Product, product_id)
         if product is None or product.source_id != _source_id(db):
             raise HTTPException(404, "Product not found")
@@ -645,10 +644,6 @@ def catalog_router(admin_dependency, csrf_dependency):
                             .order_by(CatalogSource.name, SupplierOffer.id)).all()
         reasons = list(db.scalars(select(ValidationReason.message).where(
             ValidationReason.product_id == product_id).order_by(ValidationReason.id)))
-        load_candidates = [cat.id for cat in product.categories if structure_report(db, cat.id)["ai_load_allowed"]]
-        can_load = (not product.is_archived and bool(product.manufacturer and product.manufacturer_article)
-                    and len(product.categories) == 1 and len(load_candidates) == 1
-                    and not has_technical_values(db, product_id))
         return {"id": product.id, "sku": product.sku, "name": product.name,
                 "article": product.manufacturer_article, "manufacturer": product.manufacturer,
                 "status": product.status, "validity_check": product.validity_check,
@@ -656,7 +651,6 @@ def catalog_router(admin_dependency, csrf_dependency):
                 "categories": [{"id": cat.id, "name": cat.name} for cat in product.categories],
                 "attributes": _attributes(db, [product_id])[product_id],
                 "available_attributes": _available_attributes(db, product),
-                "ai_load_allowed": can_load,
                 "validation_reasons": reasons,
                 "offers": [{"source": source_name, "sku": offer.sku,
                             "price": str(offer.price) if offer.price is not None else None,

@@ -1,5 +1,6 @@
 """Canonical cooling connections shared by manual editing and all loaders."""
 import math
+from fastapi import HTTPException
 import re
 
 COOLING_CODES = frozenset({
@@ -166,3 +167,31 @@ def normalize_cooling_inventory(code, value):
             raise ValueError('Один физический разъём указан в нескольких группах')
         seen_ids.update(identifiers)
     return sorted(result.values(), key=lambda row: (row['kind'], row['raw']))
+
+
+def merge_header_evidence(old, new):
+    """New evidence may enrich a count, never silently contradict an old count."""
+    old = normalize_cooling_inventory('motherboard_fan_headers', old)
+    new = normalize_cooling_inventory('motherboard_fan_headers', new)
+    # A shorter specification may omit a previously verified pump capability.
+    # Retain the richer physical group instead of appending it a second time.
+    for previous in old:
+        previous_roles = set(previous.get('roles', []))
+        candidates = [index for index, row in enumerate(new) if previous_roles and
+            set(row.get('roles', [])) < previous_roles and row['count'] == previous['count'] and
+            (not previous.get('header_ids') or not row.get('header_ids') or
+             set(previous['header_ids']) & set(row['header_ids']))]
+        if len(candidates) == 1:
+            new[candidates[0]] = previous
+    for role in ('system_fan', 'cpu_fan', 'cpu_opt', 'pump'):
+        previous = [row for row in old if role in row.get('roles', []) or row['kind'] == role + '_header']
+        if not previous:
+            continue
+        current = [row for row in new if role in row.get('roles', []) or row['kind'] == role + '_header']
+        if not current:
+            new.extend(previous)
+        elif sum(row['count'] for row in previous) not in {
+                sum(row['count'] for row in current),
+                sum(row['count'] for row in current if role == 'system_fan' and 'pump' not in row.get('roles', []))}:
+            raise HTTPException(409, f'Новый перечень разъёмов противоречит сохранённому количеству {role}')
+    return normalize_cooling_inventory('motherboard_fan_headers', new)

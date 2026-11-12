@@ -54,7 +54,8 @@ const usbWarningInstruction = '\nЕсли verifiedBuild.warnings содержи�
 const buildStageInstruction = '\nВ стадии initial_build оцени все ответы клиента: город, назначение, конкретные задачи, бюджет, выбор CPU и игровое разрешение в partPreferences.gamingResolution. Рассматривай все названные игры, не своди смешанный запрос к одной игре. Выбери подходящую платформу с учётом бюджета, задач и перспективы модернизации; если выбор обоснован, передай сокет через action.platformSocket, а не только в тексте. Не противоречь явно выбранному производителю CPU. Не называй модели до расчёта; выбери rebuild либо задай действительно необходимый уточняющий вопрос. В стадии discussion явное изменение клиентом игрового разрешения требует нового расчёта; не обсуждай старую сборку как соответствующую новому разрешению. В стадии build_review сопоставь проверенную сборку с этими ответами: кратко объясни, что учтено и какие есть ограничения. Упоминай только подтверждённые данные verifiedBuild. Не меняй условия и не запрашивай новый расчёт. В стадии build_feedback сервер передаёт результат неудачного расчёта в builderError. Объясни причину простыми словами с учётом исходного пожелания и текущей проверенной сборки. Если клиент назвал только тип детали или свойство, не требуй артикул или точное название модели; задай лишь необходимое уточнение. Не утверждай, что изменение применено.';
 const performanceEvidenceInstruction = '\nЕсли verifiedBuild.performanceEvidence или verifiedBuild.processorEvidence есть, это отдельные измерения видеокарты и процессора на разных контрольных системах источника, а не прогноз FPS предложенной сборки. Можешь использовать их для объяснения относительного выбора деталей, но не обещай клиенту эти значения FPS, не складывай их, не переноси результат на другую игру или настройки и не утверждай, что именно связка выбранных CPU и GPU тестировалась вместе. Если verifiedBuild.fpsEstimate есть, это отдельный приблизительный расчёт pc-builds.com для указанной игры, разрешения и настроек. Называй его оценкой калькулятора, а не измеренным FPS этой сборки или основанием для выбора деталей; не переноси число на другие игры и настройки.';
 class AIError extends Error {
-  constructor(code,status=400){super(code);this.code=code;this.status=status;}
+  constructor(code,status=400,retryAfter){super(code);this.code=code;this.status=status;
+    const seconds=Number(retryAfter);if(Number.isInteger(seconds)&&seconds>0&&seconds<=86400)this.retryAfter=seconds;}
 }
 function loadConfig() {
   return {provider:'corelab',organizationId:1};
@@ -150,7 +151,7 @@ async function callCorelabAI(config, input, fetcher=fetch, {signal}={}) {
   if(!response.ok){
     if(response.status===409)throw new AIError('ai_not_configured',503);
     if(response.status===402)throw new AIError('ai_quota_exceeded',402);
-    if(response.status===429)throw new AIError('ai_rate_limited',429);
+    if(response.status===429)throw new AIError('ai_rate_limited',429,response.headers?.get?.('retry-after'));
     if(response.status===504)throw new AIError('ai_timeout',504);
     const failure=await response.json().catch(()=>null);
     if(failure?.detail?.code==='ai_invalid_response')throw new AIError('ai_invalid_response',502);

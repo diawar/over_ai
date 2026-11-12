@@ -48,6 +48,7 @@ services:
       HOST: 0.0.0.0
       PORT: 8001
       CHAT_SESSION_DIRECTORY: /var/lib/corelab-chat
+      MINI_APP_PROXY_SECRET: ${MINI_APP_PROXY_SECRET:?Set MINI_APP_PROXY_SECRET in .env}
       CORELAB_INTERNAL_API: http://backend:8000
       SESSION_SECRET: ${SESSION_SECRET:?Set SESSION_SECRET in .env}
     depends_on:
@@ -73,6 +74,7 @@ services:
       - "127.0.0.1:5173:5173"
     environment:
       VITE_API_URL: ""
+      MINI_APP_PROXY_SECRET: ${MINI_APP_PROXY_SECRET:?Set MINI_APP_PROXY_SECRET in .env}
       API_PROXY_TARGET: http://backend:8000
       MINI_APP_PROXY_TARGET: http://mini_app:8001
       CLOUDFLARE_TUNNEL_HOST: ${CLOUDFLARE_TUNNEL_HOST:-}

@@ -9,8 +9,6 @@ const category = (id: number) => ({
   items: id === 2 ? [rule] : [],
   check: { current: false, status: 'warning', structure_status: 'success', errors: [], warnings: [], ai_load_allowed: false, load_reason: 'Нужна проверка' },
 })
-const result = { created: 1, models: [], research: { citations: [], model_id: 'test', checked_at: '2026-10-31' } }
-const load = (completed = false) => ({ id: 8, status: completed ? 'completed' : 'running', total: 1, completed: completed ? 1 : 0, skipped: 0, failed: 0, items: [] })
 const response = (body: unknown) => ({ ok: true, json: async () => body })
 function deferred<T>() {
   let resolve!: (value: T) => void
@@ -51,50 +49,15 @@ beforeEach(() => {
 })
 afterEach(() => { cleanup(); vi.useRealTimers(); vi.unstubAllGlobals(); fetchMock.mockReset() })
 
-it('clears running jobs and the editor on navigation, and restores A from the server on return', async () => {
-  generation = { id: 9, status: 'running' }; loading = load()
-  vi.useFakeTimers()
-  await act(async () => { renderCategories() })
-  expect(screen.getByText('AI ищет официальные страницы и формирует свойства')).toBeInTheDocument()
+it('clears the editor on category navigation without polling paid jobs', async () => {
+  renderCategories()
+  await screen.findByText('Сокет A')
   fireEvent.click(screen.getByRole('button', { name: 'Изменить' }))
   expect(screen.getByLabelText('Название свойства')).toHaveValue('Сокет A')
   await goToB()
   expect(screen.queryByLabelText('Название свойства')).not.toBeInTheDocument()
-  expect(screen.queryByText('AI ищет официальные страницы и формирует свойства')).not.toBeInTheDocument()
-  expect(screen.queryByText('Загрузка свойств: выполняется')).not.toBeInTheDocument()
-  expect(screen.getByRole('button', { name: 'Сформировать свойства с AI' })).toBeEnabled()
-  await act(async () => { await vi.advanceTimersByTimeAsync(6000) })
-  expect(fetchMock.mock.calls.some(([url]) => /\/(structure-jobs\/9|jobs\/8)$/.test(url))).toBe(false)
-  await act(async () => { fireEvent.click(screen.getByRole('link', { name: 'Открыть A' })) })
-  expect(screen.getByText('AI ищет официальные страницы и формирует свойства')).toBeInTheDocument()
-  expect(screen.queryByLabelText('Название свойства')).not.toBeInTheDocument()
-  expect(fetchMock.mock.calls.some(([, options]) => options.method === 'POST')).toBe(false)
-})
-
-it.each(['completed', 'failed'] as const)('does not carry a %s generation result into another category', async status => {
-  generation = { id: 9, status, result, error: 'Ошибка категории A' }
-  renderCategories()
-  if (status === 'completed') await screen.findByText('Добавлено свойств: 1')
-  else await screen.findByText('Ошибка категории A')
-  await goToB()
-  expect(screen.queryByText('Добавлено свойств: 1')).not.toBeInTheDocument()
-  expect(screen.queryByText('Ошибка категории A')).not.toBeInTheDocument()
-})
-
-it('ignores a load poll arriving after navigation', async () => {
-  loading = load()
-  const pending = deferred<ReturnType<typeof response>>()
-  const normal = fetchMock.getMockImplementation()!
-  fetchMock.mockImplementation((url: string, options?: RequestInit) => url.endsWith('/jobs/8') ? pending.promise : normal(url, options))
-  vi.useFakeTimers()
-  await act(async () => { renderCategories() })
-  expect(screen.getByText('Загрузка свойств: выполняется')).toBeInTheDocument()
-  await act(async () => { await vi.advanceTimersByTimeAsync(3000) })
-  expect(fetchMock.mock.calls.some(([url]) => url.endsWith('/jobs/8'))).toBe(true)
-  await goToB()
-  await act(async () => { pending.resolve(response(load(true))) })
-  expect(screen.queryByText('Загрузка свойств: завершена')).not.toBeInTheDocument()
-  expect(screen.getByRole('heading', { name: 'Категория: Категория B' })).toBeInTheDocument()
+  expect(screen.queryByRole('button', { name: 'Сформировать свойства с AI' })).not.toBeInTheDocument()
+  expect(fetchMock.mock.calls.some(([url]) => /\/(load|generate|structure-jobs|jobs)(\/|$)/.test(String(url)))).toBe(false)
 })
 
 it('ignores a category refresh started by a mutation on the previous page', async () => {
@@ -110,7 +73,7 @@ it('ignores a category refresh started by a mutation on the previous page', asyn
   await screen.findByText('Сокет A')
   await act(async () => { fireEvent.click(screen.getByRole('button', { name: 'Проверить структуру свойств' })) })
   await goToB()
-  expect(screen.getByRole('button', { name: 'Сформировать свойства с AI' })).toBeEnabled()
+  expect(screen.getByRole('button', { name: 'Добавить свойство' })).toBeEnabled()
   await act(async () => { pending.resolve(response(category(2))) })
   expect(screen.getByRole('heading', { name: 'Категория: Категория B' })).toBeInTheDocument()
   expect(screen.queryByText('Сокет A')).not.toBeInTheDocument()

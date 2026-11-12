@@ -56,7 +56,8 @@ def main():
         check.report = {**report, **({"research": research} if research else {})}
         check.checked_at = datetime.now(timezone.utc)
         db.flush()
-        if not structure_report(db, CATEGORY_ID)["ai_load_allowed"]:
+        report = structure_report(db, CATEGORY_ID)
+        if not report["current"] or report["structure_status"] != "success":
             raise RuntimeError("Структура не прошла проверку для загрузки")
 
         rules = {row.code: row for row in db.scalars(select(PropertyRule).where(

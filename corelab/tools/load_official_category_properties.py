@@ -27,7 +27,7 @@ from app.connector_inventory import normalize_connector_inventory
 from app.property_service import definition, has_technical_values
 from app.validity import lock_validation, revalidate_product
 from app.cooling_inventory import COOLING_CODES
-from app.product_loader import _merge_header_evidence
+from app.cooling_inventory import merge_header_evidence as _merge_header_evidence
 
 EVIDENCE_PATH = Path('/tmp/official-category-properties.json')
 

@@ -55,13 +55,13 @@ function compactPlannerInput(input){
  if(state.qualityReview?.validatedAlternatives)state.qualityReview.validatedAlternatives=validatedAlternatives.map(row=>
   JSON.stringify(row.warnings)===JSON.stringify(qualityReview.baseline.warnings)?
    {...row,warnings:{reference:'qualityReview.baseline.warnings'}}:row);
- const selected=new Set([...(proposedParts||[]).map(p=>p.skuOver),...recentDetails]);
+ const selected=new Set([...(proposedParts||[]).map(p=>p?.skuOver),...recentDetails]);
  // Old search diagnostics are reproducible; keep component facts before them.
  while(Buffer.byteLength(JSON.stringify(render()))>26000&&state.searchEvidence.length>4)state.searchEvidence.shift();
  while(Buffer.byteLength(JSON.stringify(render()))>26000&&state.observedSearchBounds.length>4)state.observedSearchBounds.shift();
  while(Buffer.byteLength(JSON.stringify(render()))>26000&&state.previouslySeenCandidates.length>8)state.previouslySeenCandidates.shift();
  const categoryAnchors=new Map();for(const item of state.inspectedDetails)if(item.category)categoryAnchors.set(item.category,item.skuOver);
- const proposed=new Set((proposedParts||[]).map(p=>p.skuOver));
+ const proposed=new Set((proposedParts||[]).map(p=>p?.skuOver));
  // Keep newly inspected alternatives visible. The validated baseline and exact
  // proposed SKUs remain in metadata; its older detailed cards may be reloaded.
  const essential=new Set([...categoryAnchors.values(),...state.inspectedDetails.filter(i=>proposed.has(i.skuOver)&&!i.category).map(i=>i.skuOver)]);

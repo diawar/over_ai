@@ -19,7 +19,7 @@ beforeEach(() => {
       aiEnabled = JSON.parse(String(options?.body)).enabled
       return { ok: true, json: async () => ({ enabled: aiEnabled }) }
     }
-    if (url.endsWith('/kimi')) return { ok: true, json: async () => ({ provider: 'Kimi', configured: options?.method === 'PUT', model_id: 'kimi-k2.5' }) }
+    if (url.endsWith('/kimi')) return { ok: true, json: async () => ({ provider: 'Kimi', configured: options?.method === 'PUT', model_id: 'kimi-k2.6' }) }
     if (url.endsWith('/openrouter')) return { ok: true, json: async () => ({ provider: 'OpenRouter', configured: options?.method === 'PUT', model_id: 'moonshotai/kimi-k2.5' }) }
     if (url.endsWith('/organization')) return { ok: true, json: async () => ({ id: 1, name: 'ТОО "OVER-SHOP.KZ"', role: 'chief_admin' }) }
     if (url.endsWith('/users') && options?.method === 'POST') {
@@ -39,13 +39,13 @@ it('switches to Kimi, saves its own key and clears the secret', async () => {
   await screen.findByLabelText('API-ключ OpenAI')
   fireEvent.change(screen.getByLabelText('Провайдер AI'), { target: { value: 'kimi' } })
   const field = await screen.findByLabelText('API-ключ Kimi')
-  await screen.findByDisplayValue('kimi-k2.5')
+  await screen.findByDisplayValue('kimi-k2.6')
   fireEvent.change(field, { target: { value: 'sk-kimi-test-0123456789012345' } })
   fireEvent.click(screen.getByRole('button', { name: 'Сохранить ключ' }))
   await screen.findByText('Ключ сохранён в зашифрованном виде.')
   expect(field).toHaveValue('')
   const call = fetchMock.mock.calls.find(([url, options]) => String(url).endsWith('/kimi') && options?.method === 'PUT')!
-  expect(JSON.parse(String(call[1].body))).toEqual({ api_key: 'sk-kimi-test-0123456789012345', model_id: 'kimi-k2.5' })
+  expect(JSON.parse(String(call[1].body))).toEqual({ api_key: 'sk-kimi-test-0123456789012345', model_id: 'kimi-k2.6' })
 })
 
 it('activates an already configured provider on selection and restores it after reopening', async () => {

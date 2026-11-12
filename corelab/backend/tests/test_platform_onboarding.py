@@ -101,6 +101,10 @@ def test_platform_creation_blocking_and_password_change_in_context(client):
     assert changed.status_code==200,changed.text
     with db.SessionLocal() as session:
         assert verify_password(session.get(User,root_id).password_hash,'root-password-replaced')
+    # Password change rotates both session and CSRF cookies. Reusing the old
+    # CSRF header must fail; subsequent UI operations read the updated cookie.
+    assert client.patch(f'/api/v1/admin/platform/organizations/{org_id}',json={"name":"Company Two","short_name":"Two","is_active":False},headers=headers).status_code==403
+    headers={"X-CSRF-Token":client.cookies.get('corelab_csrf')}
     blocked=client.patch(f'/api/v1/admin/platform/organizations/{org_id}',json={"name":"Company Two","short_name":"Two","is_active":False},headers=headers)
     assert blocked.status_code==200
     assert client.get('/api/v1/admin/settings/organization',headers={"X-CoreLab-Organization-Context":context}).status_code==200

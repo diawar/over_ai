@@ -160,3 +160,32 @@ test('AI can recover after a stagnant cycle by proposing an inspected compositio
   return calls%2?action('search',{}):action('details',{skus:['cpu']});
  }});const r=await p.run({requestId:'recover-cycle'});assert.equal(r.ok,true);assert.equal(calls,5);
 });
+
+test('malformed proposal entries survive context compaction and AI can correct them',async()=>{
+ let calls=0;
+ const planner=createAiBuildPlanner({catalog,provider:async({input})=>{
+  calls++;
+  if(calls===1)return action('details',{skus:['cpu']});
+  if(calls===2)return action('propose',{parts:[null]});
+  const state=JSON.parse(require('../tools/ai-planner-context.cjs').compactPlannerInput(input)[1].content);
+  assert.equal(state.lastValidation.violations[0].code,'inspect_selected_parts');
+  assert.equal(state.budgetEvidence.proposal.completePrices,false);
+  return action('propose',{parts:[{skuOver:'cpu',quantity:1}]});
+ }});
+ const result=await planner.run({requestId:'repair-null-part'});
+ assert.equal(result.ok,true);assert.equal(result.calls,3);
+});
+
+test('quality review remaining budget respects a cheaper-build ceiling',async()=>{
+ let calls=0;
+ const capped={...catalog,customerRequest:()=>({budget:1000,partPreferences:{maxTotal:100}})};
+ const planner=createAiBuildPlanner({catalog:capped,reviewFirstBuild:true,provider:async({input})=>{
+  if(++calls===1)return action('details',{skus:['cpu']});
+  if(calls===2)return action('propose',{parts:[{skuOver:'cpu',quantity:1}]});
+  const state=JSON.parse(require('../tools/ai-planner-context.cjs').compactPlannerInput(input)[1].content);
+  assert.equal(state.qualityReview.remainingBudget,1);
+  assert.equal(state.budgetEvidence.budget,100);
+  return action('stop',{});
+ }});
+ assert.equal((await planner.run({requestId:'review-effective-ceiling'})).ok,true);
+});

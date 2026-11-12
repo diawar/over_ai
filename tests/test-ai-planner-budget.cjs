@@ -13,3 +13,13 @@ test('unknown prices or invalid quantities cannot produce a complete proposal to
   assert.equal(r.proposal.completePrices,false);assert.equal(r.proposal.total,undefined);
  }
 });
+
+test('cheaper-build ceiling limits the AI ledger without changing the customer budget',()=>{
+ const cards=[{skuOver:'ram',category:'RAM',price:300}];
+ for(const [maxTotal,effective] of [[500,500],[1500,1000]]){
+  const r=budgetMemory({budget:1000,partPreferences:{maxTotal}},cards,[{skuOver:'ram',quantity:2}]);
+  assert.equal(r.requestedBudget,1000);assert.equal(r.budget,effective);
+  assert.equal(r.proposal.total,600);assert.equal(r.proposal.remainingBudget,effective-600);
+  assert.equal(r.proposal.overBudgetBy,Math.max(0,600-effective));
+ }
+});

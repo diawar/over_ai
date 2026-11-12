@@ -19,6 +19,7 @@ from .kimi import active_provider, request as kimi_request
 from .models import Organization
 from .openrouter import completion_text, request as openrouter_request
 from . import ai_explanation_jobs as explanation_jobs
+from . import ai_usage_limits
 
 logger = logging.getLogger(__name__)
 
@@ -190,20 +191,20 @@ def internal_dialogue_router():
         provider_data = row.provider, row.model_id, row.encrypted_api_key
         db.rollback()
         from types import SimpleNamespace
+        def generate():
+            return ai_usage_limits.execute(organization_id, lambda: _dialogue(
+                SimpleNamespace(provider=provider_data[0], model_id=provider_data[1],
+                                encrypted_api_key=provider_data[2]), instructions, turns, schema, mode))
         if mode == "explanation" and request_id is not None:
             fresh = explanation_jobs.reserve(db, organization_id, request_id,
                 explanation_jobs.payload_hash(instructions, turns, schema))
             if fresh:
-                explanation_jobs.start(organization_id, request_id, lambda: _dialogue(
-                    SimpleNamespace(provider=provider_data[0], model_id=provider_data[1],
-                                    encrypted_api_key=provider_data[2]), instructions, turns, schema, mode))
+                explanation_jobs.start(organization_id, request_id, generate)
             receipt = explanation_jobs.read(db, organization_id, request_id)
             return JSONResponse(receipt, status_code=202 if receipt["status"] == "running" else 200)
         started = time.monotonic()
         try:
-            return await run_in_threadpool(
-                _dialogue, SimpleNamespace(provider=provider_data[0], model_id=provider_data[1],
-                                           encrypted_api_key=provider_data[2]), instructions, turns, schema, mode)
+            return await run_in_threadpool(generate)
         except HTTPException as exc:
             logger.warning("AI dialogue failed: provider=%s status=%s elapsed_seconds=%.1f",
                            provider_data[0], exc.status_code, time.monotonic() - started)

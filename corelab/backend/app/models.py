@@ -48,6 +48,30 @@ class User(OrganizationOwned, Base):
     created_at: Mapped[object] = mapped_column(DateTime(timezone=True), nullable=False, server_default=func.now())
 
 
+class AdminSession(Base):
+    __tablename__ = "admin_sessions"
+    token_hash: Mapped[str] = mapped_column(String(64), primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True)
+    password_fingerprint: Mapped[str] = mapped_column(String(64), nullable=False)
+    expires_at: Mapped[int] = mapped_column(Integer, nullable=False, index=True)
+
+
+class AIUsageBudget(Base):
+    __tablename__ = "ai_usage_budgets"
+    organization_id: Mapped[int] = mapped_column(ForeignKey("organizations.id", ondelete="CASCADE"), primary_key=True)
+    minute: Mapped[int] = mapped_column(Integer, nullable=False)
+    minute_count: Mapped[int] = mapped_column(Integer, nullable=False)
+    day: Mapped[int] = mapped_column(Integer, nullable=False)
+    day_count: Mapped[int] = mapped_column(Integer, nullable=False)
+
+
+class AIRequestLease(Base):
+    __tablename__ = "ai_request_leases"
+    id: Mapped[str] = mapped_column(String(64), primary_key=True)
+    organization_id: Mapped[int] = mapped_column(ForeignKey("organizations.id", ondelete="CASCADE"), nullable=False, index=True)
+    expires_at: Mapped[int] = mapped_column(Integer, nullable=False)
+
+
 product_categories = Table(
     "product_categories", Base.metadata,
     Column("product_id", ForeignKey("products.id", ondelete="CASCADE"), primary_key=True),

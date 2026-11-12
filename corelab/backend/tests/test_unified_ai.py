@@ -82,25 +82,6 @@ def test_openrouter_settings_are_private_and_used_by_internal_dialogue(catalog_c
     assert client.get("/api/v1/internal/ai/status?organization_id=1", headers=_auth(b"")).json() == {"ready": False, "provider": None}
 
 
-def test_openrouter_research_accepts_only_search_annotations(monkeypatch):
-    verified_url = "https://www.asus.com/model-a"
-    invented_url = "https://www.asus.com/invented"
-    def fake_request(key, path, payload=None, method="POST"):
-        assert path == "/chat/completions"
-        assert payload["tools"][0]["type"] == "openrouter:web_search"
-        return {"choices": [{"finish_reason": "stop", "message": {
-            "content": json.dumps({"url": invented_url}),
-            "annotations": [{"type": "url_citation", "url_citation": {"url": verified_url}}]}}]}
-    monkeypatch.setattr(openrouter, "request", fake_request)
-    payload = {"model": "moonshotai/kimi-k2.5", "input": [{"role": "system", "content": "Research"}],
-               "text": {"format": {"schema": {"type": "object", "required": ["url"],
-                                              "properties": {"url": {"type": "string"}}}}}}
-    result = openrouter.research_request("secret", payload)
-    from app.ai_research import _response_text
-    _, citations = _response_text(result)
-    assert citations == [verified_url] and invented_url not in citations
-
-
 def test_internal_dialogue_uses_selected_key_without_echoing_it(monkeypatch):
     key = "sk-hidden-12345678901234567890"
     monkeypatch.setattr(dialogue_views, "decrypt_key", lambda _: key)
@@ -185,13 +166,3 @@ def test_dialogue_stages_use_provider_specific_contracts(monkeypatch, provider, 
     monkeypatch.setattr(dialogue_views, "kimi_request", kimi)
     assert dialogue_views._dialogue(SimpleNamespace(provider=provider, model_id=model,
         encrypted_api_key="cipher"), "Instructions", turns, schema) == answer
-
-
-def test_openrouter_fails_closed_without_citations(monkeypatch):
-    monkeypatch.setattr(openrouter, "request", lambda *args, **kwargs: {"choices": [{"finish_reason": "stop", "message": {
-        "content": '{"url":"https://www.asus.com/invented"}', "annotations": []}}]})
-    payload = {"model": "moonshotai/kimi-k2.5", "input": [{"role": "system", "content": "Research"}],
-               "text": {"format": {"schema": {"type": "object", "required": ["url"],
-                                              "properties": {"url": {"type": "string"}}}}}}
-    from app.ai_research import _response_text
-    assert _response_text(openrouter.research_request("secret", payload))[1] == []

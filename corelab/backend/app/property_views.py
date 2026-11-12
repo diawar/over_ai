@@ -69,11 +69,10 @@ def property_router(admin_dependency, csrf_dependency):
     def get_rules(category_id: int, db: Session = Depends(get_db)):
         cat = category(db, category_id)
         rows = rules_for(db, [category_id])
-        has_local_properties = any(r.scope == str(category_id) and r.source == "internal" for r in rows)
         return {"category": {"id": cat.id, "name": cat.name, "selection_category": cat.selection_category,
                               "required_for_build": cat.required_for_build,
                               "template_code": cat.property_template_code,
-                              "can_generate_structure": not has_local_properties},
+                              "can_generate_structure": False},
                 "items": [{"id": r.id, "attribute_id": r.attribute_id, "scope": r.scope,
                            "revision": r.revision, **definition(r)}
                           for r in rows],

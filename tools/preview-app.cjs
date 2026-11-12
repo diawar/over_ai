@@ -3,6 +3,7 @@ const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
+const {createChatRequestLimiter,clientAddress}=require('./chat-request-limiter.cjs');
 const {createBuildQueue} = require('./build-queue.cjs');
 const {createSessionStore}=require('./chat-session-store.cjs');
 const {createChatService, corelabAIStatus, AIError} = require('./corelab-ai.cjs');
@@ -84,7 +85,7 @@ function calculateBuildResponse(body,localData,onProgress=()=>{}) {
       ({skuOver,category,name,productUrl:typeof productUrl==='string'&&/^https:\/\//i.test(productUrl)?productUrl:null,
         quantity,price,transferBusinessDays}))}}};
 }
-function createServer({chatService:providedChatService,buildDataProvider:providedBuildDataProvider,buildQueue:providedBuildQueue}={}) {
+function createServer({chatService:providedChatService,buildDataProvider:providedBuildDataProvider,buildQueue:providedBuildQueue,chatRequestLimiter=createChatRequestLimiter()}={}) {
 const buildDataProvider=providedBuildDataProvider || buildDataFromCorelab;
 const chatServices=new Map();
 const serviceUse=new Map();
@@ -225,8 +226,13 @@ const server=http.createServer(async (req,res)=>{
       let size=0;const chunks=[];
       for await(const chunk of req){size+=chunk.length;if(size>16384)throw new AIError('request_too_large',413);chunks.push(chunk);}
       let body;try{body=JSON.parse(Buffer.concat(chunks).toString('utf8'));}catch{throw new AIError('invalid_request');}
+      const admission=chatRequestLimiter.acquire(clientAddress(req),{newSession:!body?.sessionId});
+      if(!admission.allowed){res.setHeader('Retry-After',String(admission.retryAfter));json(429,{error:'ai_rate_limited'});return;}
       json(200,await chatService.chat(body,{signal:controller.signal}));
-    }catch(error){json(error instanceof AIError?error.status:500,{error:error instanceof AIError?error.code:'internal_error'});}
+    }catch(error){
+      if(error instanceof AIError&&error.retryAfter)res.setHeader('Retry-After',String(error.retryAfter));
+      json(error instanceof AIError?error.status:500,{error:error instanceof AIError?error.code:'internal_error'});
+    }
     return;
   }
   const file=files.get(route);

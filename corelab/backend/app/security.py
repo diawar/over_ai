@@ -1,4 +1,5 @@
 import secrets
+import hashlib
 from argon2 import PasswordHasher
 from argon2.exceptions import VerifyMismatchError, VerificationError
 from itsdangerous import BadSignature, URLSafeTimedSerializer
@@ -24,13 +25,23 @@ def session_serializer():
 
 
 def issue_session(user_id: int) -> str:
-    return session_serializer().dumps({"sub": user_id})
+    return session_serializer().dumps({"sub": user_id, "nonce": secrets.token_hex(32)})
+
+
+def session_hash(token: str) -> str:
+    return hashlib.sha256(token.encode()).hexdigest()
+
+
+def password_fingerprint(password_hash: str) -> str:
+    return hashlib.sha256(password_hash.encode()).hexdigest()
 
 
 def read_session(token: str, max_age: int = 8 * 60 * 60):
     try:
         payload = session_serializer().loads(token, max_age=max_age)
-        return int(payload["sub"])
+        if not isinstance(payload, dict) or type(payload.get("sub")) is not int or payload["sub"] < 1:
+            return None
+        return payload["sub"]
     except (BadSignature, KeyError, TypeError, ValueError):
         return None
 

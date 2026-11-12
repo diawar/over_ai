@@ -1,6 +1,8 @@
 'use strict';
 // Arithmetic over observed catalog facts, never a compatibility verdict or SKU selection.
 function budgetMemory(request,cards,proposedParts){
+ const requestedBudget=request.budget, maxTotal=request.partPreferences?.maxTotal;
+ const budget=Number.isSafeInteger(maxTotal)&&maxTotal>0&&Number.isFinite(requestedBudget)?Math.min(requestedBudget,maxTotal):requestedBudget;
  const bySku=new Map(cards.filter(c=>typeof c.skuOver==='string'&&Number.isFinite(c.price)&&c.price>0).map(c=>[c.skuOver,c]));
  const groups=new Map();
  for(const c of bySku.values())if(c.category){if(!groups.has(c.category))groups.set(c.category,[]);groups.get(c.category).push(c);}
@@ -15,11 +17,11 @@ function budgetMemory(request,cards,proposedParts){
  });
  let proposal=null;
  if(Array.isArray(proposedParts)){
-  const lines=proposedParts.map(p=>{const c=bySku.get(p.skuOver);const valid=Number.isSafeInteger(p.quantity)&&p.quantity>=1&&p.quantity<=32;
-   return {skuOver:p.skuOver,quantity:p.quantity,...(c&&valid?{category:c.category,unitPrice:c.price,lineTotal:c.price*p.quantity}:{priceUnknown:true})};});
+  const lines=proposedParts.map(p=>{const c=bySku.get(p?.skuOver);const valid=Number.isSafeInteger(p?.quantity)&&p.quantity>=1&&p.quantity<=32;
+   return {skuOver:p?.skuOver??null,quantity:p?.quantity??null,...(c&&valid?{category:c.category,unitPrice:c.price,lineTotal:c.price*p.quantity}:{priceUnknown:true})};});
   const subtotal=lines.reduce((n,l)=>n+(l.lineTotal??0),0),complete=lines.every(l=>!l.priceUnknown);
-  proposal={lines,pricedSubtotal:subtotal,completePrices:complete,...(complete?{total:subtotal,...(Number.isFinite(request.budget)?{overBudgetBy:Math.max(0,subtotal-request.budget),remainingBudget:request.budget-subtotal}:{})}:{})};
+  proposal={lines,pricedSubtotal:subtotal,completePrices:complete,...(complete?{total:subtotal,...(Number.isFinite(budget)?{overBudgetBy:Math.max(0,subtotal-budget),remainingBudget:budget-subtotal}:{})}:{})};
  }
- return {budget:request.budget,proposal,alternatives,scope:'Observed inspected items only, not the full catalog. Unit/kit prices; quantities multiply price. Cheaper is not better or compatible. These rows preserve price and identity when full details are omitted; reload omitted specifications before deciding. Only exact validation certifies the complete composition. Change optional search constraints or platform if inspected options cannot meet the total budget; do not repeat the same expensive allocation.'};
+ return {budget,requestedBudget,proposal,alternatives,scope:'Observed inspected items only, not the full catalog. Unit/kit prices; quantities multiply price. Cheaper is not better or compatible. These rows preserve price and identity when full details are omitted; reload omitted specifications before deciding. Only exact validation certifies the complete composition. Change optional search constraints or platform if inspected options cannot meet the total budget; do not repeat the same expensive allocation.'};
 }
 module.exports={budgetMemory};

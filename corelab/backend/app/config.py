@@ -1,6 +1,7 @@
 from functools import lru_cache
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import SecretStr
+from pydantic import Field
 
 
 class Settings(BaseSettings):
@@ -10,6 +11,9 @@ class Settings(BaseSettings):
     admin_password: str = ""
     app_env: str = "local"
     cors_origins: str = "http://localhost:5173"
+    ai_requests_per_minute: int = Field(default=30, ge=1, le=10000)
+    ai_requests_per_day: int = Field(default=500, ge=1, le=1000000)
+    ai_max_concurrent: int = Field(default=2, ge=1, le=100)
     # alias -> {token, organization_id?}; absent organization_id means shared bot.
     telegram_bots_json: SecretStr = SecretStr("{}")
 

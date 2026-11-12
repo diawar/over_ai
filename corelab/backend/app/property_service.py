@@ -103,22 +103,13 @@ def structure_report(db, category_id):
         if d["required_for_selection"] and d["ai_blocked"]:
             warnings.append(f"{d['label']}: обязательно для подбора, но закрыто для ИИ")
     previous = db.get(CategoryStructureCheck, category_id)
-    research = (previous.report or {}).get("research") if previous is not None and isinstance(previous.report, dict) else None
-    if not research or not research.get("models"):
-        warnings.append("Исследование 2–5 официальных моделей не прикреплено к категории в CoreLab")
     current = previous is not None and previous.fingerprint == digest
-    blocked_ids = {link.attribute_id for link in links if link.ai_blocked}
-    allowed = current and not errors and any(r.source == "internal" and r.attribute_id not in blocked_ids
-                                            and not definition(r)["ai_blocked"] for r in local)
-    reason = ("Можно загрузить свойства для пробной выборки пустых карточек" if allowed else
-              "Сначала задайте технические свойства и выполните актуальную проверку структуры" if not current or errors else
-              "Все технические свойства категории заблокированы для ИИ")
     return {"fingerprint": digest, "status": "error" if errors else "warning" if warnings else "success",
             "structure_status": "error" if errors else "success",
             "errors": list(dict.fromkeys(errors)), "warnings": list(dict.fromkeys(warnings)),
             "current": current,
-            "ai_load_allowed": allowed,
-            "load_reason": reason,
+            "ai_load_allowed": False,
+            "load_reason": "Платная загрузка удалена",
             "scope": "Покрытие сохранённой структуры внутренних правил категории"}
 
 

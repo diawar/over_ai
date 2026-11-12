@@ -41,7 +41,7 @@ def test_crud_csrf_preservation_and_check_invalidation(catalog_client):
     data = client.get(path).json()
     assert data["check"]["current"] is False
     checked = client.post(path + "/check", headers=headers).json()
-    assert checked["current"] is True and checked["ai_load_allowed"] is True
+    assert checked["current"] is True and checked["ai_load_allowed"] is False
     rule = next(r for r in data["items"] if r["code"] == "memory_type")
     assert rule["attribute_id"] == db.scalar(select(Attribute.id).where(Attribute.code == "memory_type"))
     body = {k: v for k, v in rule.items() if k not in ("id", "attribute_id", "scope", "revision")}
