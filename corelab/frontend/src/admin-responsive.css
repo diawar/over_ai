@@ -1,0 +1,200 @@
+/* Keep the admin layout independent of the public pages and theme overrides. */
+body:has(.admin-shell) { min-width: 0; }
+.admin-shell .content,
+.admin-shell .content > *,
+.admin-shell .catalog-workspace > *,
+.admin-shell .property-values-layout > *,
+.admin-shell .settings-branding-controls > * {
+  min-width: 0;
+}
+.admin-shell .content { overflow-wrap: anywhere; }
+.admin-shell .catalog-page { grid-template-columns: minmax(0, 1fr); }
+.admin-shell .catalog-table-wrap,
+.admin-shell .products-table-scroll {
+  position: relative;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+}
+.admin-shell .catalog-table { min-width: 680px; }
+.admin-shell .catalog-main .catalog-table { min-width: 800px; }
+.admin-shell .catalog-table th { overflow-wrap: normal; }
+.admin-shell .catalog-search,
+.admin-shell .catalog-select-label,
+.admin-shell .catalog-select-label select {
+  min-width: 0;
+  max-width: 100%;
+}
+.admin-shell .catalog-select-label { flex: 1 1 260px; }
+.admin-shell .catalog-select-label select { flex: 1; }
+.admin-shell .catalog-actions { flex-wrap: wrap; }
+.admin-shell .catalog-name > div { min-width: 0; }
+.admin-shell .catalog-name > button { flex-shrink: 0; }
+.admin-shell .content :is(input, select, textarea) { max-width: 100%; min-width: 0; }
+.admin-shell .content :is(button, a.catalog-button) { white-space: normal; }
+.admin-shell .property-values-main > header { height: auto; padding: 0; }
+.admin-shell .property-values-list > div > button > span { min-width: 0; }
+.admin-shell .property-values-list > div > button > strong { flex-shrink: 0; }
+.admin-shell .catalog-bulk-dialog { min-width: 0; max-height: 90dvh; }
+.admin-shell .catalog-bulk-heading > div { min-width: 0; }
+.admin-shell .catalog-bulk-heading > button { flex-shrink: 0; }
+.admin-shell .user-menu .avatar { flex-shrink: 0; }
+.admin-shell .user-menu > span:not(.avatar) { overflow-wrap: anywhere; }
+
+@media (max-width: 1250px) {
+  .admin-shell .catalog-workspace,
+  .admin-shell .sources-workspace { grid-template-columns: minmax(0, 1fr); }
+  .admin-shell .catalog-sidebar { max-height: 260px; }
+  .admin-shell .content { padding: 22px 18px; }
+}
+
+@media (min-width: 761px) and (max-width: 1100px) {
+  .admin-shell > .sidebar { width: 180px; padding: 20px 12px; }
+  .admin-shell .property-values-layout { grid-template-columns: minmax(0, 1fr); }
+  .admin-shell .property-values-list { max-height: 260px; }
+}
+
+@media (max-width: 760px) {
+  .admin-shell { flex-direction: column; }
+  .admin-shell > .sidebar {
+    width: 100%;
+    padding: 12px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    gap: 10px;
+  }
+  .admin-shell .sidebar .brand { justify-content: flex-start; }
+  .admin-shell .sidebar .brand > span:last-child { display: inline; }
+  .admin-shell .nav-caption,
+  .admin-shell .sidebar-foot { display: none; }
+  .admin-shell .sidebar nav {
+    display: flex;
+    gap: 4px;
+    margin: 0;
+    min-width: 0;
+    overflow-x: auto;
+    padding: 3px;
+    overscroll-behavior-x: contain;
+  }
+  .admin-shell .sidebar nav a {
+    flex: 0 0 auto;
+    justify-content: flex-start;
+    min-height: 44px;
+    padding: 10px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .admin-shell .sidebar nav a span { font-size: 18px; }
+  .admin-shell .main-column > header {
+    height: auto;
+    min-height: 60px;
+    padding: 12px 16px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .admin-shell .main-column > header > span { overflow-wrap: anywhere; }
+  .admin-shell .user-menu { min-width: 0; flex-wrap: wrap; }
+  .admin-shell .user-menu button { min-height: 36px; padding: 6px; }
+  .admin-shell .content { padding: 18px 12px; }
+  .admin-shell .catalog-heading { align-items: flex-start; flex-wrap: wrap; }
+  .admin-shell .catalog-toolbar { display: grid; grid-template-columns: minmax(0, 1fr); }
+  .admin-shell .catalog-search { width: 100%; }
+  .admin-shell .catalog-select-label { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .admin-shell .catalog-select-label select { width: 100%; }
+  .admin-shell .catalog-found { margin-left: 0; }
+  .admin-shell .property-values-layout { grid-template-columns: minmax(0, 1fr); }
+  .admin-shell .property-values-list { max-height: 260px; }
+  .admin-shell .property-values-main > header { align-items: stretch; }
+  .admin-shell .property-values-main > header > .catalog-search { flex-basis: 100%; }
+  .admin-shell .product-attribute-row { grid-template-columns: minmax(0, 1fr); }
+  .admin-shell .product-attribute-actions { justify-content: flex-end; }
+  .admin-shell .product-attribute-add { flex-wrap: wrap; }
+  .admin-shell .product-attribute-add label,
+  .admin-shell .product-attribute-editor label { min-width: 0; width: 100%; }
+  .admin-shell .product-attribute-editor :is(input, select, textarea) { width: 100%; }
+  .admin-shell .catalog-attributes > div { grid-template-columns: minmax(0, 1fr); gap: 3px; }
+  .admin-shell .settings-card-heading,
+  .admin-shell .settings-users-heading,
+  .admin-shell .settings-user-row,
+  .admin-shell .settings-user-row > div:last-child,
+  .admin-shell .source-metrics,
+  .admin-shell .mini-app-preview-heading,
+  .admin-shell .mini-app-preview-pagination { flex-wrap: wrap; }
+  .admin-shell .settings-branding-controls { grid-template-columns: minmax(0, 1fr); }
+  .admin-shell .settings-branding-logo { min-width: 0; }
+  .admin-shell .property-editor .property-fields,
+  .admin-shell .property-editor-options { grid-template-columns: minmax(0, 1fr); }
+  .admin-shell .property-editor > .property-editor-header { padding: 22px 18px; }
+  .admin-shell .property-editor-footer { flex-wrap: wrap; }
+  .admin-shell .catalog-pagination,
+  .admin-shell .products-pagination,
+  .admin-shell .logs-pagination { flex-wrap: wrap; gap: 12px; }
+  .admin-shell .catalog-pagination > div,
+  .admin-shell .products-pagination > div,
+  .admin-shell .logs-pagination > div { flex-wrap: wrap; }
+  .admin-shell .content :is(.catalog-button, .soft-button) { min-height: 40px; }
+  .admin-shell .products-filters > select { width: 100%; max-width: 100%; }
+  .admin-shell .sort-box select { min-width: 0; flex: 1; }
+  .admin-shell .mini-app-preview { padding: 16px; }
+}
+
+/* Mobile actions share the right edge of their own card or form. */
+@media (max-width: 760px) {
+  .admin-shell :is(.settings-user-row, .settings-users-heading, .operations-item-heading) {
+    grid-template-columns: minmax(0, 1fr) auto;
+    justify-content: stretch;
+  }
+  .admin-shell :is(.settings-inline-actions, .catalog-actions, .property-actions,
+    .property-values-row-actions, .property-delete-confirmation-actions,
+    .catalog-bulk-actions, .property-editor-footer, .product-attribute-add,
+    .product-attribute-editor, .mini-app-preview-pagination) {
+    justify-content: flex-end;
+  }
+  .admin-shell :is(.settings-user-row, .settings-users-heading, .operations-item-heading)
+    > :is(button, .settings-inline-actions) {
+    justify-self: end;
+    justify-content: flex-end;
+    max-width: 100%;
+  }
+  .admin-shell :is(.catalog-heading, .sources-heading) {
+    flex-wrap: wrap;
+  }
+  .admin-shell :is(.catalog-heading, .sources-heading) > :is(button, .catalog-button, .catalog-actions),
+  .admin-shell :is(.catalog-pagination, .products-pagination, .logs-pagination) > div {
+    margin-left: auto;
+  }
+  .admin-shell :is(.catalog-toolbar, .settings-card) > .catalog-actions {
+    width: 100%;
+  }
+  .admin-shell :is(.settings-card, .settings-card form, .operations-section,
+    .operations-save, .operations-row, .branch-calendar) > button.catalog-button {
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+    justify-self: end;
+  }
+  .admin-shell :is(.settings-branding-logo, .settings-branding-color,
+    .settings-branding-short-name) > button {
+    justify-self: end;
+    width: fit-content;
+    max-width: 100%;
+  }
+  .admin-shell .settings-delete-confirm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+  .admin-shell .settings-delete-confirm > p { flex-basis: 100%; }
+  .admin-shell .settings-delete-confirm > button { margin: 0; }
+  .admin-shell .catalog-bulk-actions .catalog-button { flex: 0 1 auto; }
+  .admin-shell .user-menu { margin-left: auto; justify-content: flex-end; }
+}
+
+@media (max-width: 480px) {
+  .admin-shell :is(.settings-user-row, .settings-users-heading, .operations-item-heading) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+}

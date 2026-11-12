@@ -1,0 +1,57 @@
+{
+  "products": [
+    {
+      "product_id": 19055,
+      "category_id": 146,
+      "manufacturer": "PCCOOLER",
+      "article": "P3-F650-W1H",
+      "official_model": "PCCooler KF650",
+      "source_url": "https://www.pccooler.cn/details/62",
+      "source_kind": "manufacturer_site",
+      "checked_at": "2026-10-25",
+      "reviewed_by": "Codex",
+      "values": {
+        "psu_power_w": 650,
+        "psu_form_factor": "ATX",
+        "psu_atx_version": "ATX 12V 2.4",
+        "psu_efficiency_rating": "80 PLUS White",
+        "psu_modularity": "fixed cables",
+        "psu_length_mm": 140,
+        "psu_cpu_connectors": [
+          {"kind": "cpu_4plus4", "count": 2, "raw": "CPU (4+4)Pin x2"}
+        ],
+        "psu_pcie_connectors": [
+          {"kind": "pcie_8", "count": 1, "raw": "PCI-E (6+2)Pin x1"}
+        ],
+        "psu_pcie_6plus2_count": 1
+      }
+    },
+    {
+      "product_id": 16991,
+      "category_id": 146,
+      "manufacturer": "GamerStorm",
+      "article": "PQ650G-FD",
+      "official_model": "GamerStorm PQ650G",
+      "source_url": "https://www.gamerstorm.com/ru/product/PowerSupply/2025-06/2601_15398.shtml",
+      "source_kind": "manufacturer_site",
+      "checked_at": "2026-10-25",
+      "reviewed_by": "Codex",
+      "values": {
+        "psu_power_w": 650,
+        "psu_form_factor": "ATX",
+        "psu_atx_version": "ATX 3.1",
+        "psu_efficiency_rating": "80 PLUS Gold",
+        "psu_length_mm": 140,
+        "psu_cpu_connectors": [
+          {"kind": "cpu_4plus4", "count": 2, "raw": "CPU (4+4)Pin x1 x2"}
+        ],
+        "psu_pcie_connectors": [
+          {"kind": "pcie_8", "count": 3, "raw": "PCI-E (6+2)Pin x1 x1 and PCI-E (6+2)Pin x2 x1"},
+          {"kind": "pcie_16", "count": 1, "raw": "12V-2x6 (16Pin) x1 x1"}
+        ],
+        "psu_pcie_6plus2_count": 3,
+        "psu_connector12v2x6_count": 1
+      }
+    }
+  ]
+}

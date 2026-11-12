@@ -1,0 +1,31 @@
+.logs-page{max-width:1200px}
+.logs-panel{display:grid;gap:14px;padding:18px;background:#fff;border:1px solid #ebecf2;border-radius:10px}
+.logs-section-heading h2{margin:0;color:#353a54;font-size:16px}
+.logs-section-heading p{margin:5px 0 0;color:#85899c;font-size:12px}
+.logs-filters{display:flex;gap:12px;flex-wrap:wrap}
+.logs-filters label{display:grid;gap:6px;flex:1 1 220px;color:#656b80;font-size:12px}
+.logs-filters select,.logs-filters input{min-height:38px;padding:8px 10px;border:1px solid #dfe2d5;border-radius:7px;background:#fff;color:#353a54;font:inherit}
+.logs-jobs{display:grid;gap:9px}
+.logs-job{border:1px solid #e8e9f1;border-radius:8px;padding:10px 12px}
+.logs-job summary{display:flex;align-items:center;gap:14px;cursor:pointer;color:#353a54;font-size:12px}
+.logs-job summary>span:first-child{flex:1}
+.logs-job summary strong,.logs-job summary small{display:block}
+.logs-job summary small{margin-top:3px;color:#898da0;font-size:11px}
+.logs-job-count{color:#62677e;font-weight:600}
+.logs-job progress{display:block;width:100%;height:9px;margin:14px 0 8px;accent-color:var(--accent)}
+.logs-job p{margin:0 0 8px;color:#62677e;font-size:12px}
+.logs-job ul{display:grid;gap:5px;margin:0;padding:0;list-style:none}
+.logs-job li{display:flex;gap:12px;justify-content:space-between;border-top:1px solid #f0f0f5;padding:6px 0;color:#62677e;font-size:11px}
+.logs-job li a{color:var(--accent-strong)}.logs-job li span:last-child{text-align:right}
+.logs-status{display:inline-block;width:max-content;border-radius:5px;padding:4px 7px;background:#f1f1f8;color:#656b80;font-size:11px;font-weight:600}
+.logs-status-completed,.logs-status-success{background:#edf7f1;color:#3f7962}
+.logs-status-failed,.logs-status-error{background:#fff0f0;color:#a34343}
+.logs-status-skipped,.logs-status-warning{background:#fff6e6;color:#886c38}
+.logs-table td:first-child{min-width:150px;width:auto}.logs-table td{vertical-align:top}
+.logs-table td:last-child small{display:block;margin-top:5px;color:#74798e;font-size:11px;white-space:normal}
+.logs-pagination{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#858aa0;font-size:11px}
+.logs-pagination>div{display:flex;align-items:center;gap:9px}
+.logs-empty{margin:0;padding:24px;color:#858aa0;text-align:center;font-size:12px}
+.logs-error{margin:0;color:#a34343;font-size:12px}
+@media(max-width:640px){.logs-panel{padding:14px}.logs-job summary{flex-wrap:wrap}.logs-job li{display:grid;gap:3px}.logs-job li span:last-child{text-align:left}.logs-pagination{flex-wrap:wrap}.logs-filters label{flex-basis:100%}}
+.logs-job li{padding-block:10px}

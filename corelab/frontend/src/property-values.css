@@ -1,0 +1,14 @@
+.property-values-layout{display:grid;grid-template-columns:minmax(230px,280px) minmax(0,1fr);gap:16px;align-items:start}
+.property-values-list,.property-values-main{background:#fff;border:1px solid #ebecf2;border-radius:10px;padding:16px}
+.property-values-list{max-height:72vh;overflow:auto}.property-values-list>.catalog-search{box-sizing:border-box;width:100%}.property-values-main header>.catalog-search{flex:0 1 320px;box-sizing:border-box}
+.property-values-list>div{display:grid;gap:3px;margin-top:12px}.property-values-list>div>button{display:flex;justify-content:space-between;gap:12px;width:100%;padding:10px;border:0;border-radius:7px;background:transparent;color:#353a54;text-align:left;cursor:pointer;font:inherit;font-size:12px}
+.property-values-list>div>button.selected{background:var(--accent-soft);color:var(--accent-strong)}.property-values-list>div>button small{display:block;margin-top:3px;color:#8a8da0;font-size:10px}.property-values-list>div>button strong{color:#777c91;font-size:11px}
+.property-values-main{display:grid;gap:15px;min-width:0}.property-values-main header{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap}.property-values-main h2{margin:0;color:#353a54;font-size:18px}.property-values-main header p{margin:5px 0 0;color:#85899c;font-size:12px}
+.property-values-title{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}.property-delete-attribute{color:#a23b43}
+.property-values-sort{border:0;padding:0;background:transparent;color:inherit;font:inherit;font-weight:inherit;cursor:pointer}.property-values-sort:hover{text-decoration:underline}.property-values-sort:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.property-values-actions{flex-wrap:wrap}.property-values-row-actions{display:flex;gap:8px;flex-wrap:wrap}
+.property-values-success{margin:0;color:#3f7962;font-size:12px}
+@media(max-width:760px){.property-values-layout{grid-template-columns:1fr}.property-values-list{max-height:240px}}
+.property-values-list>div>button.selection-participant{background:var(--accent-soft);box-shadow:inset 3px 0 var(--accent)}
+.property-values-list>div>button.selection-participant.selected{outline:2px solid var(--accent);outline-offset:-2px}
+.property-values-list>div>button .selection-badge{display:inline-block;color:var(--accent-strong);margin-top:5px}

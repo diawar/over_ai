@@ -34,6 +34,7 @@
     {"label": "STN", "city": "Алматы", "deliveries": {"Алматы": 1, "Астана": 5, "Павлодар": 5}},
     {"label": "Marvel", "city": "Алматы", "deliveries": {"Алматы": 3, "Астана": 10, "Павлодар": 10}},
     {"label": "PULSER", "city": "Алматы", "deliveries": {"Алматы": 1, "Астана": 5, "Павлодар": 5}},
+    {"label": "Azerti", "city": "Алматы", "deliveries": {"Алматы": 1, "Астана": 5, "Павлодар": 5}},
     {"label": "VENDER_P", "city": "Алматы", "company": "VENDER", "deliveries": {"Алматы": 1, "Астана": 5, "Павлодар": 5}},
     {"label": "ASBIS", "city": "Алматы", "deliveries": {"Алматы": 1, "Астана": 5, "Павлодар": 5}},
     {"label": "ALSER", "city": "Алматы", "deliveries": {"Алматы": null, "Астана": null, "Павлодар": null}},

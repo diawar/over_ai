@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Каталог</title>
+  <link id="app-icon" rel="icon" href="data:,">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="shell">
+    <header><img id="logo" alt="" hidden><div><small>КАТАЛОГ ТОВАРОВ</small><h1 id="shop-name">Подключение…</h1></div><button id="change-shop" type="button" hidden>Сменить</button></header>
+    <p id="notice" role="status"></p>
+    <a id="browser-login" href="/admin/login" hidden>Войти как администратор для предпросмотра</a>
+    <section id="shop-picker" hidden><h2>Выберите магазин</h2><div id="shops"></div></section>
+    <section id="catalog" hidden>
+      <form id="search"><input id="query" type="search" placeholder="Название или артикул" aria-label="Поиск товаров"><button type="submit">Найти</button></form>
+      <label class="filter">Категория <select id="category"><option value="">Все категории</option></select></label>
+      <p id="count"></p><div id="products"></div>
+      <nav class="pages" aria-label="Страницы каталога"><button id="previous" type="button">Назад</button><span id="page-label"></span><button id="next" type="button">Далее</button></nav>
+    </section>
+    <section id="detail" hidden><button id="back" type="button"><!-- lucide:arrow-left --><svg aria-hidden="true" focusable="false" class="app-icon lucide lucide-arrow-left" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m12 19-7-7 7-7" /> <path d="M19 12H5" /> </svg><!-- /lucide --> К каталогу</button><h2 id="detail-name"></h2><p id="detail-price"></p><dl id="detail-attributes"></dl></section>
+  </main>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script type="module" src="./app.mjs"></script>
+</body>
+</html>

@@ -1,0 +1,1508 @@
+{
+  "products": [
+    {
+      "product_id": 757,
+      "category_id": 359,
+      "manufacturer": "ASRock",
+      "article": "A520M-HVS",
+      "official_model": "Материнская плата ASRock A520M-HVS",
+      "source_url": "https://www.asrock.com/mb/AMD/A520M-HVS/index.asp",
+      "checked_at": "2026-10-24",
+      "values": {
+        "motherboard_fan_headers": 2,
+        "motherboard_dimensions_mm": "230 x 201 mm",
+        "motherboard_dimensions_reported": true,
+        "motherboard_supported_cpu_series": [
+          "Ryzen 5000"
+        ]
+      }
+    },
+    {
+      "product_id": 1078,
+      "category_id": 359,
+      "manufacturer": "Gigabyte",
+      "article": "B840M H",
+      "official_model": "Материнская плата Gigabyte B840M H",
+      "source_url": "https://www.gigabyte.com/Motherboard/B840M-H/sp",
+      "checked_at": "2026-10-24",
+      "values": {
+        "motherboard_fan_headers": 2,
+        "motherboard_dimensions_mm": "230 x 225 mm",
+        "motherboard_dimensions_reported": true,
+        "motherboard_supported_cpu_series": [
+          "Ryzen 7000",
+          "Ryzen 8000",
+          "Ryzen 9000"
+        ]
+      }
+    },
+    {
+      "product_id": 2554,
+      "category_id": 359,
+      "manufacturer": "ASUS",
+      "article": "ROG STRIX X870E-E GAMING NEO",
+      "official_model": "ROG STRIX X870E-E GAMING WIFI7 NEO",
+      "source_url": "https://rog.asus.com/us/motherboards/rog-strix/rog-strix-x870e-e-gaming-wifi7-neo/spec/",
+      "checked_at": "2026-10-24",
+      "values": {
+        "motherboard_socket": "AM5",
+        "motherboard_chipset": "AMD X870E",
+        "motherboard_form_factor": "ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 256,
+        "motherboard_pcie_x16": "PCIe 5.0 x16",
+        "motherboard_m2_slots": 5,
+        "motherboard_sata_ports": 4,
+        "motherboard_m2_interfaces": [
+          "M.2_1: PCIe 5.0 x4 with Ryzen 9000/7000; PCIe 4.0 x4 with Ryzen 8700/8600/8400/8500/8300",
+          "M.2_2: PCIe 5.0 x4 with Ryzen 9000/7000; PCIe 4.0 x4 with Ryzen 8700/8600/8400; unavailable with Ryzen 8500/8300",
+          "M.2_3: PCIe 4.0 x4; shares bandwidth with PCIEX16(G4), disabling that slot when populated",
+          "M.2_4: PCIe 4.0 x4",
+          "M.2_5: PCIe 4.0 x4"
+        ],
+        "motherboard_fan_headers": [
+          {
+            "kind": "system_fan_header",
+            "count": 5,
+            "raw": "5 x 4-pin Chassis Fan headers"
+          }
+        ],
+        "motherboard_internal_usb_headers": [
+          {
+            "kind": "usb_c_type_e",
+            "count": 2,
+            "raw": "2 x USB 20Gbps connectors supporting USB Type-C"
+          },
+          {
+            "kind": "usb3_19pin",
+            "count": 2,
+            "raw": "2 x USB 5Gbps headers supporting 4 additional USB 5Gbps ports"
+          },
+          {
+            "kind": "usb2_9pin",
+            "count": 3,
+            "raw": "3 x USB 2.0 headers supporting 6 additional USB 2.0 ports"
+          }
+        ]
+      }
+    },
+    {
+      "product_id": 3187,
+      "category_id": 359,
+      "manufacturer": "MSI",
+      "article": "MPG X870E CARBON WIFI",
+      "official_model": "MSI MPG X870E CARBON WIFI",
+      "source_url": "https://www.msi.com/Motherboard/MPG-X870E-CARBON-WIFI/Specification",
+      "checked_at": "2026-10-25",
+      "values": {
+        "motherboard_socket": "AM5",
+        "motherboard_chipset": "AMD X870E",
+        "motherboard_form_factor": "ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 256,
+        "motherboard_pcie_x16": "PCIe 5.0 x16",
+        "motherboard_m2_slots": 4,
+        "motherboard_sata_ports": 4,
+        "motherboard_m2_interfaces": [
+          "M.2_1: PCIe 5.0 x4; CPU dependent",
+          "M.2_2: PCIe 5.0 x4; unavailable with Ryzen 8000",
+          "M.2_3: PCIe 4.0 x4",
+          "M.2_4: PCIe 4.0 x4"
+        ],
+        "motherboard_fan_headers": [
+          {
+            "kind": "system_fan_header",
+            "count": 5,
+            "raw": "5 x System Fan"
+          }
+        ],
+        "motherboard_internal_usb_headers": [
+          {
+            "kind": "usb_c_type_e",
+            "count": 1,
+            "raw": "1 x USB 20Gbps Type-C front connector"
+          },
+          {
+            "kind": "usb3_19pin",
+            "count": 2,
+            "ports": 4,
+            "raw": "4 x USB 5Gbps Type-A front ports through internal headers"
+          },
+          {
+            "kind": "usb2_9pin",
+            "count": 2,
+            "ports": 4,
+            "raw": "4 x USB 2.0 front ports through internal headers"
+          }
+        ]
+      }
+    },
+    {
+      "product_id": 3580,
+      "category_id": 359,
+      "manufacturer": "Gigabyte",
+      "article": "B650M AORUS ELITE AX ICE",
+      "official_model": "Материнская плата Gigabyte B650M AORUS ELITE AX ICE",
+      "source_url": "https://www.gigabyte.com/in/Motherboard/B650M-AORUS-ELITE-AX-ICE-rev-1x/sp",
+      "checked_at": "2026-10-24",
+      "values": {
+        "motherboard_fan_headers": 3,
+        "motherboard_dimensions_mm": "244 x 244 mm",
+        "motherboard_dimensions_reported": true,
+        "motherboard_supported_cpu_series": [
+          "Ryzen 7000",
+          "Ryzen 8000",
+          "Ryzen 9000"
+        ]
+      }
+    },
+    {
+      "product_id": 3639,
+      "category_id": 359,
+      "manufacturer": "ASRock",
+      "article": "B760M PRO RS",
+      "official_model": "ASRock B760M Pro RS",
+      "source_url": "https://www.asrock.com/MB/Intel/B760M%20Pro%20RS/index.asp",
+      "checked_at": "2026-10-17",
+      "values": {
+        "motherboard_socket": "LGA1700",
+        "motherboard_chipset": "Intel B760",
+        "motherboard_form_factor": "Micro ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_memory_channels": "Dual channel",
+        "motherboard_pcie_x16": "PCIe 5.0 x16",
+        "motherboard_m2_slots": 3,
+        "motherboard_sata_ports": 4
+      }
+    },
+    {
+      "product_id": 3796,
+      "category_id": 359,
+      "manufacturer": "Gigabyte",
+      "article": "Z790 D",
+      "official_model": "GIGABYTE Z790 D",
+      "source_url": "https://www.gigabyte.com/in/Motherboard/Z790-D-rev-10-12/sp",
+      "checked_at": "2026-10-17",
+      "values": {
+        "motherboard_socket": "LGA1700",
+        "motherboard_chipset": "Intel Z790",
+        "motherboard_form_factor": "ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 256,
+        "motherboard_memory_channels": "Dual channel",
+        "motherboard_pcie_x16": "PCIe 5.0 x16"
+      }
+    },
+    {
+      "product_id": 4156,
+      "category_id": 359,
+      "manufacturer": "ASUS",
+      "article": "PROART X870E-CREATOR WIFI",
+      "official_model": "ASUS ProArt X870E-CREATOR WIFI",
+      "source_url": "https://www.asus.com/nz/motherboards-components/motherboards/proart/proart-x870e-creator-wifi/techspec/",
+      "checked_at": "2026-10-25",
+      "source_kind": "manufacturer_site",
+      "values": {
+        "motherboard_socket": "AM5",
+        "motherboard_chipset": "AMD X870E",
+        "motherboard_form_factor": "ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 256,
+        "motherboard_pcie_x16": "PCIe 5.0 x16",
+        "motherboard_m2_slots": 4,
+        "motherboard_sata_ports": 4,
+        "motherboard_fan_headers": [
+          {
+            "kind": "system_fan_header",
+            "count": 5,
+            "raw": "5 x 4-pin Chassis Fan headers"
+          }
+        ],
+        "motherboard_internal_usb_headers": [
+          {
+            "kind": "usb_c_type_e",
+            "count": 1,
+            "raw": "1 x USB 20Gbps connector supports USB Type-C"
+          },
+          {
+            "kind": "usb3_19pin",
+            "count": 1,
+            "ports": 2,
+            "raw": "1 x USB 5Gbps header supports 2 additional USB 5Gbps ports"
+          },
+          {
+            "kind": "usb2_9pin",
+            "count": 3,
+            "ports": 6,
+            "raw": "3 x USB 2.0 headers support 6 additional USB 2.0 ports"
+          }
+        ]
+      }
+    },
+    {
+      "product_id": 4195,
+      "category_id": 359,
+      "manufacturer": "ASUS",
+      "article": "PRIME H610M-K",
+      "official_model": "Материнская плата ASUS PRIME H610M-K DDR5",
+      "source_url": "https://www.asus.com/uk/motherboards-components/motherboards/prime/prime-h610m-k/techspec/",
+      "checked_at": "2026-10-24",
+      "values": {
+        "motherboard_fan_headers": 2,
+        "motherboard_dimensions_mm": "234 x 203 mm",
+        "motherboard_dimensions_reported": true,
+        "motherboard_supported_cpu_series": [
+          "Intel Core 12th Gen",
+          "Intel Core 13th Gen",
+          "Intel Core 14th Gen"
+        ]
+      }
+    },
+    {
+      "product_id": 4703,
+      "category_id": 359,
+      "manufacturer": "ASUS",
+      "article": "ROG STRIX B760-I GAMING WIFI",
+      "official_model": "Материнская плата ASUS ROG Strix B760-I Gaming WiFi",
+      "source_url": "https://rog.asus.com/us/motherboards/rog-strix/rog-strix-b760-i-gaming-wifi-model/spec/",
+      "checked_at": "2026-10-24",
+      "values": {
+        "motherboard_fan_headers": 1,
+        "motherboard_dimensions_mm": "170 x 170 mm",
+        "motherboard_dimensions_reported": true,
+        "motherboard_supported_cpu_series": [
+          "Intel Core 12th Gen",
+          "Intel Core 13th Gen",
+          "Intel Core 14th Gen"
+        ],
+        "motherboard_socket": "LGA1700",
+        "motherboard_chipset": "Intel B760",
+        "motherboard_form_factor": "Mini-ITX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 2,
+        "motherboard_max_memory_gb": 96,
+        "motherboard_memory_channels": "Dual channel",
+        "motherboard_pcie_x16": "PCIe 5.0 x16",
+        "motherboard_m2_slots": 2,
+        "motherboard_sata_ports": 4
+      }
+    },
+    {
+      "product_id": 5631,
+      "category_id": 359,
+      "manufacturer": "ASUS",
+      "article": "TUF GAMING B850-E WIFI",
+      "official_model": "Материнская плата ASUS TUF GAMING B850-E WIFI",
+      "source_url": "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850-e-wifi/techspec/",
+      "checked_at": "2026-10-24",
+      "values": {
+        "motherboard_fan_headers": 4,
+        "motherboard_dimensions_mm": "305 x 244 mm",
+        "motherboard_dimensions_reported": true,
+        "motherboard_supported_cpu_series": [
+          "Ryzen 7000",
+          "Ryzen 8000",
+          "Ryzen 9000"
+        ],
+        "motherboard_socket": "AM5",
+        "motherboard_chipset": "AMD B850",
+        "motherboard_form_factor": "ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 256,
+        "motherboard_memory_channels": "Dual channel",
+        "motherboard_pcie_x16": "PCIe 5.0 x16",
+        "motherboard_m2_slots": 3,
+        "motherboard_sata_ports": 4
+      }
+    },
+    {
+      "product_id": 5634,
+      "category_id": 359,
+      "manufacturer": "ASUS",
+      "article": "ROG STRIX X870E-E GAMING WIFI",
+      "official_model": "ASUS ROG STRIX X870E-E GAMING WIFI",
+      "source_url": "https://rog.asus.com/us/motherboards/rog-strix/rog-strix-x870e-e-gaming-wifi/spec/",
+      "checked_at": "2026-10-25",
+      "source_kind": "manufacturer_site",
+      "values": {
+        "motherboard_socket": "AM5",
+        "motherboard_chipset": "AMD X870E",
+        "motherboard_form_factor": "ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 256,
+        "motherboard_pcie_x16": "PCIe 5.0 x16",
+        "motherboard_m2_slots": 5,
+        "motherboard_sata_ports": 4,
+        "motherboard_fan_headers": [
+          {
+            "kind": "system_fan_header",
+            "count": 5,
+            "raw": "5 x 4-pin Chassis Fan headers"
+          }
+        ],
+        "motherboard_internal_usb_headers": [
+          {
+            "kind": "usb_c_type_e",
+            "count": 1,
+            "raw": "1 x USB 20Gbps connector (supports USB Type-C)"
+          },
+          {
+            "kind": "usb3_19pin",
+            "count": 2,
+            "ports": 4,
+            "raw": "2 x USB 5Gbps headers support additional 4 USB 5Gbps ports"
+          },
+          {
+            "kind": "usb2_9pin",
+            "count": 3,
+            "ports": 6,
+            "raw": "3 x USB 2.0 headers support additional 6 USB 2.0 ports"
+          }
+        ]
+      }
+    },
+    {
+      "product_id": 5640,
+      "category_id": 359,
+      "manufacturer": "ASUS",
+      "article": "TUF GAMING B850M-PLUS WIFI7",
+      "official_model": "ASUS TUF GAMING B850M-PLUS WIFI7",
+      "source_url": "https://www.asus.com/us/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850m-plus-wifi7/techspec/",
+      "checked_at": "2026-10-17",
+      "values": {
+        "motherboard_socket": "AM5",
+        "motherboard_chipset": "AMD B850",
+        "motherboard_form_factor": "Micro ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 256,
+        "motherboard_memory_channels": "Dual channel"
+      }
+    },
+    {
+      "product_id": 5881,
+      "category_id": 359,
+      "manufacturer": "ASUS",
+      "article": "ROG MAXIMUS Z890 HERO",
+      "official_model": "ASUS ROG MAXIMUS Z890 HERO",
+      "source_url": "https://rog.asus.com/motherboards/rog-maximus/rog-maximus-z890-hero/spec/",
+      "checked_at": "2026-10-25",
+      "values": {
+        "motherboard_socket": "LGA1851",
+        "motherboard_chipset": "Intel Z890",
+        "motherboard_form_factor": "ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 256,
+        "motherboard_pcie_x16": "PCIe 5.0 x16",
+        "motherboard_m2_slots": 6,
+        "motherboard_sata_ports": 4,
+        "motherboard_m2_interfaces": [
+          "M.2_1: PCIe 5.0 x4",
+          "M.2_2: PCIe 4.0 x4",
+          "M.2_3 and M.2_4: PCIe 5.0 x4; PCIEX16(G5) runs x8 if either is enabled",
+          "M.2_5: PCIe 4.0 x4",
+          "M.2_6: PCIe 4.0 x4"
+        ],
+        "motherboard_fan_headers": [
+          {
+            "kind": "system_fan_header",
+            "count": 4,
+            "raw": "4 x 4-pin Chassis Fan headers"
+          }
+        ],
+        "motherboard_internal_usb_headers": [
+          {
+            "kind": "usb_c_type_e",
+            "count": 2,
+            "raw": "1 x USB 20Gbps connector and 1 x USB 10Gbps connector, both support USB Type-C"
+          },
+          {
+            "kind": "usb3_19pin",
+            "count": 2,
+            "ports": 4,
+            "raw": "2 x USB 5Gbps headers support 4 additional ports"
+          },
+          {
+            "kind": "usb2_9pin",
+            "count": 2,
+            "ports": 4,
+            "raw": "2 x USB 2.0 headers support 4 additional ports"
+          }
+        ]
+      }
+    },
+    {
+      "product_id": 6034,
+      "category_id": 359,
+      "manufacturer": "MaxSun",
+      "article": "MS-Challenger H610M-H",
+      "official_model": "Материнская плата MaxSun MS-Challenger H610M-H",
+      "source_url": "https://www.maxsun.com/products/ms-challenger-h610m-h",
+      "checked_at": "2026-10-19",
+      "values": {
+        "motherboard_dimensions_mm": "225 x 185 mm",
+        "motherboard_dimensions_reported": true,
+        "motherboard_supported_cpu_series": [
+          "Intel Core 12th Gen",
+          "Intel Core 13th Gen",
+          "Intel Core 14th Gen"
+        ],
+        "motherboard_socket": "LGA1700",
+        "motherboard_chipset": "Intel H610",
+        "motherboard_form_factor": "Micro ATX",
+        "memory_type": "DDR4",
+        "motherboard_memory_slots": 2,
+        "motherboard_max_memory_gb": 64,
+        "motherboard_memory_channels": "Dual channel",
+        "motherboard_pcie_x16": "PCIe 4.0 x16",
+        "motherboard_m2_slots": 1,
+        "motherboard_sata_ports": 2
+      }
+    },
+    {
+      "product_id": 6070,
+      "category_id": 359,
+      "manufacturer": "MSI",
+      "article": "MPG X870I EDGE TI EVO WIFI",
+      "official_model": "MSI MPG X870I EDGE TI EVO WIFI",
+      "source_url": "https://us.msi.com/Motherboard/MPG-X870I-EDGE-TI-EVO-WIFI/Specification",
+      "checked_at": "2026-10-25",
+      "values": {
+        "motherboard_socket": "AM5",
+        "motherboard_chipset": "AMD X870",
+        "motherboard_form_factor": "Mini-ITX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 2,
+        "motherboard_max_memory_gb": 128,
+        "motherboard_pcie_x16": "PCIe 5.0 x16",
+        "motherboard_m2_slots": 3,
+        "motherboard_sata_ports": 2,
+        "motherboard_m2_interfaces": [
+          "1 x M.2 Gen5 x4",
+          "1 x M.2 Gen4 x4 onboard",
+          "1 x M.2 Gen4 x4 via included 5-in-1 Xpander Card"
+        ],
+        "motherboard_fan_headers": [
+          {
+            "kind": "system_fan_header",
+            "count": 1,
+            "raw": "1 x System Fan"
+          }
+        ],
+        "motherboard_internal_usb_headers": [
+          {
+            "kind": "usb_c_type_e",
+            "count": 1,
+            "raw": "1 x USB 20Gbps Type-C front connector"
+          },
+          {
+            "kind": "usb3_19pin",
+            "count": 1,
+            "ports": 2,
+            "raw": "2 x USB 5Gbps Type-A front ports through header"
+          },
+          {
+            "kind": "usb2_9pin",
+            "count": 1,
+            "ports": 2,
+            "raw": "2 x USB 2.0 front ports through header"
+          }
+        ]
+      }
+    },
+    {
+      "product_id": 6075,
+      "category_id": 359,
+      "manufacturer": "MSI",
+      "article": "B550-A PRO",
+      "official_model": "Материнская плата MSI B550-A PRO",
+      "source_url": "https://www.msi.com/Motherboard/B550-A-PRO/Specification",
+      "checked_at": "2026-10-24",
+      "values": {
+        "motherboard_fan_headers": 6,
+        "motherboard_dimensions_mm": "305 x 244 mm",
+        "motherboard_dimensions_reported": true,
+        "motherboard_supported_cpu_series": [
+          "Ryzen 5000"
+        ],
+        "motherboard_socket": "AM4",
+        "motherboard_chipset": "AMD B550",
+        "motherboard_form_factor": "ATX",
+        "memory_type": "DDR4",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 128,
+        "motherboard_memory_channels": "Dual channel",
+        "motherboard_pcie_x16": "PCIe 4.0 x16",
+        "motherboard_m2_slots": 2,
+        "motherboard_sata_ports": 6
+      }
+    },
+    {
+      "product_id": 6258,
+      "category_id": 359,
+      "manufacturer": "ASUS",
+      "article": "PRIME B760M-R D4",
+      "official_model": "Материнская плата ASUS PRIME B760M-R D4",
+      "source_url": "https://www.asus.com/uk/motherboards-components/motherboards/prime/prime-b760m-r-d4/techspec/",
+      "checked_at": "2026-10-24",
+      "values": {
+        "motherboard_fan_headers": 2,
+        "motherboard_dimensions_mm": "244 x 211 mm",
+        "motherboard_dimensions_reported": true,
+        "motherboard_supported_cpu_series": [
+          "Intel Core 12th Gen",
+          "Intel Core 13th Gen",
+          "Intel Core 14th Gen"
+        ],
+        "motherboard_socket": "LGA1700",
+        "motherboard_chipset": "Intel B760",
+        "motherboard_form_factor": "Micro ATX",
+        "memory_type": "DDR4",
+        "motherboard_memory_slots": 2,
+        "motherboard_max_memory_gb": 64,
+        "motherboard_memory_channels": "Dual channel",
+        "motherboard_pcie_x16": "PCIe 4.0 x16",
+        "motherboard_m2_slots": 2,
+        "motherboard_sata_ports": 4
+      }
+    },
+    {
+      "product_id": 6523,
+      "category_id": 359,
+      "manufacturer": "ASUS",
+      "article": "ROG MAXIMUS Z890 APEX",
+      "official_model": "ASUS ROG MAXIMUS Z890 APEX",
+      "source_url": "https://rog.asus.com/uk/motherboards/rog-maximus/rog-maximus-z890-apex/spec/",
+      "checked_at": "2026-10-25",
+      "values": {
+        "motherboard_socket": "LGA1851",
+        "motherboard_chipset": "Intel Z890",
+        "motherboard_form_factor": "ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 2,
+        "motherboard_max_memory_gb": 128,
+        "motherboard_pcie_x16": "PCIe 5.0 x16",
+        "motherboard_m2_slots": 6,
+        "motherboard_sata_ports": 4,
+        "motherboard_m2_interfaces": [
+          "4 onboard M.2 slots; 1 PCIe 5.0 x4, 3 PCIe 4.0/5.0 x4 per specification",
+          "DIMM.2 expansion card: 2 additional M.2 slots"
+        ],
+        "motherboard_fan_headers": [
+          {
+            "kind": "system_fan_header",
+            "count": 4,
+            "raw": "2 x 4-pin Chassis Fan headers plus 2 x 4-pin Full Speed Fan headers"
+          }
+        ],
+        "motherboard_internal_usb_headers": [
+          {
+            "kind": "usb_c_type_e",
+            "count": 2,
+            "raw": "1 x USB 20Gbps connector and 1 x USB 10Gbps connector support USB Type-C"
+          },
+          {
+            "kind": "usb3_19pin",
+            "count": 2,
+            "ports": 4,
+            "raw": "2 x USB 5Gbps headers support 4 additional ports"
+          },
+          {
+            "kind": "usb2_9pin",
+            "count": 2,
+            "ports": 4,
+            "raw": "2 x USB 2.0 headers support 4 additional ports"
+          }
+        ]
+      }
+    },
+    {
+      "product_id": 7305,
+      "category_id": 359,
+      "manufacturer": "MSI",
+      "article": "B850 MLG EDITION",
+      "official_model": "MSI B850 MLG EDITION",
+      "source_url": "https://sg.msi.com/Motherboard/B850-MLG-EDITION/Specification",
+      "checked_at": "2026-10-25",
+      "values": {
+        "motherboard_socket": "AM5",
+        "motherboard_chipset": "AMD B850",
+        "motherboard_form_factor": "ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 256,
+        "motherboard_pcie_x16": "PCIe 5.0 x16",
+        "motherboard_m2_slots": 4,
+        "motherboard_sata_ports": 4,
+        "motherboard_m2_interfaces": [
+          "M.2_1: PCIe Gen5 x4",
+          "M.2_2: PCIe Gen5 x4",
+          "M.2_3: PCIe Gen4 x4",
+          "M.2_4: PCIe Gen4 x2"
+        ],
+        "motherboard_fan_headers": [
+          {
+            "kind": "system_fan_header",
+            "count": 6,
+            "raw": "6 x 4-pin System Fan"
+          }
+        ],
+        "motherboard_internal_usb_headers": [
+          {
+            "kind": "usb_c_type_e",
+            "count": 1,
+            "raw": "1 x USB 20Gbps Type-C front connector"
+          },
+          {
+            "kind": "usb3_19pin",
+            "count": 2,
+            "ports": 4,
+            "raw": "4 x USB 5Gbps Type-A front ports through headers"
+          },
+          {
+            "kind": "usb2_9pin",
+            "count": 2,
+            "ports": 4,
+            "raw": "4 x USB 2.0 front ports through headers"
+          }
+        ]
+      }
+    },
+    {
+      "product_id": 8044,
+      "category_id": 359,
+      "manufacturer": "Biostar",
+      "article": "B450MHP",
+      "official_model": "BIOSTAR B450MHP",
+      "source_url": "https://www.biostar.com.tw/app/en/mb/export/spec_export.php?S_ID=1062",
+      "checked_at": "2026-10-25",
+      "source_kind": "manufacturer_site",
+      "values": {
+        "motherboard_fan_headers": [
+          {
+            "kind": "system_fan_header",
+            "count": 1,
+            "raw": "1 x System Fan Connector"
+          }
+        ],
+        "motherboard_internal_usb_headers": [
+          {
+            "kind": "usb3_19pin",
+            "count": 1,
+            "raw": "1 x USB 3.2 (Gen1) Header (each header supports 2 USB 3.2 (Gen1) ports)"
+          },
+          {
+            "kind": "usb2_9pin",
+            "count": 2,
+            "raw": "2 x USB 2.0 Header (each header supports 2 USB 2.0 ports)"
+          }
+        ],
+        "memory_type": "DDR4",
+        "motherboard_chipset": "AMD B450",
+        "motherboard_form_factor": "Micro ATX",
+        "motherboard_max_memory_gb": 64,
+        "motherboard_memory_channels": "Dual Channel",
+        "motherboard_memory_slots": 2,
+        "motherboard_pcie_x16": "PCIe 3.0 x16",
+        "motherboard_sata_ports": 4,
+        "motherboard_socket": "AM4"
+      }
+    },
+    {
+      "product_id": 8452,
+      "category_id": 359,
+      "manufacturer": "Gigabyte",
+      "article": "B760M D3HP DDR5",
+      "official_model": "Материнская плата Gigabyte B760M D3HP DDR5",
+      "source_url": "https://www.gigabyte.com/Motherboard/B760M-D3HP/sp",
+      "checked_at": "2026-10-24",
+      "values": {
+        "motherboard_fan_headers": 3,
+        "motherboard_dimensions_mm": "244 x 244 mm",
+        "motherboard_dimensions_reported": true,
+        "motherboard_supported_cpu_series": [
+          "Intel Core 12th Gen",
+          "Intel Core 13th Gen",
+          "Intel Core 14th Gen"
+        ]
+      }
+    },
+    {
+      "product_id": 8513,
+      "category_id": 359,
+      "manufacturer": "Gigabyte",
+      "article": "B850M DS3H",
+      "official_model": "Материнская плата Gigabyte B850M DS3H",
+      "source_url": "https://www.gigabyte.com/Motherboard/B850M-DS3H-rev-12/sp",
+      "checked_at": "2026-10-24",
+      "values": {
+        "motherboard_fan_headers": 1,
+        "motherboard_dimensions_mm": "244 x 244 mm",
+        "motherboard_dimensions_reported": true,
+        "motherboard_supported_cpu_series": [
+          "Ryzen 7000",
+          "Ryzen 8000",
+          "Ryzen 9000"
+        ],
+        "motherboard_socket": "AM5",
+        "motherboard_chipset": "AMD B850",
+        "motherboard_form_factor": "Micro ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 256,
+        "motherboard_memory_channels": "Dual channel",
+        "motherboard_pcie_x16": "PCIe 5.0 x16",
+        "motherboard_m2_slots": 2,
+        "motherboard_sata_ports": 4
+      }
+    },
+    {
+      "product_id": 9714,
+      "category_id": 359,
+      "manufacturer": "Gigabyte",
+      "article": "H610M K DDR4",
+      "official_model": "Материнская плата Gigabyte H610M K DDR4",
+      "source_url": "https://www.gigabyte.com/Motherboard/H610M-K-DDR4-rev-10/sp",
+      "checked_at": "2026-10-24",
+      "values": {
+        "motherboard_fan_headers": 1,
+        "motherboard_dimensions_mm": "226 x 185 mm",
+        "motherboard_dimensions_reported": true,
+        "motherboard_supported_cpu_series": [
+          "Intel Core 12th Gen",
+          "Intel Core 13th Gen",
+          "Intel Core 14th Gen"
+        ]
+      }
+    },
+    {
+      "product_id": 11142,
+      "category_id": 359,
+      "manufacturer": "GIGABYTE",
+      "article": "X870E AERO X3D WOOD",
+      "official_model": "GIGABYTE X870E AERO X3D WOOD",
+      "source_url": "https://www.gigabyte.com/us/Motherboard/X870E-AERO-X3D-WOOD/sp",
+      "checked_at": "2026-10-25",
+      "source_kind": "manufacturer_site",
+      "values": {
+        "motherboard_socket": "AM5",
+        "motherboard_chipset": "AMD X870E",
+        "motherboard_form_factor": "ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 256,
+        "motherboard_pcie_x16": "PCIe 5.0 x16",
+        "motherboard_m2_slots": 4,
+        "motherboard_sata_ports": 4,
+        "motherboard_fan_headers": [
+          {
+            "kind": "system_fan_header",
+            "count": 4,
+            "raw": "4 x system fan headers"
+          }
+        ],
+        "motherboard_internal_usb_headers": [
+          {
+            "kind": "usb_c_type_e",
+            "count": 1,
+            "raw": "1 x USB Type-C header with USB 3.2 Gen 2x2 support"
+          },
+          {
+            "kind": "usb3_19pin",
+            "count": 2,
+            "ports": 4,
+            "raw": "2 x USB 3.2 Gen 1 headers provide 4 ports"
+          },
+          {
+            "kind": "usb2_9pin",
+            "count": 2,
+            "ports": 4,
+            "raw": "2 x USB 2.0/1.1 headers provide 4 ports"
+          }
+        ]
+      }
+    },
+    {
+      "product_id": 11511,
+      "category_id": 359,
+      "manufacturer": "ASUS",
+      "article": "ROG STRIX X870E-A GAMING NEO",
+      "official_model": "ROG STRIX X870E-A GAMING WIFI7 NEO",
+      "source_url": "https://rog.asus.com/us/motherboards/rog-strix/rog-strix-x870e-a-gaming-wifi7-neo/spec/",
+      "checked_at": "2026-10-25",
+      "values": {
+        "motherboard_socket": "AM5",
+        "motherboard_chipset": "AMD X870E",
+        "motherboard_form_factor": "ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 256,
+        "motherboard_pcie_x16": "PCIe 5.0 x16 (Ryzen 9000/7000); PCIe 4.0 x8 or x4 (Ryzen 8000 variants)",
+        "motherboard_m2_slots": 4,
+        "motherboard_sata_ports": 4,
+        "motherboard_m2_interfaces": [
+          "M.2_1: PCIe 5.0 x4 with Ryzen 9000/7000; PCIe 4.0 x4 with Ryzen 8000",
+          "M.2_2: PCIe 5.0 x4 with Ryzen 9000/7000; PCIe 4.0 x4 with Ryzen 8700/8600/8400; unavailable with Ryzen 8500/8300",
+          "M.2_3: PCIe 4.0 x4",
+          "M.2_4: PCIe 4.0 x4"
+        ],
+        "motherboard_fan_headers": [
+          {
+            "kind": "system_fan_header",
+            "count": 5,
+            "raw": "5 x 4-pin Chassis Fan headers"
+          }
+        ],
+        "motherboard_internal_usb_headers": [
+          {
+            "kind": "usb_c_type_e",
+            "count": 2,
+            "raw": "1 x USB 20Gbps Type-C connector + 1 x USB 5Gbps connector supports USB Type-C"
+          },
+          {
+            "kind": "usb3_19pin",
+            "count": 2,
+            "ports": 4,
+            "raw": "2 x USB 5Gbps headers support 4 additional USB 5Gbps ports"
+          },
+          {
+            "kind": "usb2_9pin",
+            "count": 3,
+            "ports": 6,
+            "raw": "3 x USB 2.0 headers support 6 additional USB 2.0 ports"
+          }
+        ],
+        "motherboard_cpu_power_connectors": [
+          {
+            "kind": "cpu_8",
+            "count": 2,
+            "raw": "2 x 8-pin +12V CPU power connectors"
+          }
+        ],
+        "motherboard_supported_cpu_series": [
+          "AMD Ryzen 9000 Series",
+          "AMD Ryzen 8000 Series",
+          "AMD Ryzen 7000 Series"
+        ],
+        "motherboard_dimensions_mm": "305 x 244",
+        "motherboard_dimensions_reported": true,
+        "motherboard_rear_connector": false
+      }
+    },
+    {
+      "product_id": 12202,
+      "category_id": 359,
+      "manufacturer": "ASUS",
+      "article": "ProArt Z890-CREATOR WIFI",
+      "official_model": "ASUS ProArt Z890-CREATOR WIFI",
+      "source_url": "https://www.asus.com/us/motherboards-components/motherboards/proart/proart-z890-creator-wifi/techspec/",
+      "checked_at": "2026-10-25",
+      "source_kind": "manufacturer_site",
+      "values": {
+        "motherboard_socket": "LGA1851",
+        "motherboard_chipset": "Intel Z890",
+        "motherboard_form_factor": "ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 256,
+        "motherboard_pcie_x16": "PCIe 5.0 x16",
+        "motherboard_m2_slots": 5,
+        "motherboard_sata_ports": 4,
+        "motherboard_fan_headers": [
+          {
+            "kind": "system_fan_header",
+            "count": 5,
+            "raw": "Chassis Fan headers"
+          }
+        ],
+        "motherboard_internal_usb_headers": [
+          {
+            "kind": "usb_c_type_e",
+            "count": 1,
+            "raw": "1 x USB 20Gbps header supports USB Type-C"
+          },
+          {
+            "kind": "usb3_19pin",
+            "count": 1,
+            "ports": 2,
+            "raw": "1 x USB 5Gbps header supports 2 additional USB 5Gbps ports"
+          },
+          {
+            "kind": "usb2_9pin",
+            "count": 1,
+            "ports": 2,
+            "raw": "1 x USB 2.0 header supports 2 additional USB 2.0 ports"
+          }
+        ]
+      }
+    },
+    {
+      "product_id": 13199,
+      "category_id": 359,
+      "manufacturer": "MSI",
+      "article": "MPG Z890 CARBON WIFI",
+      "official_model": "MPG Z890 CARBON WIFI",
+      "source_url": "https://us.msi.com/Motherboard/MPG-Z890-CARBON-WIFI/Specification",
+      "checked_at": "2026-10-25",
+      "values": {
+        "motherboard_socket": "LGA1851",
+        "motherboard_chipset": "Intel Z890",
+        "motherboard_form_factor": "ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 256,
+        "motherboard_pcie_x16": "2 x PCIe 5.0 x16; 1 x PCIe 4.0 x16",
+        "motherboard_m2_slots": 5,
+        "motherboard_sata_ports": 4,
+        "motherboard_m2_interfaces": [
+          "M2_1: PCIe 5.0 x4",
+          "M2_2: PCIe 4.0 x4",
+          "M2_3: PCIe 4.0 x4",
+          "M2_4: PCIe 4.0 x4",
+          "M2_5: PCIe 4.0 x4 or SATA 6Gb/s"
+        ],
+        "motherboard_fan_headers": [
+          {
+            "kind": "system_fan_header",
+            "count": 5,
+            "raw": "5x System Fan"
+          }
+        ],
+        "motherboard_internal_usb_headers": [
+          {
+            "kind": "usb_c_type_e",
+            "count": 1,
+            "raw": "1x USB 20Gbps Type-C (Front)"
+          },
+          {
+            "kind": "usb3_19pin",
+            "count": 1,
+            "ports": 4,
+            "raw": "4x USB 5Gbps Type A (Front)"
+          },
+          {
+            "kind": "usb2_9pin",
+            "count": 1,
+            "ports": 4,
+            "raw": "4x USB 2.0 (Front)"
+          }
+        ]
+      }
+    },
+    {
+      "product_id": 13381,
+      "category_id": 359,
+      "manufacturer": "ASUS",
+      "article": "ROG STRIX X670E-E GAMING WIFI",
+      "official_model": "ASUS ROG STRIX X670E-E GAMING WIFI",
+      "source_url": "https://rog.asus.com/us/motherboards/rog-strix/rog-strix-x670e-e-gaming-wifi-model/spec/",
+      "checked_at": "2026-10-25",
+      "values": {
+        "motherboard_socket": "AM5",
+        "motherboard_chipset": "AMD X670",
+        "motherboard_form_factor": "ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 192,
+        "motherboard_pcie_x16": "PCIe 5.0 x16",
+        "motherboard_m2_slots": 4,
+        "motherboard_sata_ports": 4,
+        "motherboard_m2_interfaces": [
+          "M.2_1: PCIe 5.0 x4",
+          "M.2_2: PCIe 5.0 x4",
+          "M.2_3: PCIe 5.0 x4",
+          "M.2_4: PCIe 4.0 x4"
+        ],
+        "motherboard_fan_headers": [
+          {
+            "kind": "system_fan_header",
+            "count": 5,
+            "raw": "5 x 4-pin Chassis Fan header"
+          }
+        ],
+        "motherboard_internal_usb_headers": [
+          {
+            "kind": "usb_c_type_e",
+            "count": 1,
+            "raw": "1 x USB 3.2 Gen 2x2 connector supports USB Type-C"
+          },
+          {
+            "kind": "usb3_19pin",
+            "count": 1,
+            "ports": 2,
+            "raw": "1 x USB 3.2 Gen 1 header supports additional 2 ports"
+          },
+          {
+            "kind": "usb2_9pin",
+            "count": 3,
+            "ports": 6,
+            "raw": "3 x USB 2.0 headers support additional 6 ports"
+          }
+        ]
+      }
+    },
+    {
+      "product_id": 13693,
+      "category_id": 359,
+      "manufacturer": "ASUS",
+      "article": "TUF GAMING B850-PLUS WIFI",
+      "official_model": "ASUS TUF GAMING B850-PLUS WIFI",
+      "source_url": "https://www.asus.com/us/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850-plus-wifi/techspec/",
+      "checked_at": "2026-10-17",
+      "values": {
+        "motherboard_socket": "AM5",
+        "motherboard_chipset": "AMD B850",
+        "motherboard_form_factor": "ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 256,
+        "motherboard_memory_channels": "Dual channel"
+      }
+    },
+    {
+      "product_id": 14962,
+      "category_id": 359,
+      "manufacturer": "MSI",
+      "article": "PRO B860-P",
+      "official_model": "MSI PRO B860-P",
+      "source_url": "https://www.msi.com/Motherboard/PRO-B860-P",
+      "checked_at": "2026-10-17",
+      "values": {
+        "motherboard_socket": "LGA1851",
+        "motherboard_chipset": "Intel B860",
+        "motherboard_form_factor": "ATX",
+        "memory_type": "DDR5"
+      }
+    },
+    {
+      "product_id": 15314,
+      "category_id": 359,
+      "manufacturer": "MSI",
+      "article": "MAG X870 TOMAHAWK WIFI",
+      "official_model": "Материнская плата MSI MAG X870 TOMAHAWK WIFI",
+      "source_url": "https://www.msi.com/Motherboard/MAG-X870-TOMAHAWK-WIFI/Specification",
+      "checked_at": "2026-10-24",
+      "values": {
+        "motherboard_fan_headers": 6,
+        "motherboard_dimensions_mm": "305 x 244 mm",
+        "motherboard_dimensions_reported": true,
+        "motherboard_supported_cpu_series": [
+          "Ryzen 7000",
+          "Ryzen 8000",
+          "Ryzen 9000"
+        ],
+        "motherboard_socket": "AM5",
+        "motherboard_chipset": "AMD X870",
+        "motherboard_form_factor": "ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 256,
+        "motherboard_memory_channels": "Dual channel",
+        "motherboard_pcie_x16": "PCIe 5.0 x16",
+        "motherboard_m2_slots": 4,
+        "motherboard_sata_ports": 4
+      }
+    },
+    {
+      "product_id": 16204,
+      "category_id": 359,
+      "manufacturer": "GIGABYTE",
+      "article": "X870E AORUS PRO X3D",
+      "official_model": "GIGABYTE X870E AORUS PRO X3D",
+      "source_url": "https://www.gigabyte.com/dk/Motherboard/X870E-AORUS-PRO-X3D/sp",
+      "checked_at": "2026-10-25",
+      "values": {
+        "motherboard_socket": "AM5",
+        "motherboard_chipset": "AMD X870E",
+        "motherboard_form_factor": "ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 256,
+        "motherboard_pcie_x16": "PCIe 5.0 x16",
+        "motherboard_m2_slots": 4,
+        "motherboard_sata_ports": 4,
+        "motherboard_m2_interfaces": [
+          "M2A_CPU: PCIe 5.0 x4, CPU dependent",
+          "M2B_CPU: PCIe 5.0 x4; shares bandwidth with USB4 controller and may be unavailable with some Ryzen 8000 CPUs",
+          "M2C_SB: PCIe 4.0 x4",
+          "M2D_SB: PCIe 4.0 x4"
+        ],
+        "motherboard_fan_headers": [
+          {
+            "kind": "system_fan_header",
+            "count": 4,
+            "raw": "4 x system fan headers"
+          }
+        ],
+        "motherboard_internal_usb_headers": [
+          {
+            "kind": "usb_c_type_e",
+            "count": 1,
+            "raw": "1 x USB Type-C header, USB 3.2 Gen 2x2"
+          },
+          {
+            "kind": "usb3_19pin",
+            "count": 2,
+            "ports": 4,
+            "raw": "2 x USB 3.2 Gen 1 headers support 4 ports"
+          },
+          {
+            "kind": "usb2_9pin",
+            "count": 2,
+            "ports": 4,
+            "raw": "2 x USB 2.0 headers support 4 ports"
+          }
+        ]
+      }
+    },
+    {
+      "product_id": 16225,
+      "category_id": 359,
+      "manufacturer": "ASUS",
+      "article": "PRIME B860M-A WIFI",
+      "official_model": "Материнская плата ASUS PRIME B860M-A WIFI",
+      "source_url": "https://www.asus.com/ca-en/motherboards-components/motherboards/prime/prime-b860m-a-wifi/techspec/",
+      "checked_at": "2026-10-24",
+      "values": {
+        "motherboard_fan_headers": 3,
+        "motherboard_dimensions_mm": "244 x 244 mm",
+        "motherboard_dimensions_reported": true,
+        "motherboard_supported_cpu_series": [
+          "Intel Core Ultra 200S"
+        ],
+        "motherboard_socket": "LGA1851",
+        "motherboard_chipset": "Intel B860",
+        "motherboard_form_factor": "Micro ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 256,
+        "motherboard_memory_channels": "Dual channel",
+        "motherboard_pcie_x16": "PCIe 5.0 x16",
+        "motherboard_m2_slots": 2,
+        "motherboard_sata_ports": 4
+      }
+    },
+    {
+      "product_id": 16268,
+      "category_id": 359,
+      "manufacturer": "ASRock",
+      "article": "B650M-H/M.2+",
+      "official_model": "Материнская плата ASRock B650M-H/M.2+ AM5",
+      "source_url": "https://www.asrock.com/MB/AMD/B650M-HM.2%2B/",
+      "checked_at": "2026-10-24",
+      "values": {
+        "motherboard_fan_headers": 3,
+        "motherboard_dimensions_mm": "244 x 226 mm",
+        "motherboard_dimensions_reported": true,
+        "motherboard_supported_cpu_series": [
+          "Ryzen 7000",
+          "Ryzen 8000",
+          "Ryzen 9000"
+        ]
+      }
+    },
+    {
+      "product_id": 18570,
+      "category_id": 359,
+      "manufacturer": "ASUS",
+      "article": "PRIME H810M-A WIFI",
+      "official_model": "ASUS PRIME H810M-A WIFI",
+      "source_url": "https://www.asus.com/motherboards-components/motherboards/prime/prime-h810m-a-wifi/techspec/",
+      "checked_at": "2026-10-17",
+      "values": {
+        "motherboard_socket": "LGA1851",
+        "motherboard_chipset": "Intel H810",
+        "motherboard_form_factor": "Micro ATX",
+        "memory_type": "DDR5"
+      }
+    },
+    {
+      "product_id": 19330,
+      "category_id": 359,
+      "manufacturer": "MaxSun",
+      "article": "MS-Challenger H610M-H V1",
+      "official_model": "Материнская плата MaxSun Challenger H610M-H V1, MS-Challenger H610M-H V1",
+      "source_url": "https://www.maxsun.com/products/ms-challenger-h610m-h",
+      "checked_at": "2026-10-24",
+      "values": {
+        "motherboard_fan_headers": 1,
+        "motherboard_dimensions_mm": "225 x 185 mm",
+        "motherboard_dimensions_reported": true,
+        "motherboard_supported_cpu_series": [
+          "Intel Core 12th Gen",
+          "Intel Core 13th Gen",
+          "Intel Core 14th Gen"
+        ],
+        "motherboard_socket": "LGA1700",
+        "motherboard_chipset": "Intel H610",
+        "motherboard_form_factor": "Micro ATX",
+        "memory_type": "DDR4",
+        "motherboard_memory_slots": 2,
+        "motherboard_max_memory_gb": 64,
+        "motherboard_memory_channels": "Dual channel",
+        "motherboard_pcie_x16": "PCIe 4.0 x16",
+        "motherboard_m2_slots": 1,
+        "motherboard_sata_ports": 2
+      }
+    },
+    {
+      "product_id": 20106,
+      "category_id": 359,
+      "manufacturer": "ASUS",
+      "article": "ROG MAXIMUS Z690 HERO",
+      "official_model": "ASUS ROG MAXIMUS Z690 HERO",
+      "source_url": "https://rog.asus.com/motherboards/rog-maximus/rog-maximus-z690-hero-model/spec/",
+      "checked_at": "2026-10-25",
+      "values": {
+        "motherboard_socket": "LGA1700",
+        "motherboard_chipset": "Intel Z690",
+        "motherboard_form_factor": "ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 192,
+        "motherboard_pcie_x16": "PCIe 5.0 x16",
+        "motherboard_m2_slots": 5,
+        "motherboard_sata_ports": 6,
+        "motherboard_m2_interfaces": [
+          "M.2_1: PCIe 4.0 x4",
+          "M.2_2: PCIe 3.0 x4",
+          "M.2_3: PCIe 4.0 x4 or SATA",
+          "ROG Hyper M.2 card: 2 additional M.2 slots; mode depends on PCIe slot used"
+        ],
+        "motherboard_fan_headers": [
+          {
+            "kind": "system_fan_header",
+            "count": 4,
+            "raw": "4 x 4-pin Chassis Fan headers"
+          }
+        ],
+        "motherboard_internal_usb_headers": [
+          {
+            "kind": "usb_c_type_e",
+            "count": 1,
+            "raw": "1 x USB 3.2 Gen 2x2 connector supports USB Type-C"
+          },
+          {
+            "kind": "usb3_19pin",
+            "count": 2,
+            "ports": 4,
+            "raw": "2 x USB 3.2 Gen 1 headers support additional 4 ports"
+          },
+          {
+            "kind": "usb2_9pin",
+            "count": 2,
+            "ports": 4,
+            "raw": "2 x USB 2.0 headers support additional 4 ports"
+          }
+        ]
+      }
+    },
+    {
+      "product_id": 22628,
+      "category_id": 359,
+      "manufacturer": "ASRock",
+      "article": "Z890 TAICHI LITE",
+      "official_model": "ASRock Z890 Taichi Lite",
+      "source_url": "https://asrock.com/mb/Intel/Z890%20Taichi%20Lite/index.asp",
+      "checked_at": "2026-10-25",
+      "values": {
+        "motherboard_socket": "LGA1851",
+        "motherboard_chipset": "Intel Z890",
+        "motherboard_form_factor": "ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 256,
+        "motherboard_pcie_x16": "PCIe 5.0 x16",
+        "motherboard_m2_slots": 6,
+        "motherboard_sata_ports": 4,
+        "motherboard_m2_interfaces": [
+          "M2_1: PCIe Gen5x4",
+          "M2_2: PCIe Gen4x4",
+          "M2_3: SATA3 or PCIe Gen4x4",
+          "M2_4: PCIe Gen4x4",
+          "M2_5: PCIe Gen4x4",
+          "M2_6: PCIe Gen4x4; when PCIE2 is occupied M2_4 is disabled"
+        ],
+        "motherboard_fan_headers": [
+          {
+            "kind": "system_fan_header",
+            "count": 4,
+            "raw": "4 x Chassis Fan Connectors (4-pin)"
+          }
+        ],
+        "motherboard_internal_usb_headers": [
+          {
+            "kind": "usb_c_type_e",
+            "count": 1,
+            "raw": "1 x USB 3.2 Gen2x2 Type-C front header"
+          },
+          {
+            "kind": "usb3_19pin",
+            "count": 2,
+            "ports": 4,
+            "raw": "2 x USB 3.2 Gen1 headers support 4 USB 3.2 Gen1 ports"
+          },
+          {
+            "kind": "usb2_9pin",
+            "count": 2,
+            "ports": 4,
+            "raw": "2 x USB 2.0 headers support 4 USB 2.0 ports"
+          }
+        ]
+      }
+    },
+    {
+      "product_id": 22857,
+      "category_id": 359,
+      "manufacturer": "MaxSun",
+      "article": "Challenger A520M-K",
+      "official_model": "Материнская плата MaxSun Challenger A520M-K",
+      "source_url": "https://www.maxsun.com/vi/products/challenger-a520m-k",
+      "checked_at": "2026-10-24",
+      "values": {
+        "motherboard_fan_headers": 1,
+        "motherboard_dimensions_mm": "220 x 180 mm",
+        "motherboard_dimensions_reported": true,
+        "motherboard_supported_cpu_series": [
+          "Ryzen 5000"
+        ],
+        "motherboard_socket": "AM4",
+        "motherboard_chipset": "AMD A520",
+        "motherboard_form_factor": "Micro ATX",
+        "memory_type": "DDR4",
+        "motherboard_memory_slots": 2,
+        "motherboard_max_memory_gb": 64,
+        "motherboard_memory_channels": "Dual channel",
+        "motherboard_pcie_x16": "PCIe 3.0 x16",
+        "motherboard_m2_slots": 1,
+        "motherboard_sata_ports": 3
+      }
+    },
+    {
+      "product_id": 24430,
+      "category_id": 359,
+      "manufacturer": "ASRock",
+      "article": "B760M-HDV/M.2",
+      "official_model": "Материнская плата ASRock B760M-HDV/M.2 DDR5",
+      "source_url": "https://www.asrock.com/MB/Intel/B760M-HDVM.2/index.asp",
+      "checked_at": "2026-10-24",
+      "values": {
+        "motherboard_fan_headers": 2,
+        "motherboard_dimensions_mm": "244 x 201 mm",
+        "motherboard_dimensions_reported": true,
+        "motherboard_supported_cpu_series": [
+          "Intel Core 12th Gen",
+          "Intel Core 13th Gen",
+          "Intel Core 14th Gen"
+        ],
+        "motherboard_socket": "LGA1700",
+        "motherboard_chipset": "Intel B760",
+        "motherboard_form_factor": "Micro ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 2,
+        "motherboard_max_memory_gb": 128,
+        "motherboard_memory_channels": "Dual channel",
+        "motherboard_pcie_x16": "PCIe 4.0 x16",
+        "motherboard_m2_slots": 1,
+        "motherboard_sata_ports": 4
+      }
+    },
+    {
+      "product_id": 26512,
+      "category_id": 359,
+      "manufacturer": "ASUS",
+      "article": "PRIME A520M-K",
+      "official_model": "Материнская плата ASUS PRIME A520M-K",
+      "source_url": "https://www.asus.com/eg-en/motherboards-components/motherboards/prime/prime-a520m-k/techspec/",
+      "checked_at": "2026-10-24",
+      "values": {
+        "motherboard_fan_headers": 1,
+        "motherboard_dimensions_mm": "226 x 221 mm",
+        "motherboard_dimensions_reported": true,
+        "motherboard_supported_cpu_series": [
+          "Ryzen 5000"
+        ]
+      }
+    },
+    {
+      "product_id": 29140,
+      "category_id": 359,
+      "manufacturer": "ASUS",
+      "article": "PRIME X870-P",
+      "official_model": "ASUS PRIME X870-P",
+      "source_url": "https://www.asus.com/br/motherboards-components/motherboards/prime/prime-x870-p/techspec/",
+      "checked_at": "2026-10-17",
+      "values": {
+        "motherboard_socket": "AM5",
+        "motherboard_chipset": "AMD X870",
+        "motherboard_form_factor": "ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 256,
+        "motherboard_memory_channels": "Dual channel"
+      }
+    },
+    {
+      "product_id": 29992,
+      "category_id": 359,
+      "manufacturer": "ASRock",
+      "article": "B860M PRO-A",
+      "official_model": "Материнская плата ASRock B860M PRO-A",
+      "source_url": "https://www.asrock.com/MB/Intel/B860M%20Pro-A/index.asp",
+      "checked_at": "2026-10-24",
+      "values": {
+        "motherboard_fan_headers": 3,
+        "motherboard_dimensions_mm": "244 x 244 mm",
+        "motherboard_dimensions_reported": true,
+        "motherboard_supported_cpu_series": [
+          "Intel Core Ultra 200S"
+        ],
+        "motherboard_socket": "LGA1851",
+        "motherboard_chipset": "Intel B860",
+        "motherboard_form_factor": "Micro ATX",
+        "memory_type": "DDR5",
+        "motherboard_memory_slots": 4,
+        "motherboard_max_memory_gb": 256,
+        "motherboard_memory_channels": "Dual channel",
+        "motherboard_pcie_x16": "PCIe 5.0 x16",
+        "motherboard_m2_slots": 3,
+        "motherboard_sata_ports": 4
+      }
+    },
+    {
+      "product_id": 31388,
+      "category_id": 359,
+      "manufacturer": "ASRock",
+      "article": "B550M-HDV",
+      "official_model": "Материнская плата ASRock B550M-HDV",
+      "source_url": "https://www.asrock.com/MB/AMD/B550M-HDV/index.asp",
+      "checked_at": "2026-10-24",
+      "values": {
+        "motherboard_fan_headers": 2,
+        "motherboard_dimensions_mm": "230 x 201 mm",
+        "motherboard_dimensions_reported": true,
+        "motherboard_supported_cpu_series": [
+          "Ryzen 5000"
+        ],
+        "motherboard_socket": "AM4",
+        "motherboard_chipset": "AMD B550",
+        "motherboard_form_factor": "Micro ATX",
+        "memory_type": "DDR4",
+        "motherboard_memory_slots": 2,
+        "motherboard_max_memory_gb": 64,
+        "motherboard_memory_channels": "Dual channel",
+        "motherboard_pcie_x16": "PCIe 4.0 x16",
+        "motherboard_m2_slots": 1,
+        "motherboard_sata_ports": 4
+      }
+    }
+  ]
+}

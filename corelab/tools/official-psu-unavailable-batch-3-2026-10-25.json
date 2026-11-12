@@ -1,0 +1,122 @@
+{
+    "products":  [
+                     {
+                         "product_id":  28404,
+                         "category_id":  146,
+                         "manufacturer":  "GamerStorm",
+                         "article":  "PQA00G-FD",
+                         "official_model":  "GamerStorm PQ1000G",
+                         "source_url":  "https://www.gamerstorm.com/ru/product/PowerSupply/2025-06/2601_15401.shtml",
+                         "source_kind":  "manufacturer_site",
+                         "checked_at":  "2026-10-25",
+                         "reviewed_by":  "Codex",
+                         "values":  {
+                                        "psu_power_w":  1000,
+                                        "psu_form_factor":  "ATX",
+                                        "psu_atx_version":  "ATX 3.1",
+                                        "psu_efficiency_rating":  "80 PLUS Gold",
+                                        "psu_length_mm":  140,
+                                        "psu_cpu_connectors":  [
+                                                                   {
+                                                                       "kind":  "cpu_4plus4",
+                                                                       "count":  2,
+                                                                       "raw":  "CPU (4+4)Pin x1 x2"
+                                                                   }
+                                                               ],
+                                        "psu_pcie_connectors":  [
+                                                                    {
+                                                                        "kind":  "pcie_8",
+                                                                        "count":  4,
+                                                                        "raw":  "PCI-E (6+2)Pin x1 x2 and x2 x1"
+                                                                    },
+                                                                    {
+                                                                        "kind":  "pcie_16",
+                                                                        "count":  1,
+                                                                        "raw":  "12V-2x6 (16Pin) x1 x1"
+                                                                    }
+                                                                ],
+                                        "psu_pcie_6plus2_count":  4,
+                                        "psu_connector12v2x6_count":  1
+                                    }
+                     },
+                     {
+                         "product_id":  3052,
+                         "category_id":  146,
+                         "manufacturer":  "be quiet!",
+                         "article":  "BP004EU",
+                         "official_model":  "be quiet! Pure Power 12 850W",
+                         "source_url":  "https://www.bequiet.com/en/powersupply/5253",
+                         "source_kind":  "manufacturer_site",
+                         "checked_at":  "2026-10-25",
+                         "reviewed_by":  "Codex",
+                         "values":  {
+                                        "psu_power_w":  850,
+                                        "psu_form_factor":  "ATX",
+                                        "psu_atx_version":  "ATX 3.1",
+                                        "psu_efficiency_rating":  "80 PLUS Gold",
+                                        "psu_modularity":  "fixed cables",
+                                        "psu_length_mm":  160,
+                                        "psu_cpu_connectors":  [
+                                                                   {
+                                                                       "raw":  "P4+4 (CPU)",
+                                                                       "count":  1,
+                                                                       "kind":  "cpu_4plus4"
+                                                                   }
+                                                               ],
+                                        "psu_pcie_connectors":  [
+                                                                    {
+                                                                        "kind":  "pcie_8",
+                                                                        "count":  3,
+                                                                        "raw":  "PCI-e 6+2-pin x3"
+                                                                    },
+                                                                    {
+                                                                        "kind":  "pcie_16",
+                                                                        "count":  1,
+                                                                        "raw":  "12V-2x6 x1"
+                                                                    }
+                                                                ],
+                                        "psu_pcie_6plus2_count":  3,
+                                        "psu_connector12v2x6_count":  1
+                                    }
+                     },
+                     {
+                         "product_id":  6359,
+                         "category_id":  146,
+                         "manufacturer":  "MSI",
+                         "article":  "MAG A1250GL PCIE5",
+                         "official_model":  "MSI MAG A1250GL PCIE5",
+                         "source_url":  "https://www.msi.com/Power-Supply/MAG-A1250GL-PCIE5/Specification",
+                         "source_kind":  "manufacturer_site",
+                         "checked_at":  "2026-10-25",
+                         "reviewed_by":  "Codex",
+                         "values":  {
+                                        "psu_power_w":  1250,
+                                        "psu_form_factor":  "ATX",
+                                        "psu_atx_version":  "ATX 3.1",
+                                        "psu_efficiency_rating":  "80 PLUS Gold",
+                                        "psu_modularity":  "fully modular",
+                                        "psu_length_mm":  150,
+                                        "psu_cpu_connectors":  [
+                                                                   {
+                                                                       "kind":  "cpu_4plus4",
+                                                                       "count":  2,
+                                                                       "raw":  "EPS (4+4 pin) x2"
+                                                                   }
+                                                               ],
+                                        "psu_pcie_connectors":  [
+                                                                    {
+                                                                        "kind":  "pcie_8",
+                                                                        "count":  4,
+                                                                        "raw":  "PCI-E (6+2 pin) x4"
+                                                                    },
+                                                                    {
+                                                                        "kind":  "pcie_16",
+                                                                        "count":  1,
+                                                                        "raw":  "PCI-E 5.1 (16 pin) x1"
+                                                                    }
+                                                                ],
+                                        "psu_pcie_6plus2_count":  4
+                                    }
+                     }
+                 ]
+}

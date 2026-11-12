@@ -1,0 +1,11 @@
+.env
+.import/
+.venv/
+frontend/node_modules/
+frontend/dist/
+frontend/test-results/
+frontend/playwright-report/
+frontend/tsconfig.tsbuildinfo
+backend/.pytest_cache/
+backend/**/__pycache__/
+backend/.coverage

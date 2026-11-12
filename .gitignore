@@ -1,3 +1,16 @@
 .handoff-runtime/
 .secrets/
 data/
+.runtime/
+backups/
+exports/
+output/
+outputs/
+.cursor/
+**/__pycache__/
+.env
+.env.*
+!.env.example
+corelab/.loader_evidence_scan/
+corelab/.run_loader_probe.py
+tools/.gpu-pick.cjs

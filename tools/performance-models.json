@@ -1,0 +1,574 @@
+{
+  "version": 1,
+  "cpuPattern": "(?:AMD\\s+)?Ryzen\\s+[3579]\\s+\\d{4,5}[A-Za-z0-9]*|(?:Intel\\s+)?Core\\s+(?:Ultra\\s+[3579]\\s+\\d{3}[A-Za-z]*|i[3579][ -]+\\d{4,5}[A-Za-z]*)|(?:Intel\\s+)?(?:Celeron|Pentium(?:\\s+Gold|\\s+Silver)?)\\s+[A-Z]?\\d{4}[A-Za-z]*",
+  "models": [
+    {
+      "type": "gpu",
+      "name": "Radeon AI PRO R9700",
+      "memoryGB": 32,
+      "family": "radeon_ai_pro",
+      "aliases": [
+        "AMD Radeon AI PRO R9700"
+      ]
+    }
+  ],
+  "workloadObservations": [
+    {
+      "id": "puget-premiere-gpu-2025-09-25",
+      "version": "Premiere Pro 25.2.3 / PugetBench 1.1.1 Extended",
+      "application": "premiere",
+      "operation": "interactive",
+      "component": "gpu",
+      "url": "https://www.pugetsystems.com/labs/articles/2025-consumer-gpu-content-creation-roundup/",
+      "date": "2025-09-25",
+      "reviewedAt": "2026-11-05",
+      "metric": "PugetBench Premiere Pro Overall Score (Extended)",
+      "direction": "higher",
+      "baseValue": 9903,
+      "scope": "Controlled GPU comparison on Ryzen 9 9950X3D, 64 GB DDR5-5600, Windows 11. Overall editing suite, not a specific codec or GPU-effects score. NVIDIA 577.00, AMD 25.8.1, Intel 101.7026. Premiere 25.2.3 does not enable RTX 50-series 10-bit 4:2:2 hardware decoding available in newer versions. Do not extrapolate to Photoshop, Twinmotion or GPU rendering. 5060 Ti and 4060 Ti tested in 16 GB variants only.",
+      "chart": "https://wp-cdn.pugetsystems.com/2025/09/CGR_PR_Overall.png",
+      "observations": [
+        {"model":"GeForce RTX 5090","memoryGB":32,"value":11047},
+        {"model":"GeForce RTX 4090","memoryGB":24,"value":10961},
+        {"model":"GeForce RTX 5080","memoryGB":16,"value":10732},
+        {"model":"GeForce RTX 4080 SUPER","memoryGB":16,"value":10420},
+        {"model":"GeForce RTX 5070 Ti","memoryGB":16,"value":10111},
+        {"model":"GeForce RTX 5070","memoryGB":12,"value":9903},
+        {"model":"GeForce RTX 4070 Ti SUPER","memoryGB":16,"value":9654},
+        {"model":"Radeon RX 7900 XTX","memoryGB":24,"value":9432},
+        {"model":"GeForce RTX 3090 Ti","memoryGB":24,"value":9394},
+        {"model":"Radeon RX 9070 XT","memoryGB":16,"value":9298},
+        {"model":"GeForce RTX 4070 SUPER","memoryGB":12,"value":9186},
+        {"model":"GeForce RTX 5060 Ti","memoryGB":16,"value":8784},
+        {"model":"GeForce RTX 5060","memoryGB":8,"value":8446},
+        {"model":"Intel Arc A770","memoryGB":16,"value":8078},
+        {"model":"Intel Arc A750","memoryGB":8,"value":7742},
+        {"model":"Radeon RX 9060 XT","memoryGB":16,"value":7579},
+        {"model":"Intel Arc B580","memoryGB":12,"value":7385},
+        {"model":"GeForce RTX 4060 Ti","memoryGB":16,"value":7361},
+        {"model":"GeForce RTX 4060","memoryGB":8,"value":7018}
+      ]
+    },
+    {
+      "id": "puget-blender-gpu-2026-06-10",
+      "version": "Review 2026-06-10; Blender version not disclosed",
+      "application": "blender",
+      "operation": "gpu_render",
+      "component": "gpu",
+      "url": "https://www.pugetsystems.com/labs/articles/amd-gpu-rendering-performance-is-radeon-a-viable-alternative/",
+      "date": "2026-06-10",
+      "reviewedAt": "2026-11-04",
+      "metric": "Blender Benchmark score",
+      "direction": "higher",
+      "baseValue": 5968,
+      "scope": "One controlled review on a 32-core Threadripper at stock GPU settings. NVIDIA RTX/OptiX and AMD HIP; exact Blender and driver versions not disclosed. Do not combine with other reviews or extrapolate to Twinmotion or scene capacity.",
+      "observations": [
+        {
+          "model": "GeForce RTX 5090",
+          "memoryGB": 32,
+          "value": 15872
+        },
+        {
+          "model": "GeForce RTX 5080",
+          "memoryGB": 16,
+          "value": 9035
+        },
+        {
+          "model": "GeForce RTX 5070 Ti",
+          "memoryGB": 16,
+          "value": 7882
+        },
+        {
+          "model": "GeForce RTX 5070",
+          "memoryGB": 12,
+          "value": 5968
+        },
+        {
+          "model": "Radeon RX 9070 XT",
+          "memoryGB": 16,
+          "value": 3722
+        },
+        {
+          "model": "Radeon AI PRO R9700",
+          "memoryGB": 32,
+          "value": 3726
+        },
+        {
+          "model": "Radeon RX 7900 XTX",
+          "memoryGB": 24,
+          "value": 4941
+        }
+      ]
+    },
+    {
+      "id": "gn-photoshop-cpu-2024-09-05",
+      "version": "GN 2024-09-05; Puget Suite Standard; exact Photoshop/Puget versions not disclosed",
+      "application": "photoshop",
+      "operation": "interactive",
+      "metric": "Puget Photoshop Overall Score (Standard)",
+      "direction": "higher",
+      "baseValue": 10350,
+      "observations": [
+        {
+          "model": "AMD Ryzen 9 9950X",
+          "value": 11694
+        },
+        {
+          "model": "AMD Ryzen 9 7950X",
+          "value": 10923
+        },
+        {
+          "model": "Intel Core i9 14900K",
+          "value": 10049
+        },
+        {
+          "model": "Intel Core i9 13900K",
+          "value": 9974
+        },
+        {
+          "model": "Intel Core i7 14700K",
+          "value": 9971
+        },
+        {
+          "model": "Intel Core i7 13700K",
+          "value": 9849
+        },
+        {
+          "model": "AMD Ryzen 9 5950X",
+          "value": 8799
+        },
+        {
+          "model": "AMD Ryzen 9 3950X",
+          "value": 7318
+        },
+        {
+          "model": "Intel Core i9 12900K",
+          "value": 9374
+        },
+        {
+          "model": "AMD Ryzen 9 5900X",
+          "value": 8771
+        },
+        {
+          "model": "Intel Core i5 14600K",
+          "value": 9674
+        },
+        {
+          "model": "Intel Core i5 13600K",
+          "value": 9474
+        },
+        {
+          "model": "AMD Ryzen 7 9700X",
+          "value": 11950
+        },
+        {
+          "model": "AMD Ryzen 7 7700X",
+          "value": 10850
+        },
+        {
+          "model": "AMD Ryzen 7 7800X3D",
+          "value": 10474
+        },
+        {
+          "model": "Intel Core i5 12600K",
+          "value": 8775
+        },
+        {
+          "model": "AMD Ryzen 5 7600X",
+          "value": 10350
+        },
+        {
+          "model": "AMD Ryzen 7 5800X",
+          "value": 8775
+        },
+        {
+          "model": "AMD Ryzen 7 5800X3D",
+          "value": 8825
+        },
+        {
+          "model": "AMD Ryzen 7 5700X3D",
+          "value": 8299
+        },
+        {
+          "model": "AMD Ryzen 7 3700X",
+          "value": 7073
+        },
+        {
+          "model": "AMD Ryzen 5 5600X",
+          "value": 8175
+        },
+        {
+          "model": "AMD Ryzen 5 5600X3D",
+          "value": 8350
+        },
+        {
+          "model": "AMD Ryzen 5 3600",
+          "value": 6648
+        },
+        {
+          "model": "AMD Ryzen 7 2700",
+          "value": 5398
+        },
+        {
+          "model": "AMD Ryzen 7 1700X",
+          "value": 5198
+        },
+        {
+          "model": "AMD Ryzen 7 1700",
+          "value": 4924
+        },
+        {
+          "model": "AMD Ryzen 5 2600",
+          "value": 5424
+        },
+        {
+          "model": "Intel Core i3 12100F",
+          "value": 6996
+        },
+        {
+          "model": "AMD Ryzen 5 1600",
+          "value": 4824
+        }
+      ],
+      "component": "cpu",
+      "url": "https://gamersnexus.net/cpus/amd-ryzen-9-9950x-cpu-review-benchmarks-vs-7950x-9700x-14900k-more",
+      "date": "2024-09-05",
+      "reviewedAt": "2026-11-04",
+      "scope": "GN review cohort, July/August 2024 runs, RTX 4090 Strix, Arctic Liquid Freezer II 360; DDR5-6000 or DDR4-3200 as chart, Zen 5 Lexar 6000 runs. Alternate DDR5-6400/7200 entries excluded. Historical comparative measurements, not a prediction for the customer system. CPU suffixes are exact; no extrapolation to F/KF/non-X variants."
+    },
+    {
+      "id": "gn-blender-cpu-2024-09-05",
+      "version": "Blender 4.1.1; GN Logo render; GN 2024-09-05",
+      "application": "blender",
+      "operation": "cpu_render",
+      "metric": "GN Logo render time (minutes)",
+      "direction": "lower",
+      "baseValue": 17.5,
+      "observations": [
+        {
+          "model": "AMD Ryzen 9 9950X",
+          "value": 5.9
+        },
+        {
+          "model": "AMD Ryzen 9 7950X",
+          "value": 6.7
+        },
+        {
+          "model": "Intel Core i9 14900K",
+          "value": 7.9
+        },
+        {
+          "model": "Intel Core i9 13900K",
+          "value": 8.4
+        },
+        {
+          "model": "Intel Core i7 14700K",
+          "value": 8.9
+        },
+        {
+          "model": "AMD Ryzen 9 7900X",
+          "value": 9
+        },
+        {
+          "model": "Intel Core i7 13700K",
+          "value": 10.3
+        },
+        {
+          "model": "AMD Ryzen 9 5950X",
+          "value": 10.4
+        },
+        {
+          "model": "AMD Ryzen 9 3950X",
+          "value": 10.4
+        },
+        {
+          "model": "Intel Core i9 12900K",
+          "value": 11
+        },
+        {
+          "model": "AMD Ryzen 9 5900X",
+          "value": 12.4
+        },
+        {
+          "model": "Intel Core i5 14600K",
+          "value": 12.6
+        },
+        {
+          "model": "Intel Core i5 13600K",
+          "value": 12.8
+        },
+        {
+          "model": "AMD Ryzen 7 9700X",
+          "value": 13.2
+        },
+        {
+          "model": "AMD Ryzen 7 7700X",
+          "value": 13.3
+        },
+        {
+          "model": "AMD Ryzen 7 7800X3D",
+          "value": 14.2
+        },
+        {
+          "model": "AMD Ryzen 7 7700",
+          "value": 14.3
+        },
+        {
+          "model": "Intel Core i5 12600K",
+          "value": 17
+        },
+        {
+          "model": "AMD Ryzen 5 7600X",
+          "value": 17.5
+        },
+        {
+          "model": "AMD Ryzen 7 5800X",
+          "value": 17.7
+        },
+        {
+          "model": "AMD Ryzen 7 5800X3D",
+          "value": 19
+        },
+        {
+          "model": "AMD Ryzen 7 5700X3D",
+          "value": 20.1
+        },
+        {
+          "model": "AMD Ryzen 7 3700X",
+          "value": 20.3
+        },
+        {
+          "model": "AMD Ryzen 5 5600X",
+          "value": 24.7
+        },
+        {
+          "model": "AMD Ryzen 5 5600X3D",
+          "value": 24.8
+        },
+        {
+          "model": "AMD Ryzen 5 3600",
+          "value": 26.2
+        },
+        {
+          "model": "AMD Ryzen 7 2700",
+          "value": 28.3
+        },
+        {
+          "model": "AMD Ryzen 7 1700X",
+          "value": 29.2
+        },
+        {
+          "model": "AMD Ryzen 7 1700",
+          "value": 31.9
+        },
+        {
+          "model": "AMD Ryzen 5 2600",
+          "value": 34.6
+        },
+        {
+          "model": "Intel Core i3 12100F",
+          "value": 35.8
+        },
+        {
+          "model": "AMD Ryzen 5 1600",
+          "value": 40.2
+        }
+      ],
+      "component": "cpu",
+      "url": "https://gamersnexus.net/cpus/amd-ryzen-9-9950x-cpu-review-benchmarks-vs-7950x-9700x-14900k-more",
+      "date": "2024-09-05",
+      "reviewedAt": "2026-11-04",
+      "scope": "GN review cohort, July/August 2024 runs, RTX 4090 Strix, Arctic Liquid Freezer II 360; DDR5-6000 or DDR4-3200 as chart, Zen 5 Lexar 6000 runs. Alternate DDR5-6400/7200 entries excluded. Historical comparative measurements, not a prediction for the customer system. CPU suffixes are exact; no extrapolation to F/KF/non-X variants."
+    },
+    {
+      "id": "aec-twinmotion-2024-1-2-raster",
+      "version": "Twinmotion 2024.1.2",
+      "application": "twinmotion",
+      "operation": "gpu_render",
+      "component": "gpu",
+      "referenceOnly": true,
+      "url": "https://aecmag.com/workstations/workstations-for-arch-viz/",
+      "date": "2025-02-09",
+      "reviewedAt": "2026-11-04",
+      "metric": "6 raster images, 4K; total seconds",
+      "direction": "lower",
+      "baseValue": 134,
+      "scope": "Reference only: heavy scene consuming about 20 GB VRAM. Raster and path tracer are separate tests. The task profile does not yet record render mode or scene memory, so these observations MUST NOT rank generic Twinmotion requests. A crash is not a zero performance score. No GeForce or R9700 results in this cohort.",
+      "observations": [
+        {
+          "model": "NVIDIA RTX A1000",
+          "memoryGB": 8,
+          "value": 799
+        },
+        {
+          "model": "NVIDIA RTX A4000",
+          "memoryGB": 16,
+          "value": 167
+        },
+        {
+          "model": "NVIDIA RTX 2000 Ada Generation",
+          "memoryGB": 16,
+          "value": 217
+        },
+        {
+          "model": "NVIDIA RTX 4000 Ada Generation",
+          "memoryGB": 20,
+          "value": 134
+        },
+        {
+          "model": "NVIDIA RTX 4500 Ada Generation",
+          "memoryGB": 24,
+          "value": 89
+        },
+        {
+          "model": "NVIDIA RTX 5000 Ada Generation",
+          "memoryGB": 32,
+          "value": 74
+        },
+        {
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "memoryGB": 48,
+          "value": 69
+        },
+        {
+          "model": "Radeon Pro W7500",
+          "memoryGB": 8,
+          "value": 659
+        },
+        {
+          "model": "Radeon Pro W7600",
+          "memoryGB": 8,
+          "value": 688
+        },
+        {
+          "model": "Radeon Pro W7700",
+          "memoryGB": 16,
+          "value": 253
+        },
+        {
+          "model": "Radeon Pro W7800",
+          "memoryGB": 32,
+          "value": 92
+        }
+      ]
+    },
+    {
+      "id": "aec-twinmotion-2024-1-2-pathtrace",
+      "version": "Twinmotion 2024.1.2",
+      "application": "twinmotion",
+      "operation": "gpu_render",
+      "component": "gpu",
+      "referenceOnly": true,
+      "url": "https://aecmag.com/workstations/workstations-for-arch-viz/",
+      "date": "2025-02-09",
+      "reviewedAt": "2026-11-04",
+      "metric": "5 path-traced images, 4K; total seconds",
+      "direction": "lower",
+      "baseValue": 831,
+      "scope": "Reference only: heavy scene consuming about 20 GB VRAM. Raster and path tracer are separate tests. The task profile does not yet record render mode or scene memory, so these observations MUST NOT rank generic Twinmotion requests. A crash is not a zero performance score. No GeForce or R9700 results in this cohort.",
+      "observations": [
+        {
+          "model": "NVIDIA RTX A1000",
+          "memoryGB": 8,
+          "value": 2124
+        },
+        {
+          "model": "NVIDIA RTX A4000",
+          "memoryGB": 16,
+          "value": 784
+        },
+        {
+          "model": "NVIDIA RTX 2000 Ada Generation",
+          "memoryGB": 16,
+          "value": 1090
+        },
+        {
+          "model": "NVIDIA RTX 4000 Ada Generation",
+          "memoryGB": 20,
+          "value": 831
+        },
+        {
+          "model": "NVIDIA RTX 4500 Ada Generation",
+          "memoryGB": 24,
+          "value": 595
+        },
+        {
+          "model": "NVIDIA RTX 5000 Ada Generation",
+          "memoryGB": 32,
+          "value": 342
+        },
+        {
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "memoryGB": 48,
+          "value": 284
+        },
+        {
+          "model": "Radeon Pro W7700",
+          "memoryGB": 16,
+          "value": 3608
+        },
+        {
+          "model": "Radeon Pro W7800",
+          "memoryGB": 32,
+          "value": 2980
+        }
+      ],
+      "failedObservations": [
+        {
+          "model": "Radeon Pro W7500",
+          "memoryGB": 8,
+          "outcome": "crashed"
+        },
+        {
+          "model": "Radeon Pro W7600",
+          "memoryGB": 8,
+          "outcome": "crashed"
+        }
+      ]
+    }
+  ],
+  "cpuGamingLegacy": {
+    "source": "ComputerBase",
+    "url": "https://www.computerbase.de/artikel/prozessoren/amd-ryzen-5-9600x-ryzen-7-9700x-test.89029/seite-4",
+    "metric": "720p CPU-limited games, geometric mean FPS with RTX 4090 on the source test system",
+    "reviewedAt": "2026-10-26",
+    "observations": {
+      "AMD Ryzen 5 7600": {
+        "socket": "AM5",
+        "cores": 6,
+        "average": 95,
+        "onePercentLow": 65
+      },
+      "AMD Ryzen 5 7600X": {
+        "socket": "AM5",
+        "cores": 6,
+        "average": 98,
+        "onePercentLow": 68
+      },
+      "AMD Ryzen 7 7700": {
+        "socket": "AM5",
+        "cores": 8,
+        "average": 101,
+        "onePercentLow": 70
+      },
+      "AMD Ryzen 7 7700X": {
+        "socket": "AM5",
+        "cores": 8,
+        "average": 105,
+        "onePercentLow": 73
+      },
+      "AMD Ryzen 7 9700X": {
+        "socket": "AM5",
+        "cores": 8,
+        "average": 113,
+        "onePercentLow": 77
+      },
+      "AMD Ryzen 7 7800X3D": {
+        "socket": "AM5",
+        "cores": 8,
+        "average": 128,
+        "onePercentLow": 85
+      }
+    }
+  }
+}

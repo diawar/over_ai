@@ -1,0 +1,33 @@
+const test=require('node:test'),assert=require('node:assert/strict');
+const fs=require('node:fs'),os=require('node:os'),path=require('node:path');
+const {createPlannerCooldown}=require('../tools/planner-cooldown.cjs');
+const {createPlannerProvider}=require('../tools/ai-planner-provider.cjs');
+test('provider cooldowns are isolated and legacy Kimi pause survives switching',t=>{
+ const directory=fs.mkdtempSync(path.join(__dirname,'../.runtime/planner-cooldown-test-'));
+ t.after(()=>{for(const name of fs.readdirSync(directory))fs.unlinkSync(path.join(directory,name));fs.rmdirSync(directory);});
+ const store=createPlannerCooldown(directory,()=>1000);
+ store.defer(1,600);
+ assert.equal(store.remainingMs(1,'kimi'),600000);
+ assert.equal(store.remainingMs(1,'openai'),0);
+ store.defer(1,30,'openai');
+ assert.equal(store.remainingMs(1,'openai'),30000);
+ assert.equal(store.remainingMs(1,'kimi'),600000);
+ assert.equal(store.remainingMs(2,'openai'),0);
+});
+test('provider Retry-After persists across new adapters and blocks network until expiry',async t=>{
+ const directory=fs.mkdtempSync(path.join(__dirname,'../.runtime/planner-cooldown-test-'));let clock=1000,calls=0;
+ t.after(()=>{for(const name of fs.readdirSync(directory))fs.unlinkSync(path.join(directory,name));fs.rmdirSync(directory);});
+ const oldBase=process.env.CORELAB_INTERNAL_API,oldSecret=process.env.SESSION_SECRET;
+ process.env.CORELAB_INTERNAL_API='http://internal';process.env.SESSION_SECRET='test';
+ t.after(()=>{if(oldBase===undefined)delete process.env.CORELAB_INTERNAL_API;else process.env.CORELAB_INTERNAL_API=oldBase;if(oldSecret===undefined)delete process.env.SESSION_SECRET;else process.env.SESSION_SECRET=oldSecret;});
+ const fetcher=async()=>{calls++;return {ok:false,status:429,headers:{get:()=> '681'},json:async()=>({})};};
+ const args={instructions:'x',schema:{},input:[{role:'user',content:'x'}]};
+ const first=createPlannerCooldown(directory,()=>clock);
+ await assert.rejects(createPlannerProvider({organizationId:1,fetcher,cooldownStore:first})(args),/ai_http_429/);
+ const second=createPlannerCooldown(directory,()=>clock);
+ assert.equal(second.remainingMs(1),681000);assert.equal(second.remainingMs(2),0);
+ await assert.rejects(createPlannerProvider({organizationId:1,fetcher,cooldownStore:second})(args),/ai_cooldown/);assert.equal(calls,1);
+ second.defer(1,1);assert.equal(second.remainingMs(1),681000);
+ clock+=681001;assert.equal(second.remainingMs(1),0);
+ await assert.rejects(createPlannerProvider({organizationId:1,fetcher,cooldownStore:second})(args),/ai_http_429/);assert.equal(calls,2);
+});

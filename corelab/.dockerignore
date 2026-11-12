@@ -1,0 +1,11 @@
+.env
+.env.*
+!/.env.example
+frontend/
+backend/__pycache__/
+backend/.pytest_cache/
+backend/tests/__pycache__/
+mini-app/*.test.mjs
+*.pyc
+docs/
+tools/

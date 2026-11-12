@@ -13,8 +13,8 @@ POLICY = json.loads((ROOT / 'config/supplier-delivery.json').read_text(encoding=
 class SupplierPolicyTests(unittest.TestCase):
     def test_route_matrix_covers_all_workbook_combinations(self):
         cities = POLICY['destinationCities']
-        self.assertEqual(sum(not warehouse.get('excludeInventory', False) for warehouse in POLICY['warehouses']), 18)
-        self.assertEqual(len(POLICY['warehouses']), 20)
+        self.assertEqual(sum(not warehouse.get('excludeInventory', False) for warehouse in POLICY['warehouses']), 19)
+        self.assertEqual(len(POLICY['warehouses']), 21)
         for warehouse in POLICY['warehouses']:
             self.assertEqual(set(warehouse['deliveries']), set(cities))
 
@@ -23,6 +23,10 @@ class SupplierPolicyTests(unittest.TestCase):
         for supplier in excluded:
             product = {'dealersData': [f'{supplier} (999) - 1 / 1 / 1']}
             self.assertFalse(audit.has_positive_dealer_quantity(product, excluded))
+
+    def test_azerti_uses_the_authorized_pulser_routes(self):
+        by_label = {warehouse['label']: warehouse for warehouse in POLICY['warehouses']}
+        self.assertEqual(by_label['Azerti']['deliveries'], by_label['PULSER']['deliveries'])
 
     def test_active_supplier_stock_still_counts(self):
         excluded = POLICY['availabilityPolicy']['excludedSupplierLabels']

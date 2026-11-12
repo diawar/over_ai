@@ -1,0 +1,3 @@
+[submodule ".handoff"]
+	path = .handoff
+	url = https://github.com/OpenMOSS/claude-codex-handoff.git

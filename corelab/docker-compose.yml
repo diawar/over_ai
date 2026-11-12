@@ -1,0 +1,94 @@
+services:
+  db:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-corelab}
+      POSTGRES_USER: ${POSTGRES_USER:-corelab}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 5s
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    restart: unless-stopped
+    env_file: .env
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ../data:/evidence:ro
+      - ./tools:/opt/corelab-tools:ro
+      - ../tools:/performance:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health')"]
+      interval: 10s
+      timeout: 4s
+      retries: 6
+      start_period: 15s
+
+  mini_app:
+    image: node:22-alpine
+    restart: unless-stopped
+    working_dir: /workspace
+    command: ["node", "tools/preview-app.cjs"]
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8001
+      CHAT_SESSION_DIRECTORY: /var/lib/corelab-chat
+      CORELAB_INTERNAL_API: http://backend:8000
+      SESSION_SECRET: ${SESSION_SECRET:?Set SESSION_SECRET in .env}
+    depends_on:
+      backend:
+        condition: service_healthy
+    volumes:
+      - ../app:/workspace/app:ro
+      - chat_sessions:/var/lib/corelab-chat
+      - ../tools:/workspace/tools:ro
+      - ../config/supplier-delivery.json:/workspace/config/supplier-delivery.json:ro
+      - ../config/build-preferences.json:/workspace/config/build-preferences.json:ro
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8001/mini-app/healthz').then(r=>{if(!r.ok)process.exit(1)})"]
+      interval: 10s
+      timeout: 4s
+      retries: 6
+      start_period: 15s
+
+  frontend:
+    build: ./frontend
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:5173:5173"
+    environment:
+      VITE_API_URL: ""
+      API_PROXY_TARGET: http://backend:8000
+      MINI_APP_PROXY_TARGET: http://mini_app:8001
+      CLOUDFLARE_TUNNEL_HOST: ${CLOUDFLARE_TUNNEL_HOST:-}
+      __VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS: ${CLOUDFLARE_TUNNEL_HOST:-}
+    depends_on:
+      backend:
+        condition: service_healthy
+      mini_app:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:5173/').then(r=>{if(!r.ok)process.exit(1)})"]
+      interval: 10s
+      timeout: 4s
+      retries: 6
+      start_period: 10s
+
+volumes:
+  chat_sessions:
+  postgres_data:

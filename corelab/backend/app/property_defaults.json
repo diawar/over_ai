@@ -1,0 +1,446 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "code": "description",
+      "label": "Описание",
+      "source": "gmc",
+      "level": "required",
+      "value_type": "string",
+      "max_length": 500,
+      "note": "Если описания нет на официальном сайте производителя для точной модели, ИИ составляет описание до 500 символов только по подтверждённым характеристикам."
+    },
+    {
+      "code": "image_link",
+      "label": "Ссылка на изображение",
+      "source": "gmc",
+      "level": "required",
+      "value_type": "url",
+      "note": "Основная ссылка на изображение товара."
+    },
+    {
+      "code": "additional_image_link",
+      "label": "Ссылка на дополнительное изображение",
+      "source": "gmc",
+      "level": "optional",
+      "value_type": "list",
+      "note": "Список дополнительных ссылок на изображения, если доступны."
+    },
+    {
+      "code": "warranty_months",
+      "label": "Гарантия",
+      "source": "gmc",
+      "level": "optional",
+      "value_type": "integer",
+      "unit": "мес.",
+      "minimum": 1,
+      "default_value": 12,
+      "note": "Значение по умолчанию — 12 месяцев."
+    },
+    {
+      "code": "mpn",
+      "label": "Код производителя товара",
+      "source": "gmc",
+      "level": "recommended",
+      "value_type": "string",
+      "note": "Код производителя (MPN); брать с официальной страницы или маркировки точной модели."
+    },
+    {
+      "code": "condition",
+      "label": "Состояние",
+      "source": "gmc",
+      "level": "required",
+      "value_type": "enum",
+      "allowed_values": [
+        "new",
+        "used",
+        "refurbished"
+      ],
+      "default_value": "new",
+      "normalization": {
+        "aliases": {
+          "Новый": "new",
+          "Б/у": "used",
+          "Восстановленный": "refurbished"
+        }
+      },
+      "note": "По умолчанию — Новый."
+    },
+    {
+      "code": "product_length_cm",
+      "label": "Длина товара",
+      "source": "gmc",
+      "level": "recommended",
+      "value_type": "number",
+      "unit": "cm",
+      "minimum": 0,
+      "note": "Размер товара в сантиметрах; не выводить из размеров упаковки."
+    },
+    {
+      "code": "product_width_cm",
+      "label": "Ширина товара",
+      "source": "gmc",
+      "level": "recommended",
+      "value_type": "number",
+      "unit": "cm",
+      "minimum": 0,
+      "note": "Размер товара в сантиметрах; не выводить из размеров упаковки."
+    },
+    {
+      "code": "product_height_cm",
+      "label": "Высота товара",
+      "source": "gmc",
+      "level": "recommended",
+      "value_type": "number",
+      "unit": "cm",
+      "minimum": 0,
+      "note": "Размер товара в сантиметрах; не выводить из размеров упаковки."
+    },
+    {
+      "code": "product_weight_kg",
+      "label": "Вес товара",
+      "source": "gmc",
+      "level": "recommended",
+      "value_type": "number",
+      "unit": "kg",
+      "minimum": 0,
+      "note": "Вес товара в килограммах; не подменять весом упаковки."
+    }
+  ],
+  "templates": [
+    {
+      "code": "cpu",
+      "label": "Процессоры",
+      "attributes": [
+        {
+          "code": "socket",
+          "label": "Сокет",
+          "value_type": "string",
+          "unit": null,
+          "normalization": {
+            "aliases": {
+              "LGA 1700": "LGA1700",
+              "LGA 1851": "LGA1851"
+            }
+          },
+          "source": "internal",
+          "level": "recommended",
+          "note": "Внутренняя рекомендуемая характеристика настольного процессора; подтверждена просмотренными страницами AMD и Intel."
+        },
+        {
+          "code": "cores",
+          "label": "Количество ядер",
+          "value_type": "integer",
+          "unit": null,
+          "normalization": {},
+          "source": "internal",
+          "level": "recommended",
+          "minimum": 1,
+          "note": "Общее число физических ядер; для гибридных Intel берётся сумма P- и E-ядер."
+        },
+        {
+          "code": "threads",
+          "label": "Количество потоков",
+          "value_type": "integer",
+          "unit": null,
+          "normalization": {},
+          "source": "internal",
+          "level": "recommended",
+          "minimum": 1,
+          "note": "Число потоков; подтверждено на просмотренных настольных моделях."
+        },
+        {
+          "code": "max_boost_clock_ghz",
+          "label": "Максимальная частота в Boost",
+          "value_type": "number",
+          "unit": "GHz",
+          "normalization": {
+            "unit_factors": {
+              "MHz": 0.001
+            }
+          },
+          "source": "internal",
+          "level": "recommended",
+          "minimum": 1,
+          "note": "Хранить именно максимальную частоту Boost, не смешивать с базовой."
+        },
+        {
+          "code": "base_clock_ghz",
+          "label": "Базовая частота",
+          "value_type": "number",
+          "unit": "GHz",
+          "normalization": {
+            "unit_factors": {
+              "MHz": 0.001
+            }
+          },
+          "source": "internal",
+          "level": "recommended",
+          "minimum": 0.1,
+          "note": "Для гибридных Intel базовые частоты P- и E-ядер различаются; при неоднозначности не заполнять одним числом."
+        },
+        {
+          "code": "l3_cache_mb",
+          "label": "Кэш L3",
+          "value_type": "number",
+          "unit": "MB",
+          "normalization": {
+            "unit_factors": {
+              "GB": 1024,
+              "KB": 0.001
+            }
+          },
+          "source": "internal",
+          "level": "recommended",
+          "minimum": 0,
+          "note": "Отдельно от суммарного кэша L1/L2/L3."
+        },
+        {
+          "code": "cpu_memory_type",
+          "label": "Поддерживаемый тип памяти",
+          "value_type": "string",
+          "unit": null,
+          "normalization": {},
+          "source": "internal",
+          "level": "recommended",
+          "note": "Записывать поддерживаемые типы; у некоторых моделей Intel возможна поддержка нескольких поколений."
+        },
+        {
+          "code": "max_memory_gb",
+          "label": "Максимальный объём памяти",
+          "value_type": "number",
+          "unit": "GB",
+          "normalization": {},
+          "source": "internal",
+          "level": "recommended",
+          "minimum": 1,
+          "note": "Максимум, указанный производителем для модели."
+        },
+        {
+          "code": "memory_channels",
+          "label": "Количество каналов памяти",
+          "value_type": "integer",
+          "unit": null,
+          "normalization": {},
+          "source": "internal",
+          "level": "recommended",
+          "minimum": 1,
+          "note": "Подтверждено в спецификациях производителей."
+        },
+        {
+          "code": "integrated_graphics",
+          "label": "Встроенная графика",
+          "value_type": "boolean",
+          "unit": null,
+          "normalization": {},
+          "source": "internal",
+          "level": "recommended",
+          "note": "Явное булево значение: есть/нет; не выводить из модели или бренда."
+        }
+      ]
+    },
+    {
+      "code": "ram",
+      "label": "Оперативная память",
+      "attributes": [
+        {
+          "code": "memory_type",
+          "label": "Тип памяти DDR",
+          "value_type": "string",
+          "unit": null,
+          "normalization": {},
+          "source": "internal",
+          "level": "recommended",
+          "note": "Начальная структура по ТЗ владельца.; уточняется по официальным моделям категории"
+        },
+        {
+          "code": "capacity",
+          "label": "Объём",
+          "value_type": "number",
+          "unit": "GB",
+          "normalization": {},
+          "source": "internal",
+          "level": "recommended",
+          "minimum": 1,
+          "note": "Начальная структура по ТЗ владельца.; уточняется по официальным моделям категории"
+        },
+        {
+          "code": "memory_frequency",
+          "label": "Частота памяти",
+          "value_type": "number",
+          "unit": "MHz",
+          "normalization": {},
+          "source": "internal",
+          "level": "recommended",
+          "minimum": 1,
+          "note": "Начальная структура по ТЗ владельца.; уточняется по официальным моделям категории"
+        },
+        {
+          "code": "memory_form_factor",
+          "label": "Форм-фактор памяти",
+          "value_type": "string",
+          "unit": null,
+          "normalization": {},
+          "source": "internal",
+          "level": "recommended",
+          "note": "Начальная структура по ТЗ владельца.; уточняется по официальным моделям категории"
+        },
+        {
+          "code": "module_count",
+          "label": "Количество модулей",
+          "value_type": "integer",
+          "unit": null,
+          "normalization": {},
+          "source": "internal",
+          "level": "recommended",
+          "minimum": 1,
+          "note": "Начальная структура по ТЗ владельца.; уточняется по официальным моделям категории"
+        }
+      ]
+    },
+    {
+      "code": "ssd",
+      "label": "SSD",
+      "attributes": [
+        {
+          "code": "capacity",
+          "label": "Объём",
+          "value_type": "number",
+          "unit": "GB",
+          "normalization": {},
+          "source": "internal",
+          "level": "recommended",
+          "minimum": 1,
+          "note": "Начальная структура по ТЗ владельца.; уточняется по официальным моделям категории"
+        },
+        {
+          "code": "storage_interface",
+          "label": "Интерфейс накопителя",
+          "value_type": "string",
+          "unit": null,
+          "normalization": {},
+          "source": "internal",
+          "level": "recommended",
+          "note": "Начальная структура по ТЗ владельца.; уточняется по официальным моделям категории"
+        },
+        {
+          "code": "storage_form_factor",
+          "label": "Форм-фактор накопителя",
+          "value_type": "string",
+          "unit": null,
+          "normalization": {},
+          "source": "internal",
+          "level": "recommended",
+          "note": "Начальная структура по ТЗ владельца.; уточняется по официальным моделям категории"
+        },
+        {
+          "code": "storage_connection",
+          "label": "Тип подключения",
+          "value_type": "string",
+          "unit": null,
+          "normalization": {},
+          "source": "internal",
+          "level": "recommended",
+          "note": "Начальная структура по ТЗ владельца.; уточняется по официальным моделям категории"
+        }
+      ]
+    },
+    {
+      "code": "monitor",
+      "label": "Мониторы",
+      "attributes": [
+        {
+          "code": "screen_diagonal",
+          "label": "Диагональ экрана",
+          "value_type": "number",
+          "unit": "in",
+          "normalization": {},
+          "source": "internal",
+          "level": "recommended",
+          "minimum": 1,
+          "note": "Начальная структура по ТЗ владельца.; уточняется по официальным моделям категории"
+        },
+        {
+          "code": "resolution",
+          "label": "Разрешение",
+          "value_type": "string",
+          "unit": null,
+          "normalization": {},
+          "source": "internal",
+          "level": "recommended",
+          "note": "Начальная структура по ТЗ владельца.; уточняется по официальным моделям категории"
+        },
+        {
+          "code": "panel_type",
+          "label": "Тип матрицы",
+          "value_type": "string",
+          "unit": null,
+          "normalization": {},
+          "source": "internal",
+          "level": "recommended",
+          "note": "Начальная структура по ТЗ владельца.; уточняется по официальным моделям категории"
+        },
+        {
+          "code": "refresh_rate",
+          "label": "Частота обновления",
+          "value_type": "number",
+          "unit": "Hz",
+          "normalization": {},
+          "source": "internal",
+          "level": "recommended",
+          "minimum": 1,
+          "note": "Начальная структура по ТЗ владельца.; уточняется по официальным моделям категории"
+        }
+      ]
+    },
+    {
+      "code": "laptop",
+      "label": "Ноутбуки",
+      "attributes": [
+        {
+          "code": "processor_model",
+          "label": "Процессор",
+          "value_type": "string",
+          "unit": null,
+          "normalization": {},
+          "source": "internal",
+          "level": "recommended",
+          "note": "Начальная структура по ТЗ владельца.; уточняется по официальным моделям категории"
+        },
+        {
+          "code": "ram_capacity",
+          "label": "Объём оперативной памяти",
+          "value_type": "number",
+          "unit": "GB",
+          "normalization": {},
+          "source": "internal",
+          "level": "recommended",
+          "minimum": 1,
+          "note": "Начальная структура по ТЗ владельца.; уточняется по официальным моделям категории"
+        },
+        {
+          "code": "storage_capacity",
+          "label": "Объём накопителя",
+          "value_type": "number",
+          "unit": "GB",
+          "normalization": {},
+          "source": "internal",
+          "level": "recommended",
+          "minimum": 1,
+          "note": "Начальная структура по ТЗ владельца.; уточняется по официальным моделям категории"
+        },
+        {
+          "code": "screen_diagonal",
+          "label": "Диагональ экрана",
+          "value_type": "number",
+          "unit": "in",
+          "normalization": {},
+          "source": "internal",
+          "level": "recommended",
+          "minimum": 1,
+          "note": "Начальная структура по ТЗ владельца.; уточняется по официальным моделям категории"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+:root { font-family: Inter, system-ui, sans-serif; color: #211f34; background: #f7f6fb; --accent: #ff416c; --on-accent: white; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input, select { font: inherit; }
+button { cursor: pointer; }
+.shell { width: min(100%, 560px); min-height: 100dvh; margin: auto; padding: 20px 16px 40px; }
+header { display: flex; align-items: center; gap: 12px; padding: 10px 0 20px; border-bottom: 1px solid #e5e2ef; }
+header img { width: 42px; height: 42px; object-fit: contain; border-radius: 10px; }
+header div { flex: 1; min-width: 0; }
+header small { color: var(--accent); font-size: 10px; font-weight: 750; letter-spacing: .12em; }
+h1 { margin: 3px 0 0; font-size: 23px; overflow-wrap: anywhere; }
+h2 { font-size: 19px; }
+#notice { min-height: 20px; margin: 14px 0; color: #685f79; font-size: 13px; }
+#search { display: flex; gap: 8px; }
+#search input { flex: 1; min-width: 0; }
+input, select { padding: 11px; border: 1px solid #dcd8e8; border-radius: 10px; background: white; }
+button { border: 1px solid #dcd8e8; border-radius: 10px; padding: 10px 14px; background: white; color: #211f34; }
+#search button { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.filter { display: grid; gap: 5px; margin: 16px 0; color: #685f79; font-size: 12px; }
+#count { font-size: 13px; color: #685f79; }
+#products, #shops { display: grid; gap: 9px; }
+.product { display: grid; gap: 5px; width: 100%; text-align: left; padding: 15px; }
+.product strong { line-height: 1.4; }
+.product span { color: #685f79; font-size: 13px; }
+.pages { display: flex; align-items: center; justify-content: space-between; margin-top: 20px; font-size: 13px; }
+button:disabled { opacity: .5; cursor: default; }
+#detail h2 { margin-top: 20px; }
+#detail-price { color: var(--accent); font-size: 19px; font-weight: 700; }
+#detail-attributes { display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px; }
+#detail-attributes dt, #detail-attributes dd { margin: 0; padding: 10px 0; border-bottom: 1px solid #e5e2ef; font-size: 13px; }
+#detail-attributes dt { color: #685f79; }
+#detail-attributes dd { text-align: right; overflow-wrap: anywhere; }
+button:hover:not(:disabled) { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 9%, white); }
+#search button:hover:not(:disabled) { background: var(--accent); filter: brightness(.9); }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+input:focus, select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent); }
+[hidden] { display: none !important; }
+
+.app-icon{display:inline-block;width:1em;height:1em;vertical-align:-.15em}

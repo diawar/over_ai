@@ -1,0 +1,873 @@
+{
+  "products": [
+    {
+      "product_id": 5380,
+      "category_id": 17,
+      "manufacturer": "ASUS",
+      "article": "ROG-ASTRAL-RTX5080-O16G-WHITE",
+      "official_model": "ROG Astral GeForce RTX 5080 16GB GDDR7 White OC Edition",
+      "source_url": "https://rog.asus.com/us/graphics-cards/graphics-cards/rog-astral/rog-astral-rtx5080-o16g-white/spec/",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 12795,
+      "category_id": 17,
+      "manufacturer": "ZOTAC",
+      "article": "ZT-B50500Q-10M",
+      "official_model": "ZOTAC GAMING GeForce RTX 5050 Twin Edge OC White Edition",
+      "source_url": "https://www.zotac.com/download/mediadrivers/External/GraphicsCard/5050/Brochure/ZT-B50500Q-10M-brochure.pdf",
+      "checked_at": "2026-10-18",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 23413,
+      "category_id": 17,
+      "manufacturer": "Palit",
+      "article": "NE7506TU19T1-GB2061M",
+      "official_model": "GeForce RTX 5060 Ti White OC 16GB",
+      "source_url": "https://www.palit.com/palit/vgapro.php?id=5735&lang=en&pn=NE7506TU19T1-GB2061M&tab=sp",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 2040,
+      "category_id": 146,
+      "manufacturer": "ASUS",
+      "article": "ROG-STRIX-1000P-GAMING-WHITE",
+      "official_model": "ASUS ROG Strix 1000W Platinum White",
+      "source_url": "https://rog.asus.com/ru/power-supply-units/rog-strix/rog-strix-1000p-gaming-white/spec/",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 9890,
+      "category_id": 146,
+      "manufacturer": "GamerStorm",
+      "article": "R-PQ850G-FD0W-WGEU-V1",
+      "official_model": "DeepCool GamerStorm PQ850G White",
+      "source_url": "https://www.deepcool.com/download/pdf/PQ_G.pdf",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 19627,
+      "category_id": 146,
+      "manufacturer": "FSP",
+      "article": "HPT3-1200M White",
+      "official_model": "FSP Hydro PTM X PRO ATX3.1 1200W White Edition",
+      "source_url": "https://www.fsplifestyle.com/en/product/HydroPTMXPRO1200W_12V2X6_WHITE.html",
+      "checked_at": "2026-10-25",
+      "source_kind": "manufacturer_site",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 26137,
+      "category_id": 146,
+      "manufacturer": "FSP",
+      "article": "VITA-1000GM White",
+      "official_model": "Блок питания FSP VITA GM 1000W White, VITA-1000GM White",
+      "source_url": "https://www.fsplifestyle.com/en/product/VITAGM1000W_WHITE.html",
+      "checked_at": "2026-10-19",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 27466,
+      "category_id": 146,
+      "manufacturer": "AeroCool",
+      "article": "Aero White 500W",
+      "official_model": "AeroCool AERO WHITE 500W",
+      "source_url": "https://aerocool.io/ru/product/aero-white-500w/",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 1914,
+      "category_id": 246,
+      "manufacturer": "ID-Cooling",
+      "article": "SL240-XE-WHITE",
+      "official_model": "ID-Cooling SL240 XE WHITE",
+      "source_url": "https://www.idcooling.com/product/detail?id=454&name=SL240+XE+WHITE",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 2122,
+      "category_id": 246,
+      "manufacturer": "NZXT",
+      "article": "RL-KR36E-W2",
+      "official_model": "NZXT Kraken Elite 360 RGB V2 White",
+      "source_url": "https://nzxt.com/ko-intl/products/kraken-360-elite-rgb-1",
+      "checked_at": "2026-10-18",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 3152,
+      "category_id": 246,
+      "manufacturer": "ID-Cooling",
+      "article": "FX240 PRO WHITE",
+      "official_model": "ID-Cooling FX240 PRO WHITE",
+      "source_url": "https://www.idcooling.com/product/detail?id=513&name=FX240+PRO+WHITE",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 3210,
+      "category_id": 246,
+      "manufacturer": "Lian Li",
+      "article": "G89.GHS2OLDC36TW.00",
+      "official_model": "HydroShift II OLED Curved 360TL White",
+      "source_url": "https://lian-li.com/product/hs2-oled-curved/",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 4843,
+      "category_id": 246,
+      "manufacturer": "Thermaltake",
+      "article": "CL-W482-PL12SW-A",
+      "official_model": "Thermaltake MINECUBE 360 Ultra ARGB Sync Snow Edition",
+      "source_url": "https://thermaltake.com/en-tw/products/minecube-360-ultra-argb-sync-aio-liquid-cooler-snow-edition",
+      "checked_at": "2026-10-18",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 5164,
+      "category_id": 246,
+      "manufacturer": "MSI",
+      "article": "MAG-CORELIQUID-A13-360-WH",
+      "official_model": "MSI MAG CORELIQUID A13 360 White",
+      "source_url": "https://www.msi.com/Liquid-Cooling/MAG-CORELIQUID-A13-360",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 6442,
+      "category_id": 246,
+      "manufacturer": "MSI",
+      "article": "MAG-CORELIQUID-E360-WHITE",
+      "official_model": "MSI MAG CORELIQUID E360 White",
+      "source_url": "https://pl-store.msi.com/products/mag-coreliquid-e360-white",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 6835,
+      "category_id": 246,
+      "manufacturer": "Cougar",
+      "article": "CGR-PSDVPRGB-W-360",
+      "official_model": "Cougar Poseidon Vistek Pro ARGB 360 White",
+      "source_url": "https://cougargaming.com/ko/products/cooling/poseidon-vistek-pro-argb/",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 8257,
+      "category_id": 246,
+      "manufacturer": "AeroCool",
+      "article": "ACLA-AD36117.21",
+      "official_model": "AeroCool Abyss L360R Digi White",
+      "source_url": "https://aerocool.io/product/abyss-l360r-digi/",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 16610,
+      "category_id": 246,
+      "manufacturer": "ID-Cooling",
+      "article": "DX240-MAX-WHITE",
+      "official_model": "ID-Cooling DX240 MAX WHITE",
+      "source_url": "https://www.idcooling.com/product/detail?id=527&name=DX240+MAX+WHITE",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 4682,
+      "category_id": 253,
+      "manufacturer": "Kingston",
+      "article": "KF556C40BWA-16",
+      "official_model": "Kingston FURY Beast White 16GB DDR5-5600 KF556C40BWA-16",
+      "source_url": "https://www.kingston.com/datasheets/KF556C40BWA-16.pdf",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 14463,
+      "category_id": 253,
+      "manufacturer": "Kingston",
+      "article": "KF560C30BWEK2-32",
+      "official_model": "Kingston FURY Beast White 32GB (2x16GB) DDR5-6000 KF560C30BWEK2-32",
+      "source_url": "https://www.kingston.com/datasheets/KF560C30BWEK2-32.pdf",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 3580,
+      "category_id": 359,
+      "manufacturer": "Gigabyte",
+      "article": "B650M AORUS ELITE AX ICE",
+      "official_model": "Материнская плата Gigabyte B650M AORUS ELITE AX ICE",
+      "source_url": "https://www.gigabyte.com/us/press/news/2119",
+      "checked_at": "2026-10-25",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 6070,
+      "category_id": 359,
+      "manufacturer": "MSI",
+      "article": "MPG X870I EDGE TI EVO WIFI",
+      "official_model": "Материнская плата MSI MPG X870I EDGE TI EVO WIFI",
+      "source_url": "https://www.msi.com/Motherboard/MPG-X870I-EDGE-TI-EVO-WIFI",
+      "checked_at": "2026-10-25",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 11511,
+      "category_id": 359,
+      "manufacturer": "ASUS",
+      "article": "ROG STRIX X870E-A GAMING NEO",
+      "official_model": "ROG STRIX X870E-A GAMING WIFI7 NEO",
+      "source_url": "https://rog.asus.com/us/motherboards/rog-strix/rog-strix-x870e-a-gaming-wifi7-neo/",
+      "checked_at": "2026-10-25",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 31001,
+      "category_id": 359,
+      "manufacturer": "ASRock",
+      "article": "Z890 PRO RS WIFI WHITE",
+      "official_model": "ASRock Z890 Pro RS WiFi White",
+      "source_url": "https://www.asrock.com/mb/Intel/Z890%20Pro%20RS%20WiFi%20White/",
+      "checked_at": "2026-10-25",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 584,
+      "category_id": 432,
+      "manufacturer": "Thermaltake",
+      "article": "CA-1Z1-00M6WN-00",
+      "official_model": "The Tower 600 Snow",
+      "source_url": "https://thermaltake.com/products/the-tower-600-snow-mid-tower-chassis",
+      "checked_at": "2026-10-25",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 669,
+      "category_id": 432,
+      "manufacturer": "Thermaltake",
+      "article": "CA-1V2-00M6WN-00",
+      "official_model": "Thermaltake Core P6 TG Snow",
+      "source_url": "https://br.thermaltake.com/core-p6-tempered-glass-snow-mid-tower-chassis.html",
+      "checked_at": "2026-10-18",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 2023,
+      "category_id": 432,
+      "manufacturer": "Thermaltake",
+      "article": "CA-1P6-00M6WN-00",
+      "official_model": "Thermaltake View 300 MX Snow",
+      "source_url": "https://thermaltake.com/products/view-300-mx-snow-mid-tower-chassis",
+      "checked_at": "2026-10-25",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 6397,
+      "category_id": 432,
+      "manufacturer": "ASUS",
+      "article": "90DC00I3-B19000",
+      "official_model": "ASUS TUF Gaming GT302 ARGB White",
+      "source_url": "https://www.asus.com/ca-en/motherboards-components/cases/tuf-gaming/tuf-gaming-gt302-argb/techspec/",
+      "checked_at": "2026-10-25",
+      "source_kind": "manufacturer_site",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 6657,
+      "category_id": 432,
+      "manufacturer": "ASUS",
+      "article": "TUF GAMING GT502 PLUS TG ARGB WHITE",
+      "official_model": "TUF Gaming GT502 PLUS White Edition",
+      "source_url": "https://www.asus.com/motherboards-components/cases/tuf-gaming/tuf-gaming-gt502-plus/techspec/",
+      "checked_at": "2026-10-25",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 7482,
+      "category_id": 432,
+      "manufacturer": "Lian Li",
+      "article": "G99.LAN217INFW.10R",
+      "official_model": "Lian Li LANCOOL 217 INF White",
+      "source_url": "https://lian-li.com/product/lancool-217-inf/",
+      "checked_at": "2026-10-18",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 7593,
+      "category_id": 432,
+      "manufacturer": "Thermaltake",
+      "article": "CA-1Y3-00M6WN-01",
+      "official_model": "Thermaltake CTE E660 MX Snow",
+      "source_url": "https://latam.thermaltake.com/cte-e660-mx-snow-mid-tower-chassis.html",
+      "checked_at": "2026-10-18",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 13080,
+      "category_id": 432,
+      "manufacturer": "Cougar",
+      "article": "FV150 RGB White",
+      "official_model": "COUGAR FV150 RGB White",
+      "source_url": "https://cougargaming.com/products/cases/fv150-rgb/",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 14505,
+      "category_id": 432,
+      "manufacturer": "be quiet!",
+      "article": "BGW68",
+      "official_model": "be quiet! LIGHT BASE 600 LX White",
+      "source_url": "https://www.bequiet.com/en/case/5295",
+      "checked_at": "2026-10-18",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 14695,
+      "category_id": 432,
+      "manufacturer": "Lian Li",
+      "article": "G99.O11DERGBW.00",
+      "official_model": "O11 DYNAMIC EVO RGB White",
+      "source_url": "https://lian-li.com/product/o11d-evo-rgb/",
+      "checked_at": "2026-10-25",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 16767,
+      "category_id": 432,
+      "manufacturer": "Thermaltake",
+      "article": "CA-1X7-00F6WN-01",
+      "official_model": "Thermaltake CTE C700 TG ARGB Snow",
+      "source_url": "https://thermaltake.com/products/cte-c700-tg-argb-snow-mid-tower-chassis",
+      "checked_at": "2026-10-25",
+      "source_kind": "manufacturer_site",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 20329,
+      "category_id": 432,
+      "manufacturer": "Zalman",
+      "article": "i3 NEO ARGB White",
+      "official_model": "Zalman i3 NEO ARGB White",
+      "source_url": "https://www.zalman.com/EN/Product/ProductDetail.do?productSeq=1525",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 22820,
+      "category_id": 432,
+      "manufacturer": "be quiet!",
+      "article": "BGW70",
+      "official_model": "be quiet! Light Base 900 DX White",
+      "source_url": "https://www.bequiet.com/es/case/5293",
+      "checked_at": "2026-10-25",
+      "source_kind": "manufacturer_site",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 25359,
+      "category_id": 432,
+      "manufacturer": "Thermaltake",
+      "article": "CA-1X7-00F6WN-00",
+      "official_model": "CTE C700 Air Snow",
+      "source_url": "https://thermaltakeusa.com/products/cte-c700-air-snow-mid-tower-chassis-ca-1x7-00f6wn-00",
+      "checked_at": "2026-10-25",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 26473,
+      "category_id": 432,
+      "manufacturer": "Cougar",
+      "article": "FV270 WH",
+      "official_model": "COUGAR FV270 White",
+      "source_url": "https://cougargaming.com/us/products/cases/fv270/",
+      "checked_at": "2026-10-25",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 26668,
+      "category_id": 432,
+      "manufacturer": "be quiet!",
+      "article": "BGW86",
+      "official_model": "be quiet! Light Base 500 LX White",
+      "source_url": "https://www.bequiet.com/en/case/6694",
+      "checked_at": "2026-10-25",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 966,
+      "category_id": 437,
+      "manufacturer": "Ocypus",
+      "article": "Iota-A62-WH2NNWD00X-GL",
+      "official_model": "Кулер для процессора Ocypus Iota A62 Iota-A62-WH2NNWD00X-GL White",
+      "source_url": "https://www.ocypus.com/specification/cooling/iota-a62--1.html",
+      "checked_at": "2026-10-19",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 2524,
+      "category_id": 437,
+      "manufacturer": "ID-Cooling",
+      "article": "SE-224-XTS ARGB WHITE",
+      "official_model": "ID-Cooling SE-224-XTS ARGB White",
+      "source_url": "https://www.idcooling.com/product/detail?id=322&name=SE-224-XTS+ARGB+WHITE",
+      "checked_at": "2026-10-25",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 5033,
+      "category_id": 437,
+      "manufacturer": "MSI",
+      "article": "MAG COREFROZR AA13 WHITE",
+      "official_model": "MSI MAG COREFROZR AA13 WHITE",
+      "source_url": "https://www.msi.com/Air-Cooling/MAG-COREFROZR-AA13/Specification",
+      "checked_at": "2026-10-19",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 6383,
+      "category_id": 437,
+      "manufacturer": "DeepCool",
+      "article": "R-AK620G2-WHNNMN-GJD",
+      "official_model": "Кулер для процессора Deepcool AK620 G2 White",
+      "source_url": "https://www.deepcool.com/ProductCompatibilityS_New/",
+      "checked_at": "2026-10-19",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 6754,
+      "category_id": 437,
+      "manufacturer": "DeepCool",
+      "article": "R-ASN4-WHNVNN-GJD",
+      "official_model": "Кулер для процессора Deepcool ASSASSIN VC ELITE R-ASN4-WHNVNN-GJD White",
+      "source_url": "https://jp.deepcool.com/products/Cooling/cpuaircoolers/ASSASSIN-VC-ELITE-WH-Vapor-Chamber-Elite-CPU-Air-Cooler/2025/21134.shtml",
+      "checked_at": "2026-10-19",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 7194,
+      "category_id": 437,
+      "manufacturer": "Jonsbo",
+      "article": "CR-1400 EVO Color White",
+      "official_model": "Jonsbo CR-1400 EVO Color White",
+      "source_url": "https://www.jonsbo.com/en/products/CR1400EVOColorWhite.html",
+      "checked_at": "2026-10-25",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 21477,
+      "category_id": 437,
+      "manufacturer": "ID-Cooling",
+      "article": "SE-207-XT Slim Snow",
+      "official_model": "ID-Cooling SE-207-XT Slim Snow",
+      "source_url": "https://www.idcooling.com/product/detail?id=328&name=SE-207-XT+SLIM+SNOW",
+      "checked_at": "2026-10-25",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 21481,
+      "category_id": 437,
+      "manufacturer": "ID-Cooling",
+      "article": "SE-214-XT ARGB WHITE",
+      "official_model": "ID-Cooling SE-214-XT ARGB White",
+      "source_url": "https://idcooling.com/product/detail?id=281&name=SE-214-XT+ARGB+WHITE",
+      "checked_at": "2026-10-25",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 26882,
+      "category_id": 437,
+      "manufacturer": "DeepCool",
+      "article": "R-ASN4-WHNNMT-G",
+      "official_model": "Кулер для процессора Deepcool Assassin IV R-ASN4-WHNNMT-G White",
+      "source_url": "https://www.deepcool.com/ProductCompatibilityS_New/",
+      "checked_at": "2026-10-19",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 28463,
+      "category_id": 437,
+      "manufacturer": "DeepCool",
+      "article": "R-ASN4S-WHGPMN-G",
+      "official_model": "Кулер для процессора Deepcool Assassin 4S R-ASN4S-WHGPMN-G White",
+      "source_url": "https://www.deepcool.com/ProductCompatibilityS_New/",
+      "checked_at": "2026-10-19",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 1328,
+      "category_id": 442,
+      "manufacturer": "Arctic",
+      "article": "ACFAN00164A",
+      "official_model": "ARCTIC BioniX F120 Grey/White",
+      "source_url": "https://www.arctic.de/media/74/76/b4/1690270646/Spec_Sheet_BioniX_F120_EN.pdf",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 2466,
+      "category_id": 442,
+      "manufacturer": "Lian Li",
+      "article": "G99.12RSL1W1W.00",
+      "official_model": "Lian Li UNI FAN SL Wireless Reverse Blade White",
+      "source_url": "https://lian-li.com/product/uni-fan-sl-wireless/",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 2807,
+      "category_id": 442,
+      "manufacturer": "Lian Li",
+      "article": "G99.12TL1W3W.00",
+      "official_model": "Lian Li UNI FAN TL120 Wireless White 3-Pack",
+      "source_url": "https://lian-li.com/product/uni-fan-tl-wireless/",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 3016,
+      "category_id": 442,
+      "manufacturer": "Ocypus",
+      "article": "Gamma-F12-WH1AM01E-GL",
+      "official_model": "Ocypus Gamma F12 Elite ARGB Reverse Blade White",
+      "source_url": "https://www.ocypus.com/specification/cooling/gamma-f12elite-argb-reverseblade--1.html",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 3326,
+      "category_id": 442,
+      "manufacturer": "be quiet!",
+      "article": "BL113",
+      "official_model": "be quiet! Pure Wings 3 140mm PWM High-Speed White",
+      "source_url": "https://www.bequiet.com/en/casefans/4776",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 3642,
+      "category_id": 442,
+      "manufacturer": "ASUS",
+      "article": "PRIME-MR120-REV-WHITE-3IN1",
+      "official_model": "ASUS Prime MR120 ARGB Reverse White Triple Pack",
+      "source_url": "https://www.asus.com/ca-en/motherboards-components/cooling/prime/asus-prime-mr120-argb-reverse-fan-triple-pack/techspec/",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 5253,
+      "category_id": 442,
+      "manufacturer": "Lian Li",
+      "article": "G99.12RTLLCD1W3W.00",
+      "official_model": "UNI FAN TL120 LCD Reverse Blade Wireless White 3-pack",
+      "source_url": "https://lian-li.com/product/uni-fan-tl-wireless/",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 6485,
+      "category_id": 442,
+      "manufacturer": "Lian Li",
+      "article": "G99.12TLLCD1W3W.00",
+      "official_model": "Lian Li UNI FAN TL120 LCD Wireless White 3-Pack",
+      "source_url": "https://lian-li.com/product/uni-fan-tl-wireless/",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 6781,
+      "category_id": 442,
+      "manufacturer": "ASUS",
+      "article": "PRIME-MR120-WHITE-3IN1",
+      "official_model": "ASUS Prime MR120 ARGB White 3-Pack",
+      "source_url": "https://www.asus.com/ca-en/motherboards-components/cooling/prime/asus-prime-mr120-argb-fan-triple-pack/techspec/",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 7430,
+      "category_id": 442,
+      "manufacturer": "ID-Cooling",
+      "article": "TF-12025-PRO-WHITE",
+      "official_model": "ID-Cooling TF-12025-PRO White",
+      "source_url": "https://www.idcooling.com/product/detail?id=462&name=TF-12025-PRO+WHITE",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 13634,
+      "category_id": 442,
+      "manufacturer": "Arctic",
+      "article": "ACFAN00328A",
+      "official_model": "ARCTIC P14 Pro Reverse A-RGB White 3-Pack",
+      "source_url": "https://www.arctic.de/en/P14-Pro-Reverse-A-RGB-White-3-Pack/ACFAN00328A",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 15175,
+      "category_id": 442,
+      "manufacturer": "Ocypus",
+      "article": "Gamma-F12-WH3AM01E-GL",
+      "official_model": "Ocypus Gamma F12 Elite ARGB Reverse Blade White 3-in-1",
+      "source_url": "https://www.ocypus.com/specification/cooling/gamma-f12elite-argb-reverseblade-3in1--1.html",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 17727,
+      "category_id": 442,
+      "manufacturer": "ID-Cooling",
+      "article": "ZF-12025-ARGB-SNOW",
+      "official_model": "ID-Cooling ZF-12025-ARGB Snow",
+      "source_url": "https://www.idcooling.com/product/detail?id=333&name=ZF-12025-ARGB-SNOW",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 18419,
+      "category_id": 442,
+      "manufacturer": "Lian Li",
+      "article": "G99.12SLLCD1W3W.00",
+      "official_model": "Lian Li UNI FAN SL Wireless LCD White 3-Pack",
+      "source_url": "https://lian-li.com/product/uni-fan-sl-wireless/",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 18613,
+      "category_id": 442,
+      "manufacturer": "be quiet!",
+      "article": "BL125",
+      "official_model": "be quiet! Light Wings LX 120mm PWM High-Speed White 3-Pack",
+      "source_url": "https://www.bequiet.com/en/casefans/5313",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 20879,
+      "category_id": 442,
+      "manufacturer": "ID-Cooling",
+      "article": "ZF-12025-ARGB-TRIO-SNOW",
+      "official_model": "ID-Cooling ZF-12025-ARGB Snow 3-Pack",
+      "source_url": "https://www.idcooling.com/product/detail?id=333&name=ZF-12025-ARGB-SNOW",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 22244,
+      "category_id": 442,
+      "manufacturer": "Lian Li",
+      "article": "G99.12RCL1W3W.00",
+      "official_model": "Lian Li UNI FAN CL Wireless Reverse Blade White 3-Pack",
+      "source_url": "https://lian-li.com/product/uni-fan-cl-wireless/",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 22256,
+      "category_id": 442,
+      "manufacturer": "Lian Li",
+      "article": "G99.12CL1W3W.00",
+      "official_model": "Lian Li UNI FAN CL Wireless White 3-Pack",
+      "source_url": "https://lian-li.com/product/uni-fan-cl-wireless/",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 23539,
+      "category_id": 442,
+      "manufacturer": "Montech",
+      "article": "AX120-PWM-W",
+      "official_model": "Montech AX120 PWM White",
+      "source_url": "https://www.montechpc.com/ax120-pwm",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 25046,
+      "category_id": 442,
+      "manufacturer": "Thermaltake",
+      "article": "CL-F100-PL12SW-A",
+      "official_model": "Thermaltake Riing Quad 12 RGB White 3-Fan Pack",
+      "source_url": "https://thermaltake.com/products/riing-quad-12-rgb-radiator-fan-tt-premium-edition-3-pack-white",
+      "checked_at": "2026-10-25",
+      "source_kind": "manufacturer_site",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 27144,
+      "category_id": 442,
+      "manufacturer": "be quiet!",
+      "article": "BL090",
+      "official_model": "be quiet! Shadow Wings 2 140 White",
+      "source_url": "https://www.bequiet.com/en/casefans/1699",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    },
+    {
+      "product_id": 28158,
+      "category_id": 442,
+      "manufacturer": "NZXT",
+      "article": "RF-C12SF-W1",
+      "official_model": "NZXT F120 RGB Core White",
+      "source_url": "https://nzxt.com/en-intl/products/f120-core-rgb-1",
+      "checked_at": "2026-10-17",
+      "values": {
+        "component_color": "Белый"
+      }
+    }
+  ]
+}

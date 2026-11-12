@@ -1,0 +1,58 @@
+.onboarding-shell .onboarding-brand { gap: 12px; }
+.onboarding-brand-logo { display: inline-block; flex-shrink: 0; padding-right: 3px; font-size: 34px; line-height: 1.2; font-weight: 850; letter-spacing: -.055em; color: transparent; background: linear-gradient(110deg,#ff7a18,#ff416c 55%,#f72585); background-clip: text; -webkit-background-clip: text; }
+.onboarding-shell .brand > .onboarding-brand-caption { padding-left: 12px; border-left: 1px solid #eadbda; color: #7b808a; font-size: 10px; font-weight: 500; white-space: nowrap; }
+.onboarding-shell .brand small { font-size: 10px; font-weight: 500; }
+.admin-shell .sidebar nav .onboarding-nav-disabled { display: flex; align-items: center; gap: 11px; padding: 11px 12px; border-radius: 9px; color: #8e929c; font-size: 13px; font-weight: 500; cursor: not-allowed; user-select: none; }
+.onboarding-nav-disabled > span { display: flex; font-size: 17px; flex-shrink: 0; opacity: .65; }
+.onboarding-nav-note { margin: 22px 10px; display: flex; align-items: flex-start; gap: 8px; color: #7b808a; font-size: 11px; line-height: 1.7; }
+.onboarding-nav-note > svg { margin-top: 3px; flex-shrink: 0; font-size: 14px; }
+.settings-page.onboarding-page { max-width: 1280px; margin-inline: auto; }
+.onboarding-page .catalog-heading { align-items: center; gap: 20px; margin-bottom: 20px; }
+.onboarding-stage { display: inline-flex; align-items: center; flex-shrink: 0; gap: 8px; padding: 9px 12px; border: 1px solid #f3ded3; border-radius: 20px; background: #fff5ee; color: #a65335; font-size: 11px; }
+.onboarding-profile-grid { display: grid; grid-template-columns: minmax(0,1.7fr) minmax(280px,1fr); gap: 20px; margin-bottom: 20px; }
+.onboarding-profile-grid > .settings-card { margin: 0; padding: 24px; min-width: 0; }
+.onboarding-section-heading { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 24px; }
+.onboarding-section-heading > span { display: grid; place-items: center; flex-shrink: 0; width: 32px; height: 32px; border: 1px solid #f2e3db; border-radius: 9px; background: #fff6f0; color: #b7613d; font-size: 11px; font-weight: 650; }
+.onboarding-page .onboarding-section-heading h2 { margin: 0; font-size: 15px; line-height: 1.5; }
+.onboarding-page .onboarding-section-heading p { margin: 4px 0 0; font-size: 12px; line-height: 1.6; }
+.onboarding-page .onboarding-profile form { max-width: none; margin: 0; }
+.onboarding-profile fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.onboarding-fields { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+.onboarding-fields > label:first-child { grid-column: 1 / -1; }
+.onboarding-page .onboarding-fields label { margin: 0; gap: 8px; font-size: 12px; align-content: start; }
+.onboarding-fields input { min-height: 42px; }
+.onboarding-fields input[readonly] { background: #f7f7f4; color: #737a83; }
+.onboarding-fields small { color: #7e8390; font-size: 10px; line-height: 1.6; }
+.onboarding-mini-option { padding: 16px; margin: 22px 0; border: 1px solid #e8e9df; border-radius: 10px; background: #fafbf8; }
+.onboarding-page label.onboarding-checkbox { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 12px; font-weight: 600; cursor: pointer; }
+.onboarding-page .onboarding-checkbox input { width: 17px; height: 17px; margin: 0; padding: 0; flex-shrink: 0; }
+.onboarding-page .onboarding-mini-option p { margin: 10px 0 0 27px; line-height: 1.7; }
+.onboarding-actions { display: flex; justify-content: flex-end; }
+.onboarding-logo-preview { min-height: 155px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 12px; border: 1px dashed #ddd8d0; border-radius: 12px; background: #fffcf9; color: #92948a; font-size: 12px; }
+.onboarding-logo-preview > svg { font-size: 28px; color: #c28a69; }
+.onboarding-logo-preview img { width: 96px; height: 96px; object-fit: contain; }
+.onboarding-page .onboarding-logo > p { text-align: center; margin: 15px 0; line-height: 1.7; }
+.onboarding-page label.onboarding-upload { position: relative; display: flex; justify-content: center; margin: 0; }
+.onboarding-page .onboarding-upload input { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; opacity: 0; }
+.onboarding-upload > span { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 40px; padding: 10px 16px; border: 1px solid var(--line,#dfe2d5); border-radius: 7px; background: #fff; color: var(--accent-strong,#b94d32); font-size: 12px; cursor: pointer; }
+.onboarding-upload:focus-within > span { outline: 2px solid var(--accent); outline-offset: 3px; }
+.onboarding-upload.is-disabled > span { opacity: .5; cursor: wait; }
+.onboarding-page .onboarding-readiness { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 24px; }
+.onboarding-readiness ul { padding-left: 18px; margin-bottom: 0; font-size: 12px; line-height: 1.9; }
+.onboarding-readiness > button { flex-shrink: 0; }
+@media (max-width: 1100px) {
+  .onboarding-profile-grid { grid-template-columns: minmax(0,1fr); }
+  .onboarding-logo-preview { min-height: 140px; }
+}
+@media (max-width: 760px) {
+  .onboarding-shell .sidebar nav .onboarding-nav-disabled { flex-shrink: 0; padding: 10px; font-size: 11px; }
+  .onboarding-nav-note { margin: 10px 0 0; }
+  .onboarding-shell .brand > span:last-child { display: block; }
+  .onboarding-page .catalog-heading { flex-direction: column; align-items: flex-start; }
+  .onboarding-fields { grid-template-columns: minmax(0,1fr); }
+  .onboarding-profile-grid > .settings-card, .onboarding-page .onboarding-readiness { padding: 18px; }
+  .onboarding-page .onboarding-readiness { align-items: stretch; flex-direction: column; gap: 18px; }
+  .onboarding-readiness > button { align-self: flex-end; }
+  .onboarding-page label.onboarding-upload { justify-content: flex-end; }
+  .onboarding-stage { white-space: normal; flex-shrink: 1; }
+}

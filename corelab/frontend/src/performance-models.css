@@ -1,0 +1,16 @@
+.performance-filters { display:flex; align-items:end; flex-wrap:wrap; gap:12px; margin:20px 0; }
+.performance-filters label { display:flex; flex-direction:column; gap:6px; min-width:180px; }
+.performance-filters input,.performance-filters select { min-height:38px; width:100%; font:inherit; color:inherit; padding:8px 10px; border:1px solid var(--border,#e5e5df); border-radius:7px; background:var(--surface,#fff); }
+.performance-search { flex:1; }
+.performance-list { display:grid; gap:12px; }
+.performance-model { background:var(--surface,#fff); border:1px solid var(--border,#e5e5df); border-radius:10px; padding:16px; min-width:0; }
+.performance-model-heading { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+.performance-model h2 { font-size:16px; margin:0; overflow-wrap:anywhere; }
+.performance-status { font-size:12px; padding:5px 9px; border-radius:6px; background:#f4f0e7; color:#695020; }
+.performance-status.is-measured { background:#e9f4ec; color:#24613a; }
+.performance-model details { margin-top:12px; }
+.performance-model summary { cursor:pointer; }
+.performance-model li { margin:10px 0; overflow-wrap:anywhere; }
+.performance-model small { display:block; margin-top:3px; color:var(--muted,#69716a); }
+.performance-pagination { justify-content:flex-end; margin-top:18px; align-items:center; }
+@media(max-width:640px) { .performance-filters label { width:100%; min-width:0; } .performance-filters { justify-content:flex-end; } }
